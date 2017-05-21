@@ -1,24 +1,7 @@
-# README
+# Personal Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I'm creating a blog to stay fresh with Rails 5. Ideally this will be a good way
+of updating content on my website. Using rails also makes displaying repeated
+content like headers and footers consistent across all webpages without copying
+and pasting code, thereby making my website on the whole more modular in the
+end.
