@@ -53,9 +53,10 @@ class ArticlesController < ApplicationController
     def article_params
         params.require(:article).permit(:title, :text, :image)
     end
-    # Confirms the correct user.
+    # Confirms the correct admin.
     def correct_admin
-        @user= User.find(current_admin.id)
-        redirect_to(root_url) unless current_admin.id ==@post.admin.id
+        @article = Article.find(params[:id])
+        @admin = Admin.find(current_admin.id)
+        redirect_to(root_url) unless current_admin.id == @article.admin.id
     end
 end
