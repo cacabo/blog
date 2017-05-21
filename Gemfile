@@ -35,6 +35,7 @@ gem 'rails-assets-tether'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'bootstrap_form'
 gem "paperclip", "~> 5.0.0"
+gem 'aws-sdk', '~> 2.3.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

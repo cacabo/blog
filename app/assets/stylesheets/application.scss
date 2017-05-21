@@ -19,7 +19,7 @@
      a {
          transition: all 0.2s ease;
      }
-     a:hover {
+     a:hover, a:active, a:visited {
          text-decoration: none;
      }
  }
