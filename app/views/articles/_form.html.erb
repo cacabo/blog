@@ -1,5 +1,4 @@
-<%= form_for @article do |f| %>
-
+<%= bootstrap_form_for @article, url: articles_path, html: { multipart: true } do |f| %>
   <% if @article.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -15,17 +14,19 @@
   <% end %>
 
   <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+      <%= f.text_field :title %>
   </p>
 
   <p>
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+      <%= f.text_area :text %>
   </p>
 
   <p>
-    <%= f.submit %>
+      <%= f.file_field :image %>
+  </p>
+
+  <p>
+      <%= f.submit %>
   </p>
 
 <% end %>

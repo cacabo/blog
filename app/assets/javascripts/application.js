@@ -14,4 +14,5 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery
-//= require bootstrap
+//= require tether
+//= require bootstrap-sprockets

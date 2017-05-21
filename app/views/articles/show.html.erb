@@ -1,15 +1,27 @@
-<h3>
-    <%= @article.title %>
-</h3>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+            <h1>
+                <%= @article.title %>
+            </h1>
 
-<p>
-    <%= @article.text %>
-</p>
+            <p>
+                <i><%= @article.created_at.strftime("%B %e, %y") %></i>
+            </p>
 
-<% if admin_signed_in? and current_admin.id == @article.admin.id %>
-    <%= link_to 'Edit', edit_article_path(@article) %>
-    <%= link_to 'Delete', article_path(@article),
-                  method: :delete,
-                  data: { confirm: 'Are you sure?' } %>
-<% end %>
-<%= link_to 'Back', articles_path %>
+            <p>
+                <%= @article.text %>
+            </p>
+
+            <% if admin_signed_in? %>
+            <% if @article.admin.nil? or current_admin.id == @article.admin.id %>
+            <%= link_to 'Edit', edit_article_path(@article) %>
+            <%= link_to 'Delete', article_path(@article),
+                      method: :delete,
+                      data: { confirm: 'Are you sure?' } %>
+            <% end %>
+            <% end %>
+            <%= link_to 'Back', articles_path %>
+        </div>
+    </div>
+</div>
