@@ -1,11 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-            <% if !@article.image.nil? %>
+            <% if not article.image.nil? and not article.image_file_name.nil? %>
                 <%= image_tag @article.image.url(:large), class: 'img-fluid' %>
             <% end %>
 
-            <h1>
+            <h1 class="title">
                 <%= @article.title %>
             </h1>
 
@@ -18,14 +18,13 @@
                 <% end %>
             <% end %>
 
-            <p>
-                <i><%= @article.created_at.strftime("%B %e, %y") %></i>
-            </p>
+            <p class="time">Submitted <%= time_ago_in_words(@article.created_at) %> ago</p>
 
             <% @components = @article.text.split(/\n+/) %>
             <% code_enabled = false %>
-            <% @components.each do |comp| %><% if comp.start_with?('[IMAGE]') %><% comp.slice! '[IMAGE]' %><img src="<%= comp %>" class="img-fluid"><% elsif comp.start_with?('[CODE]') %><% comp.slice! '[CODE]' %>
-<% code_enabled = true %><%=comp.html_safe%><% elsif code_enabled %><% if comp.include? "</pre>" %><% code_enabled = false %><%=comp.html_safe%><% else %><%=comp%><% end %>
+        <% @components.each do |comp| %><% if comp.start_with?('[IMAGE]') %><% comp.slice! '[IMAGE]' %><img src="<%= comp %>" class="img-fluid"><% elsif comp.start_with?('[CODE]') %><% comp.slice! '[CODE]' %>
+<% code_enabled = true %><%=comp.html_safe%><% elsif code_enabled %><% if comp.include? "</pre>" %><% code_enabled = false %><%=comp.html_safe%><% else %><%=comp%>
+    <% end %>
 <% else %>
 <p>
     <%= comp %>

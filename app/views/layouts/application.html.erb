@@ -4,11 +4,13 @@
         <title>Cameron Cabo</title>
         <%= csrf_meta_tags %>
 
+        <script src="https://use.fontawesome.com/297cffcc6b.js"></script>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
     <body>
+        <%= render 'shared/header' %>
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
         <% if current_admin.nil? %>
@@ -18,5 +20,6 @@
             <%= link_to 'Sign Out', destroy_admin_session_path, method: :delete %>
         <% end %>
         <%= yield %>
+        <%= render 'shared/footer' %>
     </body>
 </html>
