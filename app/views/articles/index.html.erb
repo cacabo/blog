@@ -9,7 +9,7 @@
                     <%= image_tag article.image.url(:medium), class: 'img-fluid' %>
                 <% end %>
                 <h3><%= link_to article.title, article_path(article) %></h3>
-                <p class="time">Submitted <%= time_ago_in_words(article.created_at) %> ago</p>
+                <p class="time"><%= time_ago_in_words(article.created_at) %> ago</p>
                 <p><%= article.text[0...100] + '...' %></p>
             <% end %>
 

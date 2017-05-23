@@ -5,8 +5,10 @@ class CommentsController < ApplicationController
       @comment = @article.comments.build(comment_params)
 
       if @comment.save
-        flash[:success] = "Comment successful!"
-        redirect_to @comment.article
+        respond_to do |format|
+            format.html { redirect_to root_path }
+            format.js
+        end
       else
         flash[:alert] = "Oops! Something went wrong."
         render root_path
@@ -17,8 +19,11 @@ class CommentsController < ApplicationController
       @comment = @article.comments.find(params[:id])
 
       @comment.destroy
-      flash[:success] = "Comment deleted"
-      redirect_to @article
+      @comment.delete
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js
+      end
     end
 
     private

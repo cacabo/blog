@@ -1,3 +1,16 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.comment {
+    transition: all 0.2s ease;
+    p {
+        margin-bottom: 1.25vh;
+    }
+    .btn-delete, p.time {
+        margin-left: 18px;
+        float: right;
+    }
+    p.name, p.time {
+        display: inline-block;
+    }
+}

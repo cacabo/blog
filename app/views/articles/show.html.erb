@@ -11,14 +11,20 @@
 
             <% if admin_signed_in? %>
                 <% if @article.admin.nil? or current_admin.id == @article.admin.id %>
-                    <%= link_to 'Edit', edit_article_path(@article) %> |
-                    <%= link_to 'Delete', article_path(@article),
-                              method: :delete,
-                              data: { confirm: 'Are you sure?' } %>
+                        <div class="buttons">
+                        <%= link_to edit_article_path(@article) do %>
+                            <button class="btn btn-sm btn-outline-primary">Edit</button>
+                        <% end %>
+                        <%= link_to article_path(@article),
+                                  method: :delete,
+                                  data: { confirm: 'Are you sure?' } do %>
+                            <button class="btn btn-sm btn-outline-danger">Delete</button>
+                        <% end %>
+                    </div>
                 <% end %>
             <% end %>
 
-            <p class="time">Submitted <%= time_ago_in_words(@article.created_at) %> ago</p>
+            <p class="time"><%= time_ago_in_words(@article.created_at) %> ago</p>
 
             <% @components = @article.text.split(/\n+/) %>
             <% code_enabled = false %>
@@ -36,18 +42,19 @@
 <div class="line"></div>
 
 <% if @article.comments %>
-    <% @article.comments.each do |comment| %>
-        <p><strong><%= comment.name %></strong>
-        <% if current_admin %>
-            <%= link_to article_comment_path(@article, comment), method: :delete do %>
-                <button class="btn btn-sm btn-outline-danger">Delete Comment</button>
-            <% end %>
-        <% end %>
-        <p><%= comment.content %>
-    <% end %>
-<% end %>
+    <!-- <% @article.comments.each do |comment| %>
 
-            <%= bootstrap_form_for [@article, @article.comments.new] do |f| %>
+    <% end %> -->
+    <div id="comments_<%= @article.id %>">
+        <%= render @article.comments, article: @article %>
+    </div>
+<% else %>
+    <p><i>There are no comments on this post yet. Leave one below!</i></p>
+<% end %>
+            <div class="space"></div>
+            <h3>Leave a comment</h3>
+            <div class="line"></div>
+            <%= bootstrap_form_for([@article, @article.comments.new], remote: true) do |f| %>
                 <p><%= f.text_field :name, placeholder: 'Your name' %></p>
                 <p><%= f.text_area :content, placeholder: 'Add a comment...' %></p>
                 <p><%= f.submit %></p>
