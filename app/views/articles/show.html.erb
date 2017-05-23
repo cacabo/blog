@@ -23,9 +23,8 @@
                     </div>
                 <% end %>
             <% end %>
-
             <p class="time"><%= time_ago_in_words(@article.created_at) %> ago</p>
-
+            <div class="line"></div>
             <% @components = @article.text.split(/\n+/) %>
             <% code_enabled = false %>
         <% @components.each do |comp| %><% if comp.start_with?('[IMAGE]') %><% comp.slice! '[IMAGE]' %><img src="<%= comp %>" class="img-fluid"><% elsif comp.start_with?('[CODE]') %><% comp.slice! '[CODE]' %>
@@ -42,9 +41,6 @@
 <div class="line"></div>
 
 <% if @article.comments %>
-    <!-- <% @article.comments.each do |comment| %>
-
-    <% end %> -->
     <div id="comments_<%= @article.id %>">
         <%= render @article.comments, article: @article %>
     </div>

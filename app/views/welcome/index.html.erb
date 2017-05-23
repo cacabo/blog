@@ -3,7 +3,9 @@
         <div class="col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
             <h1 class="title">Hello Rails!</h1>
             <div class="line"></div>
-            <%= link_to 'My Blog', controller: 'articles' %>
+            <%= link_to controller: 'articles' do %>
+                <button class="btn btn-outline-primary">View My Blog</button>
+            <% end %>
         </div>
     </div>
 </div>
