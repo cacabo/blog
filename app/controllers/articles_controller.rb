@@ -10,10 +10,6 @@ class ArticlesController < ApplicationController
         end
     end
 
-    def index
-        @articles = Article.all
-    end
-
     def new
         @article = current_admin.articles.build
     end

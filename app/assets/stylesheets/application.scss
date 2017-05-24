@@ -118,6 +118,10 @@ button {
     outline: 0;
 }
 
+label {
+    width: 100%;
+}
+
 .tag {
     border-radius: 22px;
 }
@@ -145,7 +149,7 @@ button {
     width: 100%;
     margin: 2.5vh 0;
     height: 1px;
-    background: whitesmoke;
+    background: #eee;
 }
 /*footer*/
 footer {
