@@ -1,11 +1,16 @@
-<div class="space"></div>
-<div class="container">
+<div class="container bg pad-top-25 pad-bot-100" id="landscape">
     <div class="row">
         <div class="col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-            <h1 class="title">Hello Rails!</h1>
-            <div class="line"></div>
-            <%= link_to controller: 'articles' do %>
+            <h1 class="title pad-bot-25">Hi! I'm Cameron.</h1>
+            <p class="pitch pad-bot">I'm a driven learner, freelance web developer, and product builder&mdash;
+passionate for entrepreneurship, user experience, analytics, and marketing.
+<br><br>
+I study computer science, business analytics, and management of entrepreneurship in the Jerome Fisher Program at the University of Pennsylvania and, when not at school, live in Los Angeles.</p>
+            <%= link_to articles_path do %>
                 <button class="btn btn-outline-primary">View My Blog</button>
+            <% end %>
+            <%= link_to contact_path do %>
+                <button class="btn btn-outline-primary">Contact Me</button>
             <% end %>
         </div>
     </div>
