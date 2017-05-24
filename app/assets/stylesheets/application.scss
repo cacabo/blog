@@ -179,6 +179,37 @@ label {
     height: 1px;
     background: #eee;
 }
+
+#error-explanation {
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebcccc;
+    color: #a94442;
+}
+
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
+
+.pad-bot-25 {
+    padding-bottom: 2.5vh;
+}
+
+.pad-bot-50 {
+    padding-bottom: 5vh;
+}
+
+.pad-bot-75 {
+    padding-bottom: 7.5vh;
+}
+
+.pad-bot-100 {
+    padding-bottom: 10vh;
+}
+
 // footer styling
 footer {
     margin-top: 10vh;

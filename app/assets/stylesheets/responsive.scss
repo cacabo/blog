@@ -1,0 +1,19 @@
+@media screen and (max-width: 800px) {
+    footer {
+        ul.social, ul.links {
+            width: auto;
+            margin: 0 auto;
+            float: none;
+            display: table;
+        }
+
+        .links li {
+            padding: 0 1.25vh !important;
+        }
+
+        .links-wrapper, .social-wrapper {
+            width: 100%;
+        }
+    }
+
+}
