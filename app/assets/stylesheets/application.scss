@@ -114,6 +114,14 @@ body {
     height: 50px;
 }
 
+button {
+    outline: 0;
+}
+
+.tag {
+    border-radius: 22px;
+}
+
 .time {
     color: #666666;
     font-style: italic;

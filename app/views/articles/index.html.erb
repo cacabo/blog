@@ -10,6 +10,15 @@
                 <% end %>
                 <h3><%= link_to article.title, article_path(article) %></h3>
                 <p class="time"><%= time_ago_in_words(article.created_at) %> ago</p>
+                <% if @article.tag_list %>
+                    <p><strong>Tags: &nbsp;</strong>
+                    <% @article.tag_list.each do |t| %>
+                        <%= link_to tag_path(t) do %>
+                            <button class="btn btn-outline-primary btn-sm tag"><%= t %></button>
+                        <% end %>
+                    <% end %>
+                    </p>
+                <% end %>
                 <p><%= article.text[0...100] + '...' %></p>
             <% end %>
 

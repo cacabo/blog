@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
 
   root 'welcome#index'
+
+  get 'articles/tags/:tag', to: 'articles#index', as: 'tag'
 end

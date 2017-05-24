@@ -3,7 +3,11 @@ class ArticlesController < ApplicationController
     before_action :correct_admin,   only: [:edit, :update, :destroy]
 
     def index
-        @articles = Article.all
+        if (params[:tag])
+            @articles = Article.tagged_with(params[:tag])
+        else
+            @articles = Article.all
+        end
     end
 
     def index
@@ -51,7 +55,7 @@ class ArticlesController < ApplicationController
 
     private
     def article_params
-        params.require(:article).permit(:title, :text, :image)
+        params.require(:article).permit(:title, :text, :image, :tag_list)
     end
     # Confirms the correct admin.
     def correct_admin

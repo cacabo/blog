@@ -28,7 +28,17 @@
                 <% end %>
             <% end %>
             <p class="time"><%= time_ago_in_words(@article.created_at) %> ago</p>
+            <% if @article.tag_list %>
+                <p><strong>Tags: &nbsp;</strong>
+                <% @article.tag_list.each do |t| %>
+                    <%= link_to tag_path(t) do %>
+                        <button class="btn btn-outline-primary btn-sm tag"><%= t %></button>
+                    <% end %>
+                <% end %>
+                </p>
+            <% end %>
             <div class="line"></div>
+
             <% @components = @article.text.split(/\n+/) %>
             <% code_enabled = false %>
         <% @components.each do |comp| %><% if comp.start_with?('[IMAGE]') %><% comp.slice! '[IMAGE]' %><img src="<%= comp %>" class="img-fluid"><% elsif comp.start_with?('[CODE]') %><% comp.slice! '[CODE]' %>
