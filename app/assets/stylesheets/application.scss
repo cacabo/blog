@@ -15,7 +15,7 @@
  *= require_tree .
  */
 @import "bootstrap";
-
+// general formatting
 body {
     a {
         transition: all 0.2s ease;
@@ -27,7 +27,7 @@ body {
         text-decoration: none;
     }
 }
-
+// nav formatting
 .navbar {
     background: white;
     border-bottom: 1px solid gainsboro;
@@ -56,8 +56,10 @@ body {
     margin-top: 4px;
 }
 
-.navbar-toggler, .navbar-toggler:visited, .navbar-toggler:active {
-    border: 0px solid transparent !important;
+.navbar-toggler,
+.navbar-toggler:active,
+.navbar-toggler:visited {
+    border: 0 solid transparent !important;
     outline: 0 !important;
 }
 
@@ -102,16 +104,16 @@ body {
     }
 }
 
-.space {
-    display: block;
-    width: 100%;
-    height: 5vh;
-}
-
 .navbar-space {
     display: block;
     width: 100%;
     height: 50px;
+}
+// useful classes for general use
+.space {
+    display: block;
+    width: 100%;
+    height: 5vh;
 }
 
 .quote {
@@ -138,8 +140,10 @@ body {
     min-height: 30vh;
 }
 
-button {
-    outline: 0;
+button,
+button:active,
+button:visited {
+    outline: 0 !important;
 }
 
 label {
@@ -175,7 +179,7 @@ label {
     height: 1px;
     background: #eee;
 }
-/*footer*/
+// footer styling
 footer {
     margin-top: 10vh;
     padding: 2.5vh 5vw;
@@ -196,7 +200,6 @@ footer a:visited {
     text-decoration: none;
 }
 
-.person ul,
 footer ul {
     list-style: none;
     padding: 2.5vh 0;

@@ -14,15 +14,15 @@
   <% end %>
 
   <p>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, placeholder: "Pick your title..." %>
   </p>
 
   <p>
-      <%= f.text_area :text, class: "no-scroll animate min-30" %>
+      <%= f.text_area :text, class: "no-scroll animate min-30", placeholder: "Write your article here..." %>
   </p>
 
   <p>
-      <%= f.text_field :tag_list, label: "Tags (separated by commas)", value: @article.tag_list.join(", ") %>
+      <%= f.text_field :tag_list, label: "Tags (separated by commas)", value: @article.tag_list.join(", "), placeholder: "Categorize your piece with tags..." %>
   </p>
 
   <p>
