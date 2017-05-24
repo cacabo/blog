@@ -3,9 +3,15 @@
     <div class="row">
         <div class="col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
             <% if params[:tag] %>
-                <h1 class="title">Listing "<%=params[:tag]%>" articles</h1>
+                <h1 class="title">Listing articles tagged with "<%=params[:tag]%>"</h1>
             <% else %>
                 <h1 class="title">Listing Articles</h1>
+            <% end %>
+
+            <% if current_admin %>
+                <%= link_to new_article_path do %>
+                    <button class="btn btn-outline-primary btn-sm">New article</button>
+                <% end %>
             <% end %>
 
             <% @articles.each do |article| %>
@@ -27,9 +33,13 @@
                 <p><%= article.text[0...100] + '...' %></p>
             <% end %>
 
-            <% if current_admin %>
-                <%= link_to new_article_path do %>
-                    <button type="button" class="btn btn-secondary">New Article</button>
+            <% if params[:tag] %>
+                <%= link_to articles_path do %>
+                    <button class="btn btn-outline-primary btn-sm"><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to all articles</button>
+                <% end %>
+            <% else %>
+                <%= link_to root_path do %>
+                    <button class="btn btn-outline-primary btn-sm"><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to home</button>
                 <% end %>
             <% end %>
         </div>
