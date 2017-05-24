@@ -11,14 +11,22 @@
 
     <body>
         <%= render 'shared/header' %>
-        <% if notice %>
-            <div class="alert alert-info" role="alert">
-                <p class="notice"><%=notice%></p>
-            </div>
-        <% end %>
-        <% if alert %>
-            <div class="alert alert-danger" role="alert">
-                <p class="alert"><%=alert%></p>
+        <% if notice or alert %>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+                        <% if notice %>
+                            <div class="alert alert-info" role="alert">
+                                <p class="notice"><%=notice%></p>
+                            </div>
+                        <% end %>
+                        <% if alert %>
+                            <div class="alert alert-danger" role="alert">
+                                <p class="alert"><%=alert%></p>
+                            </div>
+                        <% end %>
+                    </div>
+                </div>
             </div>
         <% end %>
         <%= yield %>

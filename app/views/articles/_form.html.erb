@@ -18,7 +18,7 @@
   </p>
 
   <p>
-      <%= f.text_area :text %>
+      <%= f.text_area :text, class: "no-scroll animate min-30" %>
   </p>
 
   <p>
@@ -34,4 +34,10 @@
   <p>
       <%= f.submit "Submit Article", class: "btn btn-outline-primary" %>
   </p>
+  <script>
+      $('textarea').autogrow({
+          vertical: true,
+          horizontal: false
+      });
+  </script>
 <% end %>

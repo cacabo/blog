@@ -45,6 +45,17 @@
         <% @components.each do |comp| %><% if comp.start_with?('[IMAGE]') %><% comp.slice! '[IMAGE]' %><img src="<%= comp %>" class="img-fluid"><% elsif comp.start_with?('[CODE]') %><% comp.slice! '[CODE]' %>
 <% code_enabled = true %><%=comp.html_safe%><% elsif code_enabled %><% if comp.include? "</pre>" %><% code_enabled = false %><%=comp.html_safe%><% else %><%=comp%>
     <% end %>
+<% elsif comp.start_with?('### ') %>
+    <% comp.slice! ('### ') %>
+    <h5><%=comp%></h5>
+<% elsif comp.start_with?('## ') %>
+    <% comp.slice! ('## ') %>
+    <h3><%=comp%></h3>
+<% elsif comp.start_with?('[QUOTE]') %>
+    <% comp.slice! ('[QUOTE]') %>
+    <div class="quote">
+        <%= comp.html_safe %>
+    </div>
 <% else %>
 <p>
     <%= comp %>

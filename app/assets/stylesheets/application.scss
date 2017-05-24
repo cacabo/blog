@@ -114,6 +114,30 @@ body {
     height: 50px;
 }
 
+.quote {
+    font-size: 125%;
+    font-style: italic;
+    border-left: 4px solid rgba(0, 0, 0, .15);
+    padding-left: 12px;
+}
+
+.btn-right {
+    float: right;
+    vertical-align: top;
+}
+
+.animate {
+    transition: all 0.2s ease;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.min-30 {
+    min-height: 30vh;
+}
+
 button {
     outline: 0;
 }
