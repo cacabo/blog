@@ -16,5 +16,4 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require prism
-//= require smoothscroll.js
 //= require_tree .

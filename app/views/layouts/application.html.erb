@@ -12,25 +12,53 @@
     <body>
         <%= render 'shared/header' %>
         <% if notice or alert %>
-            <div class="space"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-                        <% if notice %>
-                            <div class="alert alert-info" role="alert">
-                                <p class="notice"><%=notice%></p>
-                            </div>
-                        <% end %>
-                        <% if alert %>
-                            <div class="alert alert-danger" role="alert">
-                                <p class="alert"><%=alert%></p>
-                            </div>
-                        <% end %>
+        <div class="space"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+                    <% if notice %>
+                    <div class="alert alert-info" role="alert">
+                        <p class="notice"><%=notice%></p>
                     </div>
+                    <% end %>
+                    <% if alert %>
+                    <div class="alert alert-danger" role="alert">
+                        <p class="alert"><%=alert%></p>
+                    </div>
+                    <% end %>
                 </div>
             </div>
+        </div>
         <% end %>
+
+        <div class="back-to-top">
+            <a class="scroll" href="#start">
+                <h3>
+                    <span class="no-display-mobile">Back to top &nbsp;</span>
+                    <i class="fa fa-angle-double-up"></i>
+                </h3>
+            </a>
+        </div>
+
         <%= yield %>
         <%= render 'shared/footer' %>
+
+        <!-- smoothscroll: https://stackoverflow.com/questions/4198041/jquery-smooth-scroll-to-an-anchor -->
+        <script>
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                //calculate destination place
+                var dest = 0;
+                if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+                    dest = $(document).height() - $(window).height();
+                } else {
+                    dest = $(this.hash).offset().top - 50;
+                }
+                //go to destination
+                $('html,body').animate({
+                    scrollTop: dest
+                }, 500, 'swing');
+            });
+        </script>
     </body>
 </html>
