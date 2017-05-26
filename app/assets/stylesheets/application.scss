@@ -235,39 +235,39 @@ p .pitch {
 }
 
 .no-pad {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .pad-bot-25 {
-    padding-bottom: 2.5vh;
+    padding-bottom: 2.5vh !important;
 }
 
 .pad-bot-50 {
-    padding-bottom: 5vh;
+    padding-bottom: 5vh !important;
 }
 
 .pad-bot-75 {
-    padding-bottom: 7.5vh;
+    padding-bottom: 7.5vh !important;
 }
 
 .pad-bot-100 {
-    padding-bottom: 10vh;
+    padding-bottom: 10vh !important;
 }
 
 .pad-top-25 {
-    padding-top: 2.5vh;
+    padding-top: 2.5vh !important;
 }
 
 .pad-top-50 {
-    padding-top: 5vh;
+    padding-top: 5vh !important;
 }
 
 .pad-top-75 {
-    padding-top: 7.5vh;
+    padding-top: 7.5vh !important;
 }
 
 .pad-top-100 {
-    padding-top: 10vh;
+    padding-top: 10vh !important;
 }
 
 .bubble {
@@ -287,8 +287,37 @@ p .pitch {
         transform: rotate(0deg);
     }
 
+    h2 {
+        padding-bottom: 1.25vh;
+    }
+
+    .collapser i {
+        font-size: 125%;
+    }
+
     .content li {
         margin: 1.25vh 0;
+    }
+
+    .sub-content {
+        padding: 2.5vh 5vh;
+    }
+
+    .sub-collapser {
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        background: whitesmoke;
+        padding: 2.5vh 5vh;
+
+        p.title {
+            margin: 0;
+            font-weight: bold;
+        }
+
+        i {
+            padding: 0;
+            font-size: 100%;
+        }
     }
 }
 
@@ -335,8 +364,12 @@ p .pitch {
     a:hover,
     a:link,
     a:visited {
-        color: rgba(0, 0, 0, 0.7);
         text-decoration: none;
+    }
+
+    a:hover,
+    a:active {
+        color: rgba(0, 0, 0, 0.7);
     }
 }
 // footer styling
