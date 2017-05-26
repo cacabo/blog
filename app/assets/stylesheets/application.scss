@@ -14,8 +14,8 @@
  *= require prism
  *= require_tree .
  */
-@import "bootstrap";
-// general formatting
+@import "bootstrap"; // general formatting
+
 body {
     a {
         transition: all 0.2s ease;
@@ -28,6 +28,7 @@ body {
     }
 }
 // nav formatting
+
 .navbar {
     background: white;
     border-bottom: 1px solid rgba(0, 0, 0, .15);
@@ -110,6 +111,7 @@ body {
     height: 50px;
 }
 // useful classes for general use
+
 .space {
     display: block;
     width: 100%;
@@ -136,6 +138,11 @@ body {
     overflow: hidden;
 }
 
+.center {
+    text-align: center;
+    width: 100%;
+}
+
 .min-30 {
     min-height: 30vh;
 }
@@ -159,6 +166,21 @@ label {
     font-style: italic;
 }
 
+.collapser,
+.collapser:active,
+.collapser:hover,
+.collapser:visited {
+    color: black !important;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    position: relative;
+
+    .fa {
+        float: right;
+    }
+}
+
 .title {
     display: inline-block;
 }
@@ -177,7 +199,7 @@ p .pitch {
     text-align: center;
 
     button {
-        margin: .25rem;
+        margin: 0.25rem;
     }
 }
 
@@ -250,12 +272,32 @@ p .pitch {
 
 .bubble {
     background: white;
-    box-shadow: 0px 0px 12px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 12px rgba(0, 0, 0, .15);
     border-radius: 5vh;
     padding: 5vh 0;
-    h2, .content {
+
+    .content,
+    a i,
+    h2 {
         padding: 0 5vh;
+        transition: all 0.2s ease;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
+
+    .content li {
+        margin: 1.25vh 0;
+    }
+}
+
+.rotate {
+    transition: all 0.2s ease;
+    -webkit-transform: rotate(180deg) !important;
+    -moz-transform: rotate(180deg) !important;
+    -ms-transform: rotate(180deg) !important;
+    transform: rotate(180deg) !important;
 }
 
 .bg {
@@ -263,12 +305,12 @@ p .pitch {
     height: auto;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #landscape {
     background-image: image-url('landscape.svg');
 }
-
 // secondary navigation
 .nav-sub {
     padding: 0.5rem 1rem;
@@ -279,22 +321,24 @@ p .pitch {
         display: table;
         margin: 0 auto;
         width: auto;
-        text-align: center
+        text-align: center;
     }
+
     a {
         display: inline-block;
         color: rgba(0, 0, 0, 0.5);
         padding: 0.75rem;
     }
-    a:hover {
+
+    a,
+    a:active,
+    a:hover,
+    a:link,
+    a:visited {
         color: rgba(0, 0, 0, 0.7);
+        text-decoration: none;
     }
 }
-
-.nav-sub ul {
-    text-align: center;
-}
-
 // footer styling
 footer {
     padding: 2.5vh 5vw;

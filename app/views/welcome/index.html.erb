@@ -1,10 +1,11 @@
 <div class="container bg pad-top-25 pad-bot-100" id="landscape">
+    <div class="space"></div>
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
             <h1 class="title pad-bot-25">Hi! I'm Cameron.</h1>
             <p class="pitch pad-bot-50">I'm a driven learner, freelance web developer, and product builder&mdash; passionate for entrepreneurship, user experience, analytics, and marketing.
                 <br><br>
-                I study computer science, business analytics, and management of entrepreneurship in the Jerome Fisher Program at the University of Pennsylvania and, when not at school, live in Los Angeles.
+                I study computer science, business analytics, and management of entrepreneurship in the Jerome Fisher Program at the University of Pennsylvania. When not at school, I live in Los Angeles.
             </p>
             <div class="buttons">
                 <%= link_to projects_path do %>
@@ -23,42 +24,50 @@
 
 <nav class="nav-sub">
     <div class="nav-wrapper">
-        <a href="#">Education</a>
-        <a href="#">Technologies</a>
-        <a href="#">Experience</a>
-        <a href="#">Extracurriculars</a>
+        <a class="scroll" href="#education">Education</a>
+        <a class="scroll" href="#technologies">Technologies</a>
+        <a class="scroll" href="#experience">Experience</a>
+        <a class="scroll" href="#extracurriculars">Extracurriculars</a>
     </div>
 </nav>
 
 <div class="gray">
     <div class="space pad-top-50"></div>
     <div class="container">
-        <div class="row pad-top-25 pad-bot-25">
+        <div class="row pad-top-25 pad-bot-25" id="education">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
-                <h2>Education</h2>
+                <a data-toggle="collapse" href="#education-content" aria-expanded="true" class="collapser">
+                    <h2 class="title">Education</h2>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </a>
                 <div class="line"></div>
-                <div class="content">
+                <div class="collapse show content" id="education-content">
                     <!-- upenn -->
                     <div class="row no-pad">
-                        <div class="col-3">
+                        <div class="col-2">
                             <%= image_tag "penn.png", class: "img-fluid" %>
                         </div>
-                        <div class="col-9">
+                        <div class="col-10">
                             <h4>University of Pennsylvania - Jerome Fisher Program in Mangement and Technology</h4>
-                            <p><i>3.95 GPA. 2016-2020.</i></p>
-                            <p>Pursuing a Bachelor of Science in Engineering in Computer Science from the School of Engineering and Applied Sciences and a Bachelors of Science in Economics in Business Analytics and Management of Tech Entrepreneurship from the Wharton School of Business.</p>
+                            <p>
+                                <i>3.95 GPA. 2016-2020.</i>
+                            </p>
+                            <p>Pursuing a Bachelor of Science in Engineering in Computer Science from the School of Engineering and Applied Sciences and a Bachelors of Science in Economics in Business Analytics and Management of Tech Entrepreneurship from the Wharton School of
+                                Business.</p>
                         </div>
                     </div>
 
                     <div class="line"></div>
                     <!-- hw -->
                     <div class="row no-pad">
-                        <div class="col-3">
+                        <div class="col-2">
                             <%= image_tag "hw.png", class: "img-fluid" %>
                         </div>
-                        <div class="col-9">
+                        <div class="col-10">
                             <h4>Harvard-Westlake School</h4>
-                            <p><i>3.94 GPA. 2013-2016.</i></p>
+                            <p>
+                                <i>3.94 GPA. 2013-2016.</i>
+                            </p>
                             <p>Graduated Cum Laude (Highest Honors) top three in the class. Leader in entrepreneurship, ethics, and current events clubs on campus.</p>
                         </div>
                     </div>
@@ -66,31 +75,133 @@
                     <div class="line"></div>
                     <!-- UCLA -->
                     <div class="row no-pad">
-                        <div class="col-3">
+                        <div class="col-2">
                             <%= image_tag "ucla.jpg", class: "img-fluid" %>
                         </div>
-                        <div class="col-9">
+                        <div class="col-10">
                             <h4>University of California, Los Angeles: SciArt NanoLab</h4>
-                            <p><i>Summer 2015.</i></p>
+                            <p>
+                                <i>Summer 2015.</i>
+                            </p>
                             <p>Interdisciplinary summer course focusing on utilizing art and design to solve issues in modern nanoscience and computing.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row pad-top-25 pad-bot-25">
+
+        <div class="space"></div>
+
+        <div class="row pad-top-25 pad-bot-25" id="technologies">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
-                <h2>Technologies</h2>
+                <a data-toggle="collapse" href="#technologies-content" aria-expanded="true" class="collapser">
+                    <h2 class="title">Technologies</h2>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </a>
                 <div class="line"></div>
-                <div class="content"></div>
+                <div class="collapse show content" id="technologies-content">
+                    <h4>General Purpose Programming Languages</h4>
+                    <i>From highest to lowest exposure.</i>
+                    <ul>
+                        <li>
+                            <strong>Java:</strong>
+                            &nbsp;test driven development (JUnit), Swing library used for GUI development, advanced collections and data structures.</li>
+                        <li>
+                            <strong>Ruby:</strong>
+                            &nbsp;solid foundational understanding.</li>
+                        <li>
+                            <strong>C:</strong>
+                            &nbsp;experience from the machine level up to building basic games and a compiler. Strong understanding of memory allocation and storage in the stack and heap.</li>
+                        <li>
+                            <strong>OCaml:</strong>
+                            &nbsp;test driven development, functional programming.</li>
+                        <li>
+                            <strong>Python:</strong>
+                            &nbsp;lightweigth yet powerful scripting and data analytics.</li>
+                        <li>
+                            <strong>MySQL:</strong>
+                            &nbsp;relational database structuring and querying.</li>
+                    </ul>
+                    <div class="line"></div>
+                    <h4>Web Development Programming Languages</h4>
+                    <ul>
+                        <li>
+                            <strong>HTML5:</strong>
+                            &nbsp;user-oriented programming, industry standard syntax. Experience utlizing
+                            <a href="https://aws.amazon.com/s3/" target="_blank">AWS (Amazon Web Services) S3</a>
+                            for hosting and
+                            <a href="https://aws.amazon.com/route53/" target="_blank">AWS Route 53</a>
+                            for domain name management.</li>
+                        <li>
+                            <strong>CSS3:</strong>
+                            &nbsp;strong understanding, media queries for mobile-first development, CSS transitions for dynamic, engaging UX.</li>
+                        <li>
+                            <strong>Javascript/jQuery:</strong>
+                            &nbsp;functional and object oriented program to keep track of web application state and make sites more interactive.</li>
+                        <li>
+                            <strong>Bootstrap 4:</strong>
+                            &nbsp;mobile-first CSS &amp; Javascript library for rapid and responsive web development.</li>
+                        <li>
+                            <strong>Ruby on Rails 5:</strong>
+                            &nbsp;web app programming, RESTful routes, deployment to
+                            <a href="https://heroku.com" target="_blank">Heroku.</a>
+                            Databases with
+                            <a href="https://sqlite.org/" target="_blank">SQLite3</a>
+                            and
+                            <a href="https://www.postgresql.org/" target="_blank">PostgreSQL.</a>
+                            View manipulation with embedded ruby (ERB).</li>
+                        <li>
+                            <strong>React.js:</strong>
+                            &nbsp;front end development; creating components and writing in JSX to handle the view side of web applications.
+                    </ul>
+                    <div class="line"></div>
+                    <h4>Additional Technologies</h4>
+                    <ul>
+                        <li>
+                            <strong>Git:</strong>
+                            &nbsp;managing projects through git for distributed version control. Primarily conducted via
+                            <a href="https://github.com/ccabo1" taget="_blank">Github.</a>
+                        </li>
+                        <li>
+                            <strong>MySQL:</strong>
+                            &nbsp;relational database structuring and querying.</li>
+                    </ul>
+                    <div class="line"></div>
+                    <h4>Digital Media</h4>
+                    <ul>
+                        <li>Adobe Photoshop, Adobe Illustrator, Adobe Dreamweaver. Graphic design, concept design for applications, wireframing, digital art, and poster design.</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="row pad-top-25 pad-bot-25">
+
+        <div class="space"></div>
+        <!-- experience -->
+        <div class="row pad-top-25 pad-bot-25" id="experience">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
+                <a data-toggle="collapse" href="#experience-content" aria-expanded="true" class="collapser">
+                    <h2 class="title">Experience</h2>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </a>
                 <h2>Experience</h2>
                 <div class="line"></div>
-                <div class="content"></div>
+                <div class="collapse show content" id="experience-content"></div>
             </div>
         </div>
+
+        <div class="space"></div>
+
+        <div class="row pad-top-25 pad-bot-25" id="extracurriculars">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
+                <a data-toggle="collapse" href="#extracurriculars-content" aria-expanded="true" class="collapser">
+                    <h2 class="title">Extracurriculars</h2>
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </a>
+                <div class="line"></div>
+                <div class="collapse show content" id="extracurriculars-content"></div>
+            </div>
+        </div>
+        <div class="space"></div>
+        <div class="space"></div>
     </div>
 </div>
