@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'projects', to: 'welcome#projects', as: 'projects'
+  get 'freelancing', to: 'welcome#freelancing', as: 'freelancing'
   get 'art', to: 'weclome#art', as: 'art'
   get 'design', to: 'welcome#design', as: 'design'
   get 'contact', to: 'welcome#contact', as: 'contact'

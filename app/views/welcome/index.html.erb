@@ -32,9 +32,9 @@
 </nav>
 
 <div class="gray">
-    <div class="space pad-top-50"></div>
+    <div class="space pad-top-50" id="education"></div>
     <div class="container">
-        <div class="row pad-top-25 pad-bot-25" id="education">
+        <div class="row pad-top-25 pad-bot-25">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
                 <a data-toggle="collapse" href="#education-content" aria-expanded="true" class="collapser">
                     <h2 class="title">Education</h2>
@@ -90,9 +90,9 @@
             </div>
         </div>
 
-        <div class="space"></div>
+        <div class="space" id="technologies"></div>
 
-        <div class="row pad-top-25 pad-bot-25" id="technologies">
+        <div class="row pad-top-25 pad-bot-25">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
                 <a data-toggle="collapse" href="#technologies-content" aria-expanded="true" class="collapser">
                     <h2 class="title">Technologies</h2>
@@ -172,9 +172,9 @@
             </div>
         </div>
 
-        <div class="space"></div>
+        <div class="space" id="experience"></div>
         <!-- experience -->
-        <div class="row pad-top-25 pad-bot-25" id="experience">
+        <div class="row pad-top-25 pad-bot-25">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
                 <h2 class="title pad-bot-25">Experience</h2>
                 <div class="content no-pad" id="experience-content">
@@ -184,6 +184,9 @@
                         <i class="fa fa-chevron-down" aria-hidden="true"></i>
                     </a>
                     <div class="collapse show sub-content" id="fortuna">
+                        <p class="time">
+                            March 2017 &ndash; present
+                        </p>
                         <p>
                             Building a web marketplace and social platform to aid hospitals in sourcing traveling nurses.
                         </p>
@@ -200,10 +203,13 @@
                     </a>
                     <div class="collapse show sub-content" id="ar">
                         <div class="row no-pad">
-                            <div class="col-2">
+                            <div class="col-3">
                                 <%= image_tag "ar.svg", class: "img-fluid" %>
                             </div>
-                            <div class="col-10">
+                            <div class="col-12">
+                                <p class="time full-width">
+                                    March 2017 &ndash; May 2017
+                                </p>
                                 <p>
                                     Modernized AR Textile's logo and image to better compete in the market. Integrated this logo into signage, business cards, and webistes.
                                 </p>
@@ -213,20 +219,167 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- crossroads -->
+                    <a data-toggle="collapse" href="#crossroads" aria-expanded="true" class="collapser sub-collapser">
+                        <p class="title">Floor Staff - Crossroads Trading Company</p>
+                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse sub-content" id="crossroads">
+                        <div class="row no-pad">
+                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                                <%= image_tag "crossroads.jpg", class: "img-fluid" %>
+                            </div>
+                            <div class="col-12">
+                                <p class="time full-width">
+                                    Summer 2016
+                                </p>
+                                <p>
+                                    Retail experience at a consignment and recycled clothing store. Aided in interacting with customers and organizing merchandise in order to optimize sales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- atletico -->
+                    <a data-toggle="collapse" href="#atletico" aria-expanded="true" class="collapser sub-collapser">
+                        <p class="title">Web Intern - Atletico SoCal Soccer Club</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse show sub-content" id="atletico">
+                        <div class="row no-pad">
+                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                                <%= image_tag "atletico.png", class: "img-fluid" %>
+                            </div>
+                            <div class="col-12">
+                                <p class="time full-width">
+                                    Winter 2016
+                                </p>
+                                <p>
+                                    Conducted design updates, proofreading, and content additions for the club's website, thereby improving their online presence and refining their company image.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- crossroads -->
+                    <a data-toggle="collapse" href="#soupure" aria-expanded="true" class="collapser sub-collapser">
+                        <p class="title">Digital Designer - Soupure</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse show sub-content" id="soupure">
+                        <div class="row no-pad">
+                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                                <%= image_tag "soupure.jpg", class: "img-fluid" %>
+                            </div>
+                            <div class="col-12">
+                                <p class="time full-width">
+                                    Spring 2016
+                                </p>
+                                <p>
+                                    Aided in designing printouts and online pdfs for customer use to incentivize continued product use.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- beacon -->
+                    <a data-toggle="collapse" href="#beacon" aria-expanded="true" class="collapser sub-collapser">
+                        <p class="title">Growth Intern - Beacon School for Boys</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse show sub-content" id="beacon">
+                        <div class="row no-pad">
+                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                                <%= image_tag "beacon.png", class: "img-fluid" %>
+                            </div>
+                            <div class="col-12">
+                                <p class="time full-width">
+                                    Summer 2015 &ndash; February 2016
+                                </p>
+                                <p>
+                                    Conducted web design and content updates, photo simulations in Photoshop, statistics, and site research. My work generated enough demonstrated interest to ensure the school would open by their scheduled date.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
 
-        <div class="space"></div>
+        <div class="space" id="extracurriculars"></div>
 
-        <div class="row pad-top-25 pad-bot-25" id="extracurriculars">
+        <div class="row pad-top-25 pad-bot-25">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
-                <a data-toggle="collapse" href="#extracurriculars-content" aria-expanded="true" class="collapser">
-                    <h2 class="title">Extracurriculars</h2>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                </a>
-                <div class="line"></div>
-                <div class="collapse show content" id="extracurriculars-content"></div>
+                <h2 class="title pad-bot-25">Extracurriculars</h2>
+                <div class="content no-pad" id="extracurriculars-content">
+
+                    <!-- youthhack -->
+                    <a data-toggle="collapse" href="#youthhack" aria-expanded="true" class="collapser sub-collapser">
+                        <p class="title">VP Marketing and Webmaster - YouthHack</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse show sub-content" id="youthhack">
+                        <div class="row no-pad">
+                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                                <%= image_tag "youthhack.png", class: "img-fluid" %>
+                            </div>
+                            <div class="col-12">
+                                <p class="time full-width">
+                                    Fall 2016 &ndash; present
+                                </p>
+                                <p>
+                                    <a href="youthhack.net">YouthHack</a>
+                                    is an international organization dedicated to fomenting entrepreneurial culture among students. I lead the Core Team in all marketing initiatives for YouthHack events, partnerships, and programs. Further, I consult our student-run ventures within the Accelerator program regarding their own marketing, design, and consumer acquisition querries.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- weisslabs -->
+                    <a data-toggle="collapse" href="#weisslabs" aria-expanded="true" class="collapser sub-collapser">
+                        <p class="title">Mentor - WeissLabs</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse show sub-content" id="weisslabs">
+                        <div class="row no-pad">
+                            <div class="col-5 col-sm-4 col-md-3">
+                                <%= image_tag "weisslabs.png", class: "img-fluid" %>
+                            </div>
+                            <div class="col-12">
+                                <p class="time full-width">
+                                    Fall 2016 &ndash; present
+                                </p>
+                                <p>
+                                    <a href="weisslabs.io/" target="blank">Weisslabs</a> is an incubator at Penn within the <a href="https://weisstech.upenn.edu/" target="blank">Weiss Tech House</a>. Within Weisslabs, I am the point person for a company within the accelerator each semester. I provide insight into their business operations, set growth metrics, track progress, and connect them to resources within the Penn and Philadelphia communities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- youthhack -->
+                    <a data-toggle="collapse" href="#ica" aria-expanded="true" class="collapser sub-collapser">
+                        <p class="title">Volunteer - Inner-City Arts</p>
+                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="collapse show sub-content" id="ica">
+                        <div class="row no-pad">
+                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                                <%= image_tag "ica.png", class: "img-fluid" %>
+                            </div>
+                            <div class="col-12">
+                                <p class="time full-width">
+                                    Summer 2015
+                                </p>
+                                <p>
+                                    <a href="inner-cityarts.org" target="_blank" title="Learn more about Inner-City Arts">Inner-City Arts</a> is an organization in downtown Los Angeles dedicated to providing free arts education to local youth. During my time there, I led student groups, aided professional artists in teaching groups, and helped maintenance in cleaning facilities and preparing installations.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
 
