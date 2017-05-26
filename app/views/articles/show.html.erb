@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
             <div class="space"></div>
 
             <% if not @article.image.nil? and not @article.image_file_name.nil? %>
@@ -15,7 +15,7 @@
 
             <% if admin_signed_in? %>
                 <% if @article.admin.nil? or current_admin.id == @article.admin.id %>
-                        <div class="buttons">
+                        <div class="buttons-right">
                         <%= link_to edit_article_path(@article) do %>
                             <button class="btn btn-sm btn-outline-primary">Edit</button>
                         <% end %>

@@ -30,7 +30,7 @@ body {
 // nav formatting
 .navbar {
     background: white;
-    border-bottom: 1px solid gainsboro;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
 
 .navbar-toggler {
@@ -173,8 +173,22 @@ p .pitch {
 }
 
 .buttons {
+    margin: 0 auto;
+    text-align: center;
+
+    button {
+        margin: .25rem;
+    }
+}
+
+.buttons-right {
     float: right;
     vertical-align: top;
+}
+
+.gray {
+    background: whitesmoke;
+    padding: 0 2.5vw;
 }
 
 .line {
@@ -196,6 +210,10 @@ p .pitch {
 .img-fluid {
     width: 100%;
     height: auto;
+}
+
+.no-pad {
+    padding: 0;
 }
 
 .pad-bot-25 {
@@ -230,6 +248,16 @@ p .pitch {
     padding-top: 10vh;
 }
 
+.bubble {
+    background: white;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, .15);
+    border-radius: 5vh;
+    padding: 5vh 0;
+    h2, .content {
+        padding: 0 5vh;
+    }
+}
+
 .bg {
     width: 100%;
     height: auto;
@@ -241,9 +269,34 @@ p .pitch {
     background-image: image-url('landscape.svg');
 }
 
+// secondary navigation
+.nav-sub {
+    padding: 0.5rem 1rem;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+
+    .nav-wrapper {
+        display: table;
+        margin: 0 auto;
+        width: auto;
+        text-align: center
+    }
+    a {
+        display: inline-block;
+        color: rgba(0, 0, 0, 0.5);
+        padding: 0.75rem;
+    }
+    a:hover {
+        color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+.nav-sub ul {
+    text-align: center;
+}
+
 // footer styling
 footer {
-    margin-top: 10vh;
     padding: 2.5vh 5vw;
     width: 100%;
     background: #004080;
