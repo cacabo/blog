@@ -1,5 +1,18 @@
-<p>Welcome <%= @email %>!</p>
+<div class="gray">
+    <div class="space pad-top-50"></div>
+    <div class="container">
+        <div class="row pad-top-25 pad-bot-25">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 bubble">
+                <h2>Welcome
+                    <%= @email %>!</h2>
+                <div class="line"></div>
+                <div class="content">
+                    <p>You can confirm your account email through the link below:</p>
 
-<p>You can confirm your account email through the link below:</p>
-
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+                    <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+</div>

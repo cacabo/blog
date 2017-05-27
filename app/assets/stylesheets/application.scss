@@ -139,6 +139,15 @@ body {
     padding-left: 12px;
 }
 
+.no-display {
+    display: none;
+}
+
+.absolute {
+    position: absolute !important;
+    z-index: 2 !important;
+}
+
 .btn-right {
     float: right;
     vertical-align: top;
@@ -278,6 +287,14 @@ p .pitch {
 
 .marg-top-25 {
     margin-top: 2.5vh !important;
+}
+
+.marg-bot-25 {
+    margin-bottom: 2.5vh !important;
+}
+
+.marg-bot-50 {
+    margin-bottom: 5vh !important;
 }
 
 .marg-bot-0 {

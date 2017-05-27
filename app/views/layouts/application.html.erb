@@ -11,8 +11,7 @@
     <body>
         <%= render 'shared/header' %>
         <% if notice or alert %>
-        <div class="space"></div>
-        <div class="container">
+        <div class="container absolute no-display marg-top-25" id="alert-container">
             <div class="row">
                 <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
                     <% if notice %>
@@ -59,5 +58,13 @@
                 }, 500, 'swing');
             });
         </script>
+
+        <% if notice or alert %>
+            <script>
+                $(document).ready(function() {
+                    $('#alert-container').delay(200).slideDown(200).delay(1600).slideUp(200);
+                });
+            </script>
+        <% end %>
     </body>
 </html>
