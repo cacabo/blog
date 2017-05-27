@@ -90,13 +90,26 @@
                 <div class="line marg-bot-50"></div>
 
                 <% if @article.comments %>
+                    <% @comments = [] %>
+                    <% @hidden_comments = [] %>
+                    <% if @article.comments.size > 5 %>
+                        <% @comments = @article.comments.last(5) %>
+                        <% @hidden_comments = @article.comments.limit(@article.comments.size - 3) %>
+                        <button class='btn btn-secondary btn-sm shade' id="show-all">
+                            See all <%= @article.comments.size %> comments
+                        </button>
+                    <% else %>
+                        <% @comments = @article.comments %>
+                    <% end %>
+
+                    <% if @hidden_comments and @hidden_comments.size > 0 %>
+                        <div class="no-display" id="hidden_comments">
+                            <%= render @hidden_comments, article: @article %>
+                        </div>
+                    <% end %>
                     <div id="comments_<%= @article.id %>">
-                        <%= render @article.comments, article: @article %>
+                        <%= render @comments, article: @article %>
                     </div>
-                <% else %>
-                    <p>
-                        <i>There are no comments on this post yet. Leave one below!</i>
-                    </p>
                 <% end %>
 
                 <div class="space"></div>
@@ -132,3 +145,12 @@
     <div class="space"></div>
 </div>
 <!-- close gray -->
+
+<script>
+    $(document).ready(function() {
+        $('#show-all').click(function() {
+            $(this).hide(200);
+            $('#hidden_comments').slideDown(200);
+        });
+    });
+</script>
