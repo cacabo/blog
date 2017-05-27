@@ -148,6 +148,10 @@ body {
     z-index: 2 !important;
 }
 
+a, a:link, a:visited, a:active {
+    text-decoration: none;
+}
+
 .btn-right {
     float: right;
     vertical-align: top;
@@ -263,6 +267,14 @@ p .pitch {
     box-shadow: 0px 0px 1.25vh rgba(0, 0, 0, 0.15);
 }
 
+.serif {
+    font-family: 'PT Serif', serif;
+}
+
+.sans {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
+}
+
 #error-explanation {
     background-color: #f2dede;
     border-color: #ebcccc;
@@ -356,7 +368,7 @@ p .pitch {
     }
 
     .content,
-    a i,
+    a i.arrow,
     h2 {
         padding: 0 5vh;
         transition: all 0.2s ease;

@@ -17,15 +17,15 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container serif">
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
             <div class="space"></div>
 
             <% if params[:tag] %>
-            <h2 class="title">Listing articles tagged with "<%=params[:tag]%>"</h2>
+            <h2 class="title sans">Listing articles tagged with "<%=params[:tag]%>"</h2>
         <% else %>
-            <h2 class="title">Listing all articles</h2>
+            <h2 class="title sans">Listing all articles</h2>
             <% end %>
 
             <% if current_admin %>
@@ -39,8 +39,8 @@
                 <% if not article.image.nil? and not article.image_file_name.nil? %>
                     <%= image_tag article.image.url(:medium), class: 'img-fluid pad-bot-25' %>
                 <% end %>
-                <h3><%= link_to article.title, article_path(article) %></h3>
-                <p class="time"><%= time_ago_in_words(article.created_at) %>
+                <h3 class="sans"><%= link_to article.title, article_path(article) %></h3>
+                <p class="time sans"><%= time_ago_in_words(article.created_at) %>
                     ago</p>
                 <% if article.tag_list %>
                     <p>

@@ -3,7 +3,7 @@
     <meta description="<%= @article.text %>">
 <head>
 
-<div class="container">
+<div class="container serif">
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             <div class="space"></div>
@@ -14,7 +14,7 @@
 
             <div class="space"></div>
 
-            <h1 class="title">
+            <h1 class="title sans">
                 <%= @article.title %>
             </h1>
 
@@ -26,14 +26,14 @@
                         <% end %>
                         <%= link_to article_path(@article),
                                   method: :delete,
-                                  data: { confirm: 'Are you sure?' } do %>
+                                  data: { confirm: 'Are you sure? The article will be permanantly deleted.' } do %>
                             <button class="btn btn-sm btn-outline-danger">Delete</button>
                         <% end %>
                     </div>
                 <% end %>
             <% end %>
             <div class="empty-spacer"></div>
-            <p class="time inline"><%= time_ago_in_words(@article.created_at) %> ago</p>
+            <p class="time inline sans"><%= time_ago_in_words(@article.created_at) %> ago</p>
             <% if @article.tag_list %>
                 <p class="inline tags">
                     <% @article.tag_list.each do |t| %>
@@ -101,7 +101,7 @@
 
                 <div class="space"></div>
 
-                <h3 class="animate">Join the discussion</h3>
+                <h4 class="animate">Join the discussion</h4>
                 <div class="line animate"></div>
 
                 <%= bootstrap_form_for([@article, @article.comments.new], remote: true) do |f| %>

@@ -5,8 +5,8 @@
         <button class="btn btn-sm btn-outline-danger btn-delete">Delete Comment</button>
         <% end %>
     <% end %>
-    <p class="time"><%= time_ago_in_words(comment.created_at) %> ago</p>
-    <p class="content"><%= comment.content %></p>
+    <p class="time sans"><%= time_ago_in_words(comment.created_at) %> ago</p>
+    <p class="content serif"><%= comment.content %></p>
 </div>
 
 <script>
