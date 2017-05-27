@@ -1,6 +1,11 @@
+<head>
+    <title><%= @article.title %></title>
+    <meta description="<%= @article.text %>">
+<head>
+
 <div class="container">
     <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
             <div class="space"></div>
 
             <% if not @article.image.nil? and not @article.image_file_name.nil? %>
@@ -27,18 +32,20 @@
                     </div>
                 <% end %>
             <% end %>
-            <p class="time"><%= time_ago_in_words(@article.created_at) %> ago</p>
+            <div class="empty-spacer"></div>
+            <p class="time inline"><%= time_ago_in_words(@article.created_at) %> ago</p>
             <% if @article.tag_list %>
-                <p><strong>Tags: &nbsp;</strong>
-                <% @article.tag_list.each do |t| %>
-                    <%= link_to tag_path(t) do %>
-                        <button class="btn btn-outline-primary btn-sm tag"><%= t %></button>
+                <p class="inline tags">
+                    <% @article.tag_list.each do |t| %>
+                        <%= link_to tag_path(t) do %>
+                            <button class="btn btn-outline-primary btn-sm tag"><%= t %></button>
+                        <% end %>
                     <% end %>
-                <% end %>
                 </p>
             <% end %>
-            <div class="line"></div>
+            <div class="line marg-top-0"></div>
 
+<div class="article-wrapper">
             <% @components = @article.text.split(/\n+/) %>
             <% code_enabled = false %>
         <% @components.each do |comp| %><% if comp.start_with?('[IMAGE]') %><% comp.slice! '[IMAGE]' %><img src="<%= comp %>" class="img-fluid"><% elsif comp.start_with?('[CODE]') %><% comp.slice! '[CODE]' %>
@@ -57,34 +64,71 @@
     </div>
 <% else %>
 <p>
-    <%= comp %>
+    <!-- HTML Safe to allow for links, styling -->
+    <%= comp.html_safe %>
 </p>
 <% end %>
 <% end %>
-
-<h3>Comments</h3>
-<div class="line"></div>
-
-<% if @article.comments %>
-    <div id="comments_<%= @article.id %>">
-        <%= render @article.comments, article: @article %>
-    </div>
-<% else %>
-    <p><i>There are no comments on this post yet. Leave one below!</i></p>
-<% end %>
-            <div class="space"></div>
-            <h3>Leave a comment</h3>
-            <div class="line"></div>
-            <%= bootstrap_form_for([@article, @article.comments.new], remote: true) do |f| %>
-                <p><%= f.text_field :name, placeholder: 'Your name' %></p>
-                <p><%= f.text_area :content, placeholder: 'Add a comment...' %></p>
-                <p><%= f.submit %></p>
-            <% end %>
-
-            <br>
-            <%= link_to articles_path do %>
-                <button class="btn btn-outline-primary btn-sm"><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to all articles</button>
-            <% end %>
-        </div>
-    </div>
 </div>
+
+<div class="space"></div>
+
+        </div>
+        <!-- close col -->
+    </div>
+    <!-- close row -->
+</div>
+<!-- close container -->
+
+<div class="gray no-pad">
+    <div class="space pad-top-100"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+
+                <h4>Responses</h4>
+                <div class="line"></div>
+
+                <% if @article.comments %>
+                    <div id="comments_<%= @article.id %>">
+                        <%= render @article.comments, article: @article %>
+                    </div>
+                <% else %>
+                    <p>
+                        <i>There are no comments on this post yet. Leave one below!</i>
+                    </p>
+                <% end %>
+
+                <div class="space"></div>
+
+                <h3 class="animate">Join the discussion</h3>
+                <div class="line animate"></div>
+
+                <%= bootstrap_form_for([@article, @article.comments.new], remote: true) do |f| %>
+                    <p><%= f.text_field :name, placeholder: 'Your name', class: 'shade' %></p>
+                    <p><%= f.text_area :content, placeholder: 'Add a comment...', class: 'shade' %></p>
+                    <%= button_tag(type: 'submit', class: "btn btn-secondary shade marg-top-25") do %>
+                        Post response
+                    <% end %>
+                <% end %>
+
+                <div class="space"></div>
+                <div class="space"></div>
+
+                <%= link_to articles_path do %>
+                    <button class="btn btn-outline-primary btn-sm">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                        &nbsp;Back to all articles
+                    </button>
+                <% end %>
+
+            </div>
+            <!-- close col -->
+        </div>
+        <!-- close row -->
+    </div>
+    <!-- close container -->
+
+    <div class="space"></div>
+</div>
+<!-- close gray -->

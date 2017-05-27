@@ -34,6 +34,10 @@ body {
     border-bottom: 1px solid rgba(0, 0, 0, .15);
 }
 
+.navbar-text {
+    padding: 0 !important;
+}
+
 .navbar-toggler {
     height: 55px;
     display: table-cell;
@@ -62,6 +66,10 @@ body {
 .navbar-toggler:visited {
     border: 0 solid transparent !important;
     outline: 0 !important;
+}
+
+.nav-link {
+    margin-bottom: 0;
 }
 
 .navbar-toggler {
@@ -108,7 +116,7 @@ body {
 .navbar-space {
     display: block;
     width: 100%;
-    height: 50px;
+    height: 55px;
 }
 // useful classes for general use
 
@@ -116,6 +124,12 @@ body {
     display: block;
     width: 100%;
     height: 5vh;
+}
+
+.empty-spacer {
+    display: block;
+    width: 100%;
+    height: 0;
 }
 
 .quote {
@@ -161,9 +175,17 @@ label {
     border-radius: 22px;
 }
 
+.tags {
+    padding-left: 2.5vh;
+}
+
 .time {
     color: #666666;
     font-style: italic;
+}
+
+.inline {
+    display: inline-block;
 }
 
 .collapser,
@@ -183,6 +205,10 @@ label {
 
 .title {
     display: inline-block;
+}
+
+.article-wrapper {
+    font-size: 125%;
 }
 
 p .pitch {
@@ -221,7 +247,11 @@ p .pitch {
     width: 100%;
     margin: 2.5vh 0;
     height: 1px;
-    background: #eee;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.shade {
+    box-shadow: 0px 0px 1.25vh rgba(0, 0, 0, 0.15);
 }
 
 #error-explanation {
@@ -242,6 +272,22 @@ p .pitch {
     padding: 0 !important;
 }
 
+.marg-top-0 {
+    margin-top: 0 !important;
+}
+
+.marg-top-25 {
+    margin-top: 2.5vh !important;
+}
+
+.marg-bot-0 {
+    margin-bottom: 0 !important;
+}
+
+.pad-bot-0 {
+    padding-bottom: 0 !important;
+}
+
 .pad-bot-25 {
     padding-bottom: 2.5vh !important;
 }
@@ -256,6 +302,10 @@ p .pitch {
 
 .pad-bot-100 {
     padding-bottom: 10vh !important;
+}
+
+.pad-top-0 {
+    padding-top: 0 !important;
 }
 
 .pad-top-25 {
