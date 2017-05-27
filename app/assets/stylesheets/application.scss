@@ -194,6 +194,10 @@ p .pitch {
     cursor: hand;
 }
 
+.border-bot {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 .buttons {
     margin: 0 auto;
     text-align: center;
@@ -283,7 +287,7 @@ p .pitch {
     img {
         padding-bottom: 2.5vh;
     }
-    
+
     .content,
     a i,
     h2 {
@@ -352,6 +356,11 @@ p .pitch {
 #landscape {
     background-image: image-url('landscape.svg');
 }
+
+#blog {
+    background-image: image-url('blog.svg');
+}
+
 // secondary navigation
 .nav-sub {
     padding: 0.5rem 1rem;
@@ -365,7 +374,7 @@ p .pitch {
         text-align: center;
     }
 
-    a {
+    a, p {
         display: inline-block;
         color: rgba(0, 0, 0, 0.5);
         padding: 0.75rem;

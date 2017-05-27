@@ -1,16 +1,38 @@
+<head>
+    <title>Cameron Cabo | Blog</title>
+    <meta name="description" content="My personal blog where I talk about my thoughts, projects, and interests.">
+</head>
+
+<div class="bg pad-top-25 pad-bot-0 border-bot" id="blog">
+    <div class="container">
+        <div class="space"></div>
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+                <h1 class="title pad-bot-25">Welcome to my blog.</h1>
+                <p class="pitch pad-bot-50">I'm a driven learner, freelance web developer, and product builder&mdash; passionate for entrepreneurship, user experience, analytics, and marketing.
+                    <br><br>
+                    I study computer science, business analytics, and management of entrepreneurship in the Jerome Fisher Program at the University of Pennsylvania. When not at school, I live in Los Angeles.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+            <div class="space"></div>
+
             <% if params[:tag] %>
-                <h1 class="title">Listing articles tagged with "<%=params[:tag]%>"</h1>
-            <% else %>
-                <h1 class="title">Listing Articles</h1>
+            <h2 class="title">Listing articles tagged with "<%=params[:tag]%>"</h2>
+        <% else %>
+            <h2 class="title">Listing all articles</h2>
             <% end %>
 
             <% if current_admin %>
-                <%= link_to new_article_path do %>
-                    <button class="btn btn-outline-primary btn-sm btn-right">New article</button>
-                <% end %>
+            <%= link_to new_article_path do %>
+            <button class="btn btn-outline-primary btn-sm btn-right">New article</button>
+            <% end %>
             <% end %>
 
             <% @articles.each do |article| %>
@@ -19,27 +41,33 @@
                     <%= image_tag article.image.url(:medium), class: 'img-fluid pad-bot-25' %>
                 <% end %>
                 <h3><%= link_to article.title, article_path(article) %></h3>
-                <p class="time"><%= time_ago_in_words(article.created_at) %> ago</p>
+                <p class="time"><%= time_ago_in_words(article.created_at) %>
+                    ago</p>
                 <% if article.tag_list %>
-                    <p><strong>Tags: &nbsp;</strong>
-                    <% article.tag_list.each do |t| %>
-                        <%= link_to tag_path(t) do %>
-                            <button class="btn btn-outline-primary btn-sm tag"><%= t %></button>
+                    <p>
+                        <strong>Tags: &nbsp;</strong>
+                        <% article.tag_list.each do |t| %>
+                            <%= link_to tag_path(t) do %>
+                                <button class="btn btn-outline-primary btn-sm tag"><%= t %></button>
+                            <% end %>
                         <% end %>
-                    <% end %>
                     </p>
                 <% end %>
                 <p><%= article.text[0...100] + '...' %></p>
             <% end %>
 
             <% if params[:tag] %>
-                <%= link_to articles_path do %>
-                    <button class="btn btn-outline-primary btn-sm"><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to all articles</button>
-                <% end %>
-            <% else %>
-                <%= link_to root_path do %>
-                    <button class="btn btn-outline-primary btn-sm"><i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to home</button>
-                <% end %>
+            <%= link_to articles_path do %>
+            <button class="btn btn-outline-primary btn-sm">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                &nbsp;Back to all articles</button>
+            <% end %>
+        <% else %>
+            <%= link_to root_path do %>
+            <button class="btn btn-outline-primary btn-sm">
+                <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                &nbsp;Back to home</button>
+            <% end %>
             <% end %>
         </div>
     </div>

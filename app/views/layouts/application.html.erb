@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cameron Cabo</title>
         <%= csrf_meta_tags %>
 
         <script src="https://use.fontawesome.com/297cffcc6b.js"></script>
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     </head>
 
     <body>
@@ -44,6 +42,7 @@
         <%= render 'shared/footer' %>
 
         <!-- smoothscroll: https://stackoverflow.com/questions/4198041/jquery-smooth-scroll-to-an-anchor -->
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
         <script>
             $(".scroll").click(function (event) {
                 event.preventDefault();
