@@ -42,18 +42,15 @@
                 <h3 class="sans inline"><%= link_to article.title, article %></h3>
                 <p class="time sans inline float-right"><%= time_ago_in_words(article.created_at) %>
                     ago</p>
-                <p>
+                <p class="bigger">
                     <% if article.text %>
                         <% if article.text.length > 100 %>
                             <%= article.text[0...100] + '...' %>
                             <%= link_to article do %>
-                                <i class="time">see full post.</i>
+                                <i class="time">click to read the full post.</i>
                             <% end %>
                         <% else %>
                             <%= article.text %>
-                            <%= link_to article do %>
-                                <i class="time"> See full post.</i>
-                            <% end %>
                         <% end %>
                     <% end %>
                 </p>
