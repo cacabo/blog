@@ -127,6 +127,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+    pg (0.20.0-x86-mingw32)
     prism-rails (1.6.0.3)
       railties (>= 4.2, < 6)
     public_suffix (2.0.5)
@@ -225,6 +226,7 @@ DEPENDENCIES
   jquery-rails
   mail_form
   paperclip (~> 5.0.0)
+  pg
   prism-rails
   puma (~> 3.7)
   rails (~> 5.1.1)
@@ -236,6 +238,9 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
+
+RUBY VERSION
+   ruby 2.3.3p222
 
 BUNDLED WITH
    1.13.7
