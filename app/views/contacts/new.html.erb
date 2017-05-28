@@ -1,0 +1,24 @@
+<div class="gray">
+    <div class="space pad-top-50"></div>
+    <div class="container">
+        <div class="row pad-top-25 pad-bot-25">
+            <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 bubble">
+                <h2>Contact me</h2>
+                <div class="line"></div>
+                <div class="content">
+                    <%= bootstrap_form_for @contact do |f| %>
+                        <%= f.text_field :name, required: true %>
+                        <%= f.email_field :email, required: true %>
+                        <%= f.text_area :message, required: true %>
+                        <div class="no-display">
+                            <%= f.text_field :nickname, hint: 'leave this field blank' %>
+                        </div>
+
+                        <%= f.submit 'Send message', class: 'btn btn-secondary' %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+</div>

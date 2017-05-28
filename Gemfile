@@ -38,6 +38,7 @@ gem "paperclip", "~> 5.0.0"
 gem 'aws-sdk', '~> 2.3.0'
 gem 'prism-rails'
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
+gem 'mail_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

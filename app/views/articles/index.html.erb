@@ -10,7 +10,7 @@
             <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
                 <h1 class="title pad-bot-25">Welcome to my blog.</h1>
                 <p class="pitch pad-bot-50">
-                    Here I write about my thoughts, projects, and interests. Please read, enjoy, and, if you want, give your input by <%= link_to 'reaching out', contact_path %> or leaving a comment.
+                    Here I write about my thoughts, projects, and interests. Please read, enjoy, and, if you want, give your input by <%= link_to 'reaching out', new_contact_path %> or leaving a comment.
                 </p>
             </div>
         </div>
@@ -39,12 +39,13 @@
                 <% if not article.image.nil? and not article.image_file_name.nil? %>
                     <%= image_tag article.image.url(:medium), class: 'img-fluid pad-bot-25' %>
                 <% end %>
-                <h3 class="sans"><%= link_to article.title, article_path(article) %></h3>
-                <p class="time sans"><%= time_ago_in_words(article.created_at) %>
+                <h3 class="sans inline"><%= link_to article.title, article_path(article) %></h3>
+                <p class="time sans inline float-right"><%= time_ago_in_words(article.created_at) %>
                     ago</p>
+                <p><%= article.text[0...100] + '...' %></p>
+                <div class="empty-spacer"></div>
                 <% if article.tag_list %>
                     <p>
-                        <strong>Tags: &nbsp;</strong>
                         <% article.tag_list.each do |t| %>
                             <%= link_to tag_path(t) do %>
                                 <button class="btn btn-outline-primary btn-sm tag"><%= t %></button>
@@ -52,8 +53,8 @@
                         <% end %>
                     </p>
                 <% end %>
-                <p><%= article.text[0...100] + '...' %></p>
             <% end %>
+            <div class="line"></div>
 
             <div class="space"></div>
 
@@ -65,7 +66,7 @@
                 <% end %>
             <% else %>
                 <%= link_to root_path do %>
-                    <button class="btn btn-outline-primary btn-sm">
+                    <button class="btn btn-outline-primary btn-sm marg-bot-25">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     &nbsp;Back to home</button>
                 <% end %>
@@ -74,4 +75,4 @@
     </div>
 </div>
 
-<div class="space pad-bot-25"></div>
+<div class="space"></div>
