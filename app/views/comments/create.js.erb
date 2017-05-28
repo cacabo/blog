@@ -1,2 +1,4 @@
 $('#comments_<%= @article.id %>').append("<%=j render 'comments/comment', article: @article, comment: @comment %>");
-$('#comment_content_<%= @article.id %>').val('')
+$('#comment_name').val('');
+$('#comment_content').val('');
+$('#show-all').html('See all <%= @article.comments.size %> comments');

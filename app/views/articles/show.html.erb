@@ -62,6 +62,12 @@
     <div class="quote">
         <%= comp.html_safe %>
     </div>
+<% elsif comp.start_with?('[LINE]') %>
+    <div class="line"></div>
+<% elsif comp.start_with?('[DASH]') %>
+    <div class="col-2 push-5 dash"></div>
+<% elsif comp.start_with?('[SPACE]') %>
+    <div class="space"></div>
 <% else %>
 <p>
     <!-- HTML Safe to allow for links, styling -->
@@ -118,8 +124,8 @@
                 <div class="line animate"></div>
 
                 <%= bootstrap_form_for([@article, @article.comments.new], remote: true) do |f| %>
-                    <p><%= f.text_field :name, placeholder: 'Your name', class: 'shade' %></p>
-                    <p><%= f.text_area :content, placeholder: 'Add a comment...', class: 'shade' %></p>
+                    <p><%= f.text_field :name, placeholder: 'Your name', class: 'shade', id: 'comment_name', required: true %></p>
+                    <p><%= f.text_area :content, placeholder: 'Add a comment...', class: 'shade no-scroll animate min-3', id: 'comment_content', required: true %></p>
                     <%= button_tag(type: 'submit', class: "btn btn-secondary shade marg-top-25") do %>
                         Post response
                     <% end %>
@@ -152,5 +158,10 @@
             $(this).hide(200);
             $('#hidden_comments').slideDown(200);
         });
+    });
+
+    $('textarea').autogrow({
+        vertical: true,
+        horizontal: false
     });
 </script>

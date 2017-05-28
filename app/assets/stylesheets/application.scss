@@ -263,6 +263,13 @@ p .pitch {
     background: rgba(0, 0, 0, 0.15);
 }
 
+.dash {
+    margin: 2.5vh 0;
+    height: 1px;
+    padding: 0;
+    border-top: 3px dashed rgba(0, 0, 0, 0.3);
+}
+
 .shade {
     box-shadow: 0px 0px 1.25vh rgba(0, 0, 0, 0.15);
 }
@@ -566,13 +573,14 @@ footer p {
     padding: 1vh 5vw;
     width: 100%;
     background: #00264d;
+    min-height: 34px;
 }
 
 .footer-bottom p {
     padding: 0;
     margin: 0;
     width: 100%;
-    text-align: right;
+    text-align: left;
     color: gray;
 }
 
