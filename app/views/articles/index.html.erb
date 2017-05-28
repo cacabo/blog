@@ -39,10 +39,24 @@
                 <% if not article.image.nil? and not article.image_file_name.nil? %>
                     <%= image_tag article.image.url(:medium), class: 'img-fluid pad-bot-25' %>
                 <% end %>
-                <h3 class="sans inline"><%= link_to article.title, article_path(article) %></h3>
+                <h3 class="sans inline"><%= link_to article.title, article %></h3>
                 <p class="time sans inline float-right"><%= time_ago_in_words(article.created_at) %>
                     ago</p>
-                <p><%= article.text[0...100] + '...' %></p>
+                <p>
+                    <% if article.text %>
+                        <% if article.text.length > 100 %>
+                            <%= article.text[0...100] + '...' %>
+                            <%= link_to article do %>
+                                <i class="time">see full post.</i>
+                            <% end %>
+                        <% else %>
+                            <%= article.text %>
+                            <%= link_to article do %>
+                                <i class="time"> See full post.</i>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </p>
                 <div class="empty-spacer"></div>
                 <% if article.tag_list %>
                     <p>
