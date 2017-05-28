@@ -143,6 +143,10 @@ body {
     display: none;
 }
 
+.min-height-60 {
+    min-height: 60vh;
+}
+
 .absolute {
     position: absolute !important;
     z-index: 2 !important;
