@@ -48,6 +48,7 @@ gem 'aws-sdk', '~> 2.3.0'
 gem 'prism-rails'
 gem 'acts-as-taggable-on', github: 'mbleigh/acts-as-taggable-on'
 gem 'mail_form'
+gem 'sendgrid-ruby'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
