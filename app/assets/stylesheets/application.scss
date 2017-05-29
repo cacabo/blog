@@ -236,6 +236,14 @@ p .pitch {
     font-size: 250%;
 }
 
+.blue-backer {
+    background-image: image-url('blue.svg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .btn {
     cursor: pointer;
     cursor: hand;
@@ -262,6 +270,7 @@ p .pitch {
 .gray {
     background: whitesmoke;
     padding: 0 2.5vw;
+    z-index: -2;
 }
 
 .line {
