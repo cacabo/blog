@@ -100,7 +100,7 @@
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble">
                 <a data-toggle="collapse" href="#technologies-content" aria-expanded="true" class="collapser">
                     <h2 class="title">Technologies</h2>
-                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
                 </a>
                 <div class="line"></div>
                 <div class="collapse show content" id="technologies-content">
@@ -448,3 +448,12 @@
     <!-- close container -->
 </div>
 <!-- close gray -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.collapser').click(function() {
+            var $icon = $(this).find('i');
+            $icon.toggleClass('rotate');
+        });
+    });
+</script>
