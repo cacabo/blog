@@ -1,0 +1,111 @@
+.browser-top {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-width: 1px 1px 0px 1px;
+    background: whitesmoke;
+    border-radius: 8px 8px 0px 0px;
+    text-align: left;
+}
+
+.search-bar {
+    margin: 0.5rem;
+    background: white;
+    height: 1.5rem;
+    width: 50%;
+    border-radius: 0.375rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 0.125rem;
+    cursor: text;
+
+    i {
+        font-size: 1rem;
+        vertical-align: top;
+        padding-left: 0.25rem;
+        color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+
+.circle-wrapper {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 0.25rem;
+    display: inline-block;
+    padding: 0.125rem;
+    vertical-align: bottom;
+}
+
+.circle {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 100%;
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.circles {
+    display: inline-block;
+    float: right;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+#green:hover {
+    background: green;
+}
+
+#yellow:hover {
+    background: yellow;
+}
+
+#red:hover {
+    background: red;
+}
+
+.browser {
+    // gradient
+    background: white;
+    background: -webkit-linear-gradient(white, white, rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, white, rgba(0, 0, 0, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, white, rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, white, rgba(0, 0, 0, 0)); /* Standard syntax */
+
+    // border
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-image:
+      -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.15)), to(#f6f7f8)) 1;
+    -webkit-border-image:
+      -webkit-linear-gradient(rgba(0, 0, 0, 0.15), #f6f7f8) 1;
+    -moz-border-image:
+      -moz-linear-gradient(rgba(0, 0, 0, 0.15), #f6f7f8) 1;
+    -o-border-image:
+      -o-linear-gradient(rgba(0, 0, 0, 0.15), #f6f7f8) 1;
+    border-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.15), #f6f7f8) 1;
+
+    // additional styling
+    padding: 5vh 5vw;
+}
+
+.browser-top {
+    .icons {
+        padding: .5rem;
+        display: inline-block;
+
+        i {
+            font-size: 1.5rem;
+            margin: 0rem 0.125rem;
+            color: rgba(0, 0, 0, 0.3);
+            vertical-align: bottom;
+            cursor: pointer;
+            cursor: hand;
+        }
+
+        i:hover {
+            color: rgba(0, 0, 0, 0.5);
+        }
+    }
+}

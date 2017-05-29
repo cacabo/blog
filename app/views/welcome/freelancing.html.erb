@@ -1,0 +1,91 @@
+<div class="background-wrapper no-pad">
+    <div class="navbar-space gray"></div>
+    <div class="space gray"></div>
+    <div class="gray h-40"></div>
+    <div class="gray h-40 full-width curve no-pad"></div>
+</div>
+<div class="space"></div>
+<div class="container">
+    <!-- browser -->
+    <div class="row">
+        <div class="container">
+            <div class="col-12">
+                <div class="browser-top">
+                    <div class="icons">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        <i class="fa fa-refresh" aria-hidden="true"></i>
+                    </div>
+                    <div class="search-bar">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </div>
+                    <div class="circles">
+                        <div class="circle-wrapper">
+                            <div class="circle" id="green"></div>
+                        </div>
+                        <div class="circle-wrapper">
+                            <div class="circle" id="yellow"></div>
+                        </div>
+                        <div class="circle-wrapper">
+                            <div class="circle" id="red"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="browser">
+                    <h1 class="title">Let's build something.</h1>
+                    <p class="bigger">
+                        I'm a web developer passionate for beautiful, well-planned, well-built, and well-used products. Whatever you are imagining, drawing up, building, or growing, I'd love to hear about it. Scroll through my work and take the time to <%= link_to 'reach out', new_contact_path %>, it can go a long way.
+                    </p>
+                    <div class="space"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1">
+            <!-- cards -->
+            <div class="row no-pad">
+                <!-- your timeline -->
+                <div class="col-12 col-lg-4 pad-all-25">
+                    <div class="card no-border shade-hover">
+                        <div class="card-block">
+                            <%= image_tag 'crossplatform.svg', class: 'img-fluid' %>
+                            <p class="pad-top-25">
+                                <strong>Your timeline, your vision</strong>
+                            </p>
+                            <p>
+                                Completely personalized development to your budget, time-frame, and specifications. Be as involved in the development process as you need.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- full-process development -->
+                <div class="col-12 col-lg-4 pad-all-25">
+                    <div class="card no-border shade-hover">
+                        <div class="card-block">
+                            <%= image_tag 'crossplatform.svg', class: 'img-fluid' %>
+                            <p class="pad-top-25">
+                                <strong>Full-process development</strong>
+                            </p>
+                            <p>I'll work from drafting to long-term, iterative implementation. I'll refine the site until it is optimized and bug-free. I'm an effective and rapid communicator who will ensure your input is built into the final product.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- cross-platform -->
+                <div class="col-12 col-lg-4 pad-all-25">
+                    <div class="card no-border shade-hover">
+                        <div class="card-block">
+                            <%= image_tag 'crossplatform.svg', class: 'img-fluid' %>
+                            <p class="pad-top-25">
+                                <strong>Cross-platform</strong>
+                            </p>
+                            <p>Sites built for diverse users across many use cases. Get the most out of each visit with mobile first development and responsively built software.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="space"></div>
