@@ -1,11 +1,11 @@
 <div class="background-wrapper no-pad">
-    <div class="navbar-space gray"></div>
-    <div class="space gray"></div>
-    <div class="gray h-40"></div>
-    <div class="gray h-40 full-width curve no-pad"></div>
+    <div class="navbar-space blue"></div>
+    <div class="space blue"></div>
+    <div class="blue" id="background"></div>
+    <div class="blue h-40 full-width curve no-pad"></div>
 </div>
 <div class="space"></div>
-<div class="container">
+<div class="container pad-top-25">
     <!-- browser -->
     <div class="row">
         <div class="container">
@@ -34,18 +34,17 @@
                 <div class="browser">
                     <h1 class="title">Let's build something.</h1>
                     <p class="bigger">
-                        I'm a web developer passionate for beautiful, well-planned, well-built, and well-used products. Whatever you are imagining, drawing up, building, or growing, I'd love to hear about it. Scroll through my work and take the time to <%= link_to 'reach out', new_contact_path %>, it can go a long way.
+                        I'm a web developer passionate for beautiful, well-planned, well-built, and well-used products. Whatever you are imagining, drawing up, building, or growing, I'd love to hear about it. Scroll through my work and take the time to <%= link_to 'reach out', new_contact_path %>&mdash;it can go a long way.
                     </p>
                     <div class="space"></div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="space"></div>
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1">
             <!-- cards -->
-            <div class="row no-pad">
+            <div class="row no-pad cards">
                 <!-- your timeline -->
                 <div class="col-12 col-lg-4 pad-all-25">
                     <div class="card no-border shade-hover">
@@ -89,3 +88,16 @@
     </div>
 </div>
 <div class="space"></div>
+
+<script type="text/javascript">
+    var size_bg = function() {
+        var h = $('.cards').offset().top;
+        console.log("Offset of cards: " + h);
+        h -= $('.curve').height() * 0.75;
+        console.log("New height: " + h);
+        $('#background').height(h);
+    }
+
+    $(document).ready(size_bg());
+    $(window).resize(size_bg());
+</script>

@@ -276,6 +276,11 @@ p .pitch {
     z-index: -2;
 }
 
+.blue {
+    background: #e6f7ff;
+    z-index: -2;
+}
+
 .white {
     background: white;
 }
@@ -296,6 +301,10 @@ p .pitch {
 
 .shade {
     box-shadow: 0px 0px 1.25vh rgba(0, 0, 0, 0.15);
+}
+
+.shade-top {
+    box-shadow: 0px -2.5px 1vh rgba(0, 0, 0, 0.15);
 }
 
 .shade-hover {
@@ -326,7 +335,6 @@ p .pitch {
 
 .curve {
     border-radius: 0 0 100% 100%;
-    background: whitesmoke;
 }
 
 #error-explanation {

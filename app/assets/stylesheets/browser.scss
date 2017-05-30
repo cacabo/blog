@@ -3,8 +3,12 @@
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-width: 1px 1px 0px 1px;
     background: whitesmoke;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 0.25rem 0.25rem 0px 0px;
     text-align: left;
+}
+
+.round {
+    border-radius: 0.25rem 0.25rem 0px 0px;
 }
 
 .search-bar {
@@ -19,6 +23,14 @@
     padding: 0.125rem;
     cursor: text;
 
+    @media screen and (max-width: 460px) {
+        width: 50%;
+    }
+
+    @media screen and (min-width: 461px) and (max-width: 545px) {
+        width: 30%;
+    }
+
     i {
         font-size: 1rem;
         vertical-align: top;
@@ -32,7 +44,7 @@
 .circle-wrapper {
     height: 1.5rem;
     width: 1.5rem;
-    margin-left: 0.25rem;
+    margin-left: 0.125rem;
     display: inline-block;
     padding: 0.125rem;
     vertical-align: bottom;
@@ -67,24 +79,24 @@
 .browser {
     // gradient
     background: white;
-    background: -webkit-linear-gradient(white, white, rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(white, white, rgba(0, 0, 0, 0)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(white, white, rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(white, white, rgba(0, 0, 0, 0)); /* Standard syntax */
+    background: -webkit-linear-gradient(white, white, white, rgba(0, 0, 0, 0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, white, white, rgba(0, 0, 0, 0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, white, white, rgba(0, 0, 0, 0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, white, white, rgba(0, 0, 0, 0)); /* Standard syntax */
 
     // border
     border-width: 1px;
     border-style: solid;
     -webkit-border-image:
-      -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.15)), to(#f6f7f8)) 1;
+      -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0, 0, 0, 0.15)), to(#e6f7ff)) 1;
     -webkit-border-image:
-      -webkit-linear-gradient(rgba(0, 0, 0, 0.15), #f6f7f8) 1;
+      -webkit-linear-gradient(rgba(0, 0, 0, 0.15), #e6f7ff) 1;
     -moz-border-image:
-      -moz-linear-gradient(rgba(0, 0, 0, 0.15), #f6f7f8) 1;
+      -moz-linear-gradient(rgba(0, 0, 0, 0.15), #e6f7ff) 1;
     -o-border-image:
-      -o-linear-gradient(rgba(0, 0, 0, 0.15), #f6f7f8) 1;
+      -o-linear-gradient(rgba(0, 0, 0, 0.15), #e6f7ff) 1;
     border-image:
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.15), #f6f7f8) 1;
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.15), #e6f7ff) 1;
 
     // additional styling
     padding: 5vh 5vw;
@@ -94,6 +106,10 @@
     .icons {
         padding: .5rem;
         display: inline-block;
+
+        @media screen and (max-width: 460px) {
+            display: none;
+        }
 
         i {
             font-size: 1.5rem;
