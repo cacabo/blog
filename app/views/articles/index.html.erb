@@ -42,6 +42,7 @@
                 <h3 class="sans inline"><%= link_to article.title, article %></h3>
                 <p class="time sans inline float-right"><%= time_ago_in_words(article.created_at) %>
                     ago</p>
+                <div class="empty-spacer"></div>
                 <p class="bigger">
                     <% if article.text %>
                         <% if article.text.length > 100 %>
