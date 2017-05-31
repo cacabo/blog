@@ -1,5 +1,7 @@
-$bg: #004080;
-$bot: #00264d;
+// $bg: #004080;
+$bg: #1a8cff;
+// $bot: #00264d;
+$bot: #0b4074;
 $font: white;
 
 // formatting for the footer
@@ -7,6 +9,10 @@ footer {
     padding: 2.5vh 5vw;
     width: 100%;
     background: $bg;
+    background: -webkit-linear-gradient(left top, #1a8cff, #1059a2);
+    background: -o-linear-gradient(bottom right, #1a8cff, #1059a2);
+    background: -moz-linear-gradient(bottom right, #1a8cff, #1059a2);
+    background: linear-gradient(to bottom right, #1a8cff, #1059a2);
     color: $font;
 }
 
