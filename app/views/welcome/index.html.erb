@@ -5,12 +5,19 @@
 <div class="container bg pad-top-25 pad-bot-100" id="landscape">
     <div class="space"></div>
     <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-            <h1 class="title pad-bot-25">Hi! I'm Cameron.</h1>
-            <p class="pitch pad-bot-50">I'm a driven learner, freelance web developer, and product builder&mdash; passionate for entrepreneurship, user experience, analytics, and marketing.
-                <br><br>
-                I study computer science, business analytics, and management of entrepreneurship in the Jerome Fisher Program at the University of Pennsylvania. When not at school, I live in Los Angeles.
-            </p>
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <div class="row no-pad">
+                <div class="col-6 push-3 col-sm-3 push-sm-0 marg-bot-50">
+                    <%= image_tag 'cameron.png', class: 'img-fluid' %>
+                </div>
+                <div class="col-12 col-sm-9">
+                    <h1 class="title pad-bot-25">Hi! I'm Cameron.</h1>
+                    <p class="pitch pad-bot-25">I'm a driven learner, freelance web developer, and product builder&mdash; passionate for entrepreneurship, user experience, analytics, and marketing.
+                        <br><br>
+                        I study computer science, business analytics, and management of entrepreneurship in the Jerome Fisher Program at the University of Pennsylvania. When not at school, I live in Los Angeles.
+                    </p>
+                </div>
+            </div>
             <div class="buttons">
                 <%= link_to projects_path do %>
                 <button class="btn btn-outline-primary">View my projects</button>
@@ -141,7 +148,7 @@
                             for domain name management.</li>
                         <li>
                             <strong>CSS3, Sass:</strong>
-                            &nbsp; media queries for mobile-first development, CSS transitions for dynamic, engaging UX. Preprocessor used for more efficient and modular  development.</li>
+                            &nbsp; media queries for mobile-first development, CSS transitions for dynamic, engaging UX. Preprocessor used for more efficient and modular development.</li>
                         <li>
                             <strong>Javascript/jQuery:</strong>
                             &nbsp;writting object oriented and functional programs to keep track of web application state and make sites more interactive.</li>
@@ -304,8 +311,7 @@
                                 <%= image_tag "beacon.png", class: "img-fluid" %>
                             </div>
                             <div class="col-12">
-                                <p class="time full-width">
-                                </p>
+                                <p class="time full-width"></p>
                                 <p>
                                     Conducted web design and content updates, photo simulations in Photoshop, statistics, and site research. My work generated enough demonstrated interest to ensure the school would open by their scheduled date.
                                 </p>
@@ -452,8 +458,8 @@
 <!-- close gray -->
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $('.collapser').click(function() {
+    $(document).ready(function () {
+        $('.collapser').click(function () {
             var $icon = $(this).find('i');
             $icon.toggleClass('rotate');
         });
