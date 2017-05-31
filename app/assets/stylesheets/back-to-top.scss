@@ -1,11 +1,21 @@
-.back-to-top {
+.back-to-top-fixed {
     position: fixed;
-    right: 0;
     bottom: 0;
+}
+
+.back-to-top-absolute {
+    position: absolute;
+    -ms-transform: translateY(-92.8px); /* IE 9 */
+    -webkit-transform: translateY(-92.8px); /* Safari */
+    transform: translateY(-92.8px);
+}
+
+.back-to-top {
     padding: 18px;
     z-index: 5;
     color: rgb(100, 100, 100) !important;
     text-decoration: none !important;
+    right: 0;
 
     h3, a, i {
         color: rgb(100, 100, 100) !important;

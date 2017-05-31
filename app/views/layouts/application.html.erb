@@ -30,15 +30,6 @@
         </div>
         <% end %>
 
-        <div class="back-to-top">
-            <a class="scroll" href="#start">
-                <h3>
-                    <span class="no-display-mobile">Back to top &nbsp;</span>
-                    <i class="fa fa-angle-double-up"></i>
-                </h3>
-            </a>
-        </div>
-
         <%= yield %>
         <%= render 'shared/footer' %>
 
@@ -57,6 +48,25 @@
                 $('html,body').animate({
                     scrollTop: dest
                 }, 500, 'swing');
+            });
+
+            function positionBack() {
+                var bot = $(window).scrollTop() + $(window).height();
+                var foot = $('footer').offset().top;
+                if (bot >= foot) {
+                    $('#back').removeClass('back-to-top-fixed');
+                    $('#back').addClass('back-to-top-absolute');
+                } else {
+                    $('#back').addClass('back-to-top-fixed');
+                    $('#back').removeClass('back-to-top-absolute');
+                }
+            }
+
+            $(window).scroll(function() {
+                positionBack();
+            });
+            $(window).resize(function() {
+                positionBack();    
             });
         </script>
 

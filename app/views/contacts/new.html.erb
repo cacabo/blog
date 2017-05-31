@@ -41,10 +41,17 @@
 </div>
 
 <script type="text/javascript">
-    $(document).ready(function() {
+    function sizeBlue() {
         var $b = $('.blue-backer');
         var h = $('#separator').offset().top + 1;
         $b.css('height', h);
+    }
+    $(document).ready(function() {
+        sizeBlue();
+    });
+
+    $(window).resize(function() {
+        sizeBlue();
     });
 
     $('textarea').autogrow({

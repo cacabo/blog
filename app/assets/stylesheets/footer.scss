@@ -1,20 +1,24 @@
+$bg: #004080;
+$bot: #00264d;
+$font: white;
+
 // formatting for the footer
 footer {
     padding: 2.5vh 5vw;
     width: 100%;
-    background: #004080;
-    color: white;
+    background: $bg;
+    color: $font;
 }
 
 footer a {
     transition: all 0.25s ease;
-    color: white;
+    color: $font;
 }
 
 footer a:active,
 footer a:hover,
 footer a:visited {
-    color: white;
+    color: $font;
     text-decoration: none;
 }
 
@@ -41,7 +45,7 @@ footer .links li .last {
 
 footer .social {
     float: right;
-    color: white;
+    color: $font;
     padding: 1.25vh 0;
 }
 
@@ -54,7 +58,7 @@ footer .social li.spacer {
 
 footer .social li.icon {
     border-radius: 100%;
-    border: 2px solid white;
+    border: 2px solid $font;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -70,18 +74,18 @@ footer .social li i {
 }
 
 footer .social li.icon:hover {
-    background: white;
+    background: $font;
 }
 
 footer .social li.icon:hover i {
-    color: #004080;
+    color: $bg;
 }
 
 .footer-line {
     margin: 0;
     height: 2px;
     width: 100%;
-    background: white;
+    background: $font;
 }
 
 footer p {
@@ -91,7 +95,7 @@ footer p {
 .footer-bottom {
     padding: 1vh 5vw;
     width: 100%;
-    background: #00264d;
+    background: $bot;
     min-height: 34px;
 }
 
@@ -101,13 +105,4 @@ footer p {
     width: 100%;
     text-align: left;
     color: gray;
-}
-
-.footer-bottom a {
-    color: #0059b3;
-    transition: all 0.25s ease;
-}
-
-.footer-bottom a:hover {
-    color: #0066cc;
 }
