@@ -40,17 +40,18 @@
                     <div class="browser">
                         <h1 class="title">Let's build something.</h1>
                         <p class="bigger">
-                            I'm a web developer passionate for beautiful, well-planned, well-built, and well-used products. Whatever you are imagining, drawing up, building, or growing, I'd love to hear about it. Scroll through my work and take the time to <%= link_to 'reach out', new_contact_path %>&mdash;it can go a long way.
+                            I'm a web developer passionate for beautiful, well-planned, well-built, and well-used products. Whatever you are imagining, drawing up, building, or growing, I'd love to hear about it. Scroll through my work and take the time to
+                            <%= link_to 'reach out', new_contact_path %>&mdash;it can go a long way.
                         </p>
                         <p class="bigger">
                             Learn more about my freelancing process via the details provided below.
                         </p>
                         <div class="buttons">
                             <%= link_to projects_path do %>
-                                <button class="btn btn-outline-primary">See what I've made</button>
+                            <button class="btn btn-outline-primary">See what I've made</button>
                             <% end %>
                             <%= link_to new_contact_path do %>
-                                <button class="btn btn-outline-primary">Reach out</button>
+                            <button class="btn btn-outline-primary">Reach out</button>
                             <% end %>
                         </div>
                         <div class="space"></div>
@@ -95,7 +96,7 @@
                         <div class="card-block">
                             <%= image_tag 'crossplatform.svg', class: 'img-fluid round' %>
                             <p class="pad-top-25">
-                                <strong>Cross-platform</strong>
+                                <strong>Cross-platform software</strong>
                             </p>
                             <p>Sites built for diverse users across many use cases. Get the most out of each visit with mobile first development and responsively built software.</p>
                         </div>
@@ -108,32 +109,62 @@
 
 <div class="space"></div>
 
-<div class="container pad-top-25 pad-bot-50">
-    <div class="space"></div>
+<div class="container pad-top-50 pad-bot-50">
     <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-            <h1 class="title pad-bot-25">On payment...</h1>
-            <div class="line"></div>
-            <p>
-                Payment is negotiable, based on hours spent working, and charged at important checkpoint completion via a secure payment client (most often <a href="https://paypal.com/" target="_blank">Paypal</a>). Further, you only pay for the work that I put directly into product: learning and preliminary research are on me.
-            </p>
-            <p>
-                If you're dissatisfied with the product in any way, I will work to resolve the problem. In exceptional cases, you will be refunded or exempted from paying.
-            </p>
+        <div class="col-12 col-md-10 offset-md-1">
+            <!-- what I can make -->
+            <div class="row">
+                <div class="col-3">
+                    <%= image_tag 'money.svg', class: 'img-fluid img-circ' %>
+                </div>
+                <div class="col-9">
+                    <h2 class="pad-bot-25">What I can make</h2>
+                    <ul>
+                        <li>Landing pages and company websites</li>
+                        <li>Personal web pages</li>
+                        <li>Blogs and other content-serving mediums</li>
+                        <li>Social platforms and other connection-based platforms</li>
+                        <li>Organization and information based web applications</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="line marg-top-50 marg-bot-50"></div>
+            <!-- payment -->
+            <div class="row">
+                <div class="col-9">
+                    <h2 class="pad-bot-25">Payment</h2>
+                    <p>
+                        The amount you pay is a low, negotiable hourly rate paid via a secure client (most often
+                        <a href="https://paypal.com/" target="_blank">Paypal</a>). Further, you only pay for the work that I put directly into product: hours spent on learning and preliminary research are on me.
+                    </p>
+                    <p>
+                        If you're dissatisfied with the product in any way, I will work to resolve the problem. In exceptional cases, you will be refunded or exempted from paying.
+                    </p>
+                </div>
+                <div class="col-3">
+                    <%= image_tag 'money.svg', class: 'img-fluid img-circ' %>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
+<div class="space"></div>
+<div class="space"></div>
 
 <script type="text/javascript">
-    var size_bg = function() {
+    var size_bg = function () {
         var h = $('.cards').offset().top;
         console.log("Offset of cards: " + h);
-        h -= $('.curve').height() * 0.75;
+        h -= $('.curve').height() * 0.5;
         console.log("New height: " + h);
         $('#background').height(h);
     }
 
-    $(document).ready(size_bg());
-    $(window).resize(size_bg());
+    $(document).ready(function() {
+        size_bg()
+    });
+    $(window).resize(function() {
+        size_bg()
+    });
 </script>

@@ -294,6 +294,10 @@ p .pitch {
     margin-top: 2.5vh !important;
 }
 
+.marg-top-50 {
+    margin-top: 5vh !important;
+}
+
 .marg-bot-25 {
     margin-bottom: 2.5vh !important;
 }
@@ -440,4 +444,8 @@ p .pitch {
 
 .round {
     border-radius: 1.25vh;
+}
+
+.img-circ {
+    border-radius: 100%;
 }
