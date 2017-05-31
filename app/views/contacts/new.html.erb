@@ -12,10 +12,14 @@
                 <h2>Contact me</h2>
                 <div class="line" id="separator"></div>
                 <div class="content">
+                    <p>
+                        Whether you have a project, potential employment or internship inquiry, design or website commission, or just want to talk, feel free to send me an email or add me on appropriate social media&mdash;I love meeting new people.
+                    </p>
+                    <div class="line"></div>
                     <%= bootstrap_form_for @contact do |f| %>
-                        <%= f.text_field :name, required: true %>
-                        <%= f.email_field :email, required: true %>
-                        <%= f.text_area :message, required: true, class: 'animate no-scroll' %>
+                        <%= f.text_field :name, placeholder: 'John Doe', required: true %>
+                        <%= f.email_field :email, placeholder: 'example@domain.com', required: true %>
+                        <%= f.text_area :message, placeholder: 'Be as brief or long as you wish...', required: true, class: 'animate no-scroll' %>
                         <div class="no-display">
                             <%= f.text_field :nickname, hint: 'leave this field blank' %>
                         </div>
