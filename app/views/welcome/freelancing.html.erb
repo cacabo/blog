@@ -114,24 +114,33 @@
         <div class="col-12 col-md-10 offset-md-1">
             <!-- what I can make -->
             <div class="row">
-                <div class="col-3">
-                    <%= image_tag 'money.svg', class: 'img-fluid img-circ' %>
+                <div class="col-6 push-3 col-md-3 push-md-0">
+                    <%= image_tag 'gear.svg', class: 'img-fluid img-circ' %>
                 </div>
-                <div class="col-9">
+                <div class="col-12 col-md-9">
                     <h2 class="pad-bot-25">What I can make</h2>
+                    <p>
+                        Here's a list of project types I have experience making:
+                    </p>
                     <ul>
                         <li>Landing pages and company websites</li>
-                        <li>Personal web pages</li>
+                        <li>Personal websites (single and multi-page)</li>
                         <li>Blogs and other content-serving mediums</li>
                         <li>Social platforms and other connection-based platforms</li>
                         <li>Organization and information based web applications</li>
                     </ul>
+                    <p>
+                        Have something else in mind? <%= link_to 'Contact me', new_contact_path %> and we can decide the best path to take.
+                    </p>
                 </div>
             </div>
             <div class="line marg-top-50 marg-bot-50"></div>
             <!-- payment -->
             <div class="row">
-                <div class="col-9">
+                <div class="col-6 push-6 col-md-3 push-md-9">
+                    <%= image_tag 'money.svg', class: 'img-fluid img-circ' %>
+                </div>
+                <div class="col-12 col-md-9 pull-md-3">
                     <h2 class="pad-bot-25">Payment</h2>
                     <p>
                         The amount you pay is a low, negotiable hourly rate paid via a secure client (most often
@@ -140,9 +149,6 @@
                     <p>
                         If you're dissatisfied with the product in any way, I will work to resolve the problem. In exceptional cases, you will be refunded or exempted from paying.
                     </p>
-                </div>
-                <div class="col-3">
-                    <%= image_tag 'money.svg', class: 'img-fluid img-circ' %>
                 </div>
             </div>
         </div>
