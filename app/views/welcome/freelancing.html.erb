@@ -112,6 +112,23 @@
 <div class="container pad-top-50 pad-bot-50">
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1">
+            <!-- what I do best -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="pad-bot-25">What I do best</h2>
+                    <p>
+                        I build sleek, well organized, user-centric websites. I tend towards
+                        <a href="material.io" target="_blank">material design</a>
+                        standards and simple yet illustrative color palettes, constructed with modern languages, frameworks, and technologies.
+                    </p>
+                    <p>
+                        All of my work keeps to similar practices and styles allowing for rapid prototyping. From this point, each website is completely personalized in content, structure, and design in order to best accomplish what the site sets out to.
+                    </p>
+                </div>
+            </div>
+
+            <div class="line marg-top-50 marg-bot-50"></div>
+
             <!-- what I can make -->
             <div class="row">
                 <div class="col-6 push-3 col-md-3 push-md-0">
@@ -130,11 +147,15 @@
                         <li>Organization and information based web applications</li>
                     </ul>
                     <p>
-                        Have something else in mind? <%= link_to 'Contact me', new_contact_path %> and we can decide the best path to take.
+                        Have something else in mind?
+                        <%= link_to 'Contact me', new_contact_path %>
+                        and we can decide the best path to take.
                     </p>
                 </div>
             </div>
+
             <div class="line marg-top-50 marg-bot-50"></div>
+
             <!-- payment -->
             <div class="row">
                 <div class="col-6 push-6 col-md-3 push-md-9">
@@ -167,10 +188,10 @@
         $('#background').height(h);
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         size_bg()
     });
-    $(window).resize(function() {
+    $(window).resize(function () {
         size_bg()
     });
 </script>
