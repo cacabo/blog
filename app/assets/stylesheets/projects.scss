@@ -26,18 +26,26 @@
     text-align: center;
 
     img {
-        height: 100%;
-        width: auto;
         display: inline-block;
         overflow: hidden;
     }
+}
+
+.ss img {
+    height: 100%;
+    width: auto;
+}
+
+.ss-same img {
+    width: 100%;
+    height: auto;
 }
 
 .ss-wrapper {
     padding-bottom: 5vh;
     width: 100%;
 
-    .desktop, .mobile {
+    .desktop, .desktop-same-width, .mobile {
         background: gainsboro;
         display: inline-block;
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
@@ -47,7 +55,7 @@
         }
     }
 
-    .desktop {
+    .desktop-same-width, .desktop {
         padding: 8px 2px 22px 2px;
         border-radius: 4px;
 
@@ -80,8 +88,12 @@
         }
     }
 
-    .ss {
+    .ss, .ss-same {
         width: 100%;
+    }
+
+    .second {
+        float: right;
     }
 
     .mobile {
@@ -201,5 +213,17 @@
 
     .btn-project:hover {
         background: #ff9999;
+    }
+}
+
+#project-sustain {
+    background: #00cc66;
+
+    .btn-project {
+        background: #00ff80;
+    }
+
+    .btn-project:hover {
+        background: #33ff99;
     }
 }
