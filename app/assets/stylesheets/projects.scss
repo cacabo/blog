@@ -4,17 +4,31 @@
 
 .project {
     border-radius: 1.25vh;
-    padding: 7.5vh !important;
     background: gray;
     color: white;
+
+    @media screen and (max-width: 480px) {
+        padding: 5vw !important;
+    }
+    @media screen and (min-width: 480.1px) and (max-width: 720px) {
+        padding: 7.5vw !important;
+    }
+    @media screen and (min-width: 720.1px) {
+        padding: 7.5vh !important;
+    }
+    @media screen and (orientation: portrait) {
+        padding: 7.5vw;
+    }
 }
 
 .ss {
     height: 0px;
+    text-align: center;
 
     img {
         height: 100%;
         width: auto;
+        display: inline-block;
         overflow: hidden;
     }
 }
@@ -34,7 +48,7 @@
     }
 
     .desktop {
-        padding: 8px 0px 22px 6px;
+        padding: 8px 2px 22px 2px;
         border-radius: 4px;
 
         .desktop-circles {
@@ -128,10 +142,11 @@
     transition: all 0.2s ease;
     background: #888888;
     color: white;
+    margin-top: 1rem;
 }
 
 .btn-project:hover {
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
     -ms-transform: translateY(2px); /* IE 9 */
     -webkit-transform: translateY(2px); /* Safari */
     transform: translateY(2px);
@@ -146,5 +161,17 @@
 
     .btn-project:hover {
         background: #99ccff;
+    }
+}
+
+#project-tic-tac-toe {
+    background: #404040;
+
+    .btn-project {
+        background: #606060;
+    }
+
+    .btn-project:hover {
+        background: #707070;
     }
 }

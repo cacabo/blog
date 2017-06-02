@@ -23,14 +23,14 @@
     </div>
 </div>
 
-<div class="space"></div>
+<div class="space no-display-mobile"></div>
 <div class="space"></div>
 
 <div class="projects-container">
     <div class="container">
         <!-- personal blog -->
         <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 project" id="project-blog">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-blog">
                 <div class="ss-wrapper">
                     <div class="desktop">
                         <div class="desktop-circles">
@@ -64,7 +64,7 @@
                 </p>
                 <p>
                     <strong>Technologies:</strong>
-                    Rails5, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), AWS S3, Heroku.
+                    Rails5, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), AWS S3, Heroku, SendGrid.
                 </p>
                 <div class="buttons pad-top-25">
                     <%= link_to Article.first do %>
@@ -77,6 +77,66 @@
                         The tech
                     </button>
                     <% end %>
+                    <a href="https://github.com/ccabo1/blog">
+                        <button class="btn btn-project">
+                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i> GitHub
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="space"></div>
+
+        <!-- tic tac toe -->
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-tic-tac-toe">
+                <div class="ss-wrapper">
+                    <div class="desktop">
+                        <div class="desktop-circles">
+                            <div class="circle green"></div>
+                            <div class="circle yellow"></div>
+                            <div class="circle red"></div>
+                        </div>
+                        <div class="ss">
+                            <%= image_tag 'projects/tictactoeweb.PNG' %>
+                        </div>
+                    </div>
+                    <div class="mobile">
+                        <div class="mobile-top">
+                            <div class="cam"></div>
+                            <div class="speaker"></div>
+                        </div>
+                        <div class="ss">
+                            <%= image_tag 'projects/blogmobile.PNG' %>
+                        </div>
+                        <div class="home-wrapper">
+                            <div class="home"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="title full-width">
+                    Javascript Tic-Tac-Toe
+                </h2>
+                <p>
+                    Recreation of the game maintaining state in Javascript. The player has the option to enable a CPU which responds to the current game state by choosing its moves to maximize winning opportunities and minimize losing opportunities. To my understanding, the CPU cannot be beat.
+                </p>
+                <p>
+                    <strong>Technologies:</strong>
+                    Javascript (jQuery), HTML5, CSS3.
+                </p>
+                <div class="buttons pad-top-25">
+                    <a href="ccabo1.github.com/projects/tictactoe.html">
+                        <button class="btn btn-project">
+                            Play it here
+                        </button>
+                    </a>
+                    <a href="https://github.com/ccabo1/tictactoe">
+                        <button class="btn btn-project">
+                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i> GitHub
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -103,7 +163,7 @@
         var width = $('.ss-wrapper').width() - 24 - space;
         var height = width / 2.752960544329101;
         $ss.height(height);
-        $desk.width(height / 0.456525 + 6);
+        $desk.width(height / 0.456525 + 4);
         $mobile.width(height / 1.777778 + 6);
     }
 

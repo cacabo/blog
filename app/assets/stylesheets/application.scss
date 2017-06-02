@@ -121,7 +121,10 @@ label {
     position: relative;
 
     .fa {
-        float: right;
+        // float: right;
+        position: absolute;
+        right: 5vh;
+        top: 2.5vh;
     }
 }
 
@@ -390,8 +393,7 @@ p .pitch {
     }
 
     .content,
-    a i.arrow,
-    h2 {
+    .collapser {
         padding: 0 5vh;
         transition: all 0.2s ease;
         -webkit-transform: rotate(0deg);
@@ -413,18 +415,21 @@ p .pitch {
     }
 
     .sub-content {
-        padding: 2.5vh 5vh;
+        padding: 2.5vh 7.5vh 2.5vh 5vh;
 
         p {
             margin-bottom: 0.5rem;
         }
     }
 
+    .collapser.sub-collapser {
+        padding: 2.5vh 7.5vh 2.5vh 5vh;
+    }
+
     .sub-collapser {
         border-top: 1px solid rgba(0, 0, 0, 0.15);
         border-bottom: 1px solid rgba(0, 0, 0, 0.15);
         background: whitesmoke;
-        padding: 2.5vh 5vh;
 
         p.title {
             margin: 0;
