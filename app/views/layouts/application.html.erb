@@ -33,7 +33,10 @@
         </div>
         <% end %>
 
-        <%= yield %>
+        <div class="page-content">
+            <%= yield %>
+        </div>
+
         <%= render 'shared/footer' %>
 
         <!-- smoothscroll: https://stackoverflow.com/questions/4198041/jquery-smooth-scroll-to-an-anchor -->

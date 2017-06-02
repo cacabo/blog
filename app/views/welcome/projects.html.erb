@@ -26,59 +26,92 @@
 <div class="space"></div>
 <div class="space"></div>
 
-<div class="container">
-    <!-- personal blog -->
-    <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-blog">
-            <div class="ss-wrapper">
-                <div class="desktop">
-                    <div class="desktop-circles">
-                        <div class="circle green"></div>
-                        <div class="circle yellow"></div>
-                        <div class="circle red"></div>
+<div class="projects-container">
+    <div class="container">
+        <!-- personal blog -->
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 project" id="project-blog">
+                <div class="ss-wrapper">
+                    <div class="desktop">
+                        <div class="desktop-circles">
+                            <div class="circle green"></div>
+                            <div class="circle yellow"></div>
+                            <div class="circle red"></div>
+                        </div>
+                        <div class="ss">
+                            <%= image_tag 'projects/blogweb.PNG' %>
+                        </div>
                     </div>
-                    <div class="ss">
-                        <%= image_tag 'projects/blogweb.PNG' %>
+                    <div class="mobile">
+                        <div class="mobile-top">
+                            <div class="cam"></div>
+                            <div class="speaker"></div>
+                        </div>
+                        <div class="ss">
+                            <%= image_tag 'projects/blogmobile.PNG' %>
+                        </div>
+                        <div class="home-wrapper">
+                            <div class="home"></div>
+                        </div>
                     </div>
                 </div>
-                <div class="mobile">
-                    <div class="mobile-top">
-                        <div class="cam"></div>
-                        <div class="speaker"></div>
-                    </div>
-                    <div class="ss">
-                        <%= image_tag 'projects/ccmobile.PNG' %>
-                    </div>
-                    <div class="home"></div>
-                </div>
-            </div>
 
-            <h2 class="title full-width">
-                Personal website and blog
-            </h2>
-            <p>
-                I built this site on Rails, Ruby, Javascript, HTML, and CSS.
-            </p>
-            <div class="buttons pad-top-25">
-                <button class="btn btn-project">
-                    The motivation
-                </button>
-                <button class="btn btn-project">
-                    The tech
-                </button>
+                <h2 class="title full-width">
+                    Personal website and blog
+                </h2>
+                <p>
+                    Personal site created to communicate who I am, fascilitate more outreach, and display my writing, projects, and work.
+                </p>
+                <p>
+                    <strong>Technologies:</strong>
+                    Rails5, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), AWS S3, Heroku.
+                </p>
+                <div class="buttons pad-top-25">
+                    <%= link_to Article.first do %>
+                    <button class="btn btn-project">
+                        The motivation
+                    </button>
+                    <% end %>
+                    <%= link_to Article.second do %>
+                    <button class="btn btn-project">
+                        The tech
+                    </button>
+                    <% end %>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-
-<div class="space"></div>
-<div class="buttons">
-    <%= link_to freelancing_path do %>
+    <div class="space"></div>
+    <div class="buttons">
+        <%= link_to freelancing_path do %>
         <button class="btn btn-outline-primary">
             Work with me
         </button>
-    <% end %>
+        <% end %>
+    </div>
 </div>
 <div class="space"></div>
 <div class="space"></div>
+
+<script type="text/javascript">
+    function resize_ss() {
+        var $ss = $('.ss');
+        var $desk = $('.desktop');
+        var $mobile = $('.mobile');
+        var space = 24;
+        var width = $('.ss-wrapper').width() - 24 - space;
+        var height = width / 2.752960544329101;
+        $ss.height(height);
+        $desk.width(height / 0.456525 + 6);
+        $mobile.width(height / 1.777778 + 6);
+    }
+
+    $(document).ready(function () {
+        resize_ss();
+    });
+
+    $(window).resize(function () {
+        resize_ss();
+    });
+</script>
