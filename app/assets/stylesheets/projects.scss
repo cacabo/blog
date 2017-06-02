@@ -1,14 +1,29 @@
 .project {
     border-radius: 1.25vh;
-    padding: 5vh !important;
-    background: whitesmoke;
+    padding: 7.5vh !important;
+    background: gray;
+    color: white;
+}
+
+.ss {
+    height: 100px;
+
+    img {
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+    }
 }
 
 .ss-wrapper {
+    padding-bottom: 5vh;
+    width: 100%;
+
     .desktop {
-        padding: 2px 6px 22px 6px;
+        padding: 4px 6px 22px 6px;
         background: gainsboro;
         border-radius: 4px;
+        display: inline-block;
 
         .desktop-circles {
             width: 100%;
@@ -17,8 +32,8 @@
 
             .circle {
                 display: inline-block;
-                height: 12px;
-                width: 12px;
+                height: 16px;
+                width: 16px;
                 background: gray;
                 margin-left: 4px;
             }
@@ -40,8 +55,74 @@
     .ss {
         width: 100%;
     }
+
+    .mobile {
+        text-align: center;
+        padding: 4px 6px;
+        background: gainsboro;
+        display: inline-block;
+        float: right;
+        border-radius: 8px;
+
+        .mobile-top {
+            padding-bottom: 4px;
+
+            .cam {
+                height: 6px;
+                width: 6px;
+                margin-right: 6px;
+                display: inline-block;
+                border-radius: 100%;
+                background: gray;
+            }
+
+            .speaker {
+                display: inline-block;
+                border-radius: 2px;
+                height: 4px;
+                margin: 1px 0px;
+                width: 20px;
+                background: gray;
+            }
+        }
+
+        .home {
+            border: 2px solid gray;
+            border-radius: 100%;
+            height: 18px;
+            width: 18px;
+            margin-top: 6px;
+            display: inline-block;
+        }
+
+        .home:hover {
+            background: rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+.btn-project {
+    box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    background: #888888;
+    color: white;
+}
+
+.btn-project:hover {
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+    -ms-transform: translateY(2px); /* IE 9 */
+    -webkit-transform: translateY(2px); /* Safari */
+    transform: translateY(2px);
 }
 
 #project-blog {
     background: #1a8cff;
+
+    .btn-project {
+        background: #66b3ff;
+    }
+
+    .btn-project:hover {
+        background: #99ccff;
+    }
 }
