@@ -3,11 +3,44 @@
     <meta name="description" content="I learn best through buidling and I also enjoy the building process. Through my projects I explore new languages, refine my skills, and create.">
 </head>
 
-<div class="container bg pad-top-25 pad-bot-100" id="blue">
+<div class="container bg pad-top-25 pad-bot-100 border-bot" id="projects">
     <div class="space"></div>
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-            <h1 class="title pad-bot-25">Hi! This page is in development, please check back soon.</h1>
+            <h1 class="title pad-bot-25">Projects are how I grow and learn.</h1>
+            <p class="pitch pad-bot-25">
+                We learn the most through directly applying the things we learn. Thus, I'm a strong proponent of taking on projects of all kinds, regardless of professional applications, because they are avenues to tangibly solidify skills.
+            </p>
+            <div class="buttons">
+                <%= link_to root_path do %>
+                <button class="btn btn-outline-primary">Here's what I know</button>
+                <% end %>
+                <%= link_to articles_path do %>
+                <button class="btn btn-outline-primary">Read my blog posts</button>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="space"></div>
+
+<div class="container">
+    <!-- personal blog -->
+    <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-blog">
+            <div class="ss-wrapper">
+                <div class="desktop">
+                    <div class="desktop-circles">
+                        <div class="circle green"></div>
+                        <div class="circle yellow"></div>
+                        <div class="circle red"></div>
+                    </div>
+                    <div class="ss">
+                        <%= image_tag 'projects/blog-desktop.PNG', class:'img-fluid'%>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,47 @@
+.project {
+    border-radius: 1.25vh;
+    padding: 5vh !important;
+    background: whitesmoke;
+}
+
+.ss-wrapper {
+    .desktop {
+        padding: 2px 6px 22px 6px;
+        background: gainsboro;
+        border-radius: 4px;
+
+        .desktop-circles {
+            width: 100%;
+            text-align: right;
+            padding-bottom: 2px;
+
+            .circle {
+                display: inline-block;
+                height: 12px;
+                width: 12px;
+                background: gray;
+                margin-left: 4px;
+            }
+        }
+
+        .green:hover {
+            background: #33A329;
+        }
+
+        .yellow:hover {
+            background: #FFF200;
+        }
+
+        .red:hover {
+            background: #AD0F00;
+        }
+    }
+
+    .ss {
+        width: 100%;
+    }
+}
+
+#project-blog {
+    background: #1a8cff;
+}
