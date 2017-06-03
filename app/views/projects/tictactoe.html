@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Tic-Tac-Toe</title>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Recreation of tic-tac-toe in Javascript, HTML, and CSS. This project was
+    primarily an exploration into Javascript as a functional programming language.">
+    <meta name="keywords" content="Cameron, Cabo, Cameron Cabo, Cam Cabo, cameroncabo.com, cameroncabo, UPenn, University of Pennsylvania, Penn, Harvard-Westlake, HW, computer science, design, art, business, engineering, M&T, Jerome Fisher, Jerome Fisher Program, Jerome Fisher Program in Management and Technology, CSS, CSS3, HTML, HTML5, Ruby, Ruby on Rails, RoR, Javascript, designer, businessman">
+    <meta name="author" content="Cameron Cabo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!-- styling -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="css/ttt_style.css">
+</head>
+
+<body>
+    <!-- Alerts which can be triggered throughout the game -->
+    <div class="alert" id="reset_alert">
+        <p>Game reset</p>
+    </div>
+    <div class="alert" id="end_alert">
+        <p>Game ended</p>
+    </div>
+    <div class="alert" id="enable_alert">
+        <p>CPU enabled</p>
+    </div>
+    <div class="alert" id="disable_alert">
+        <p>CPU disabled</p>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-lg-8 col-lg-push-2">
+                    <h1 id="title">Tic-Tac-Toe</h1>
+                    <h1 id="state"></h1>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Board -->
+    <div class="container">
+        <div class="row board-wrapper">
+            <div class="col-xs-8 col-xs-push-2 col-md-6 col-md-push-3 col-lg-4 col-lg-push-4 board">
+                <div class="col-xs-4 slot" id="r0c0">
+                </div>
+                <div class="col-xs-4 slot" id="r0c1">
+                </div>
+                <div class="col-xs-4 slot" id="r0c2">
+                </div>
+                <div class="col-xs-4 slot" id="r1c0">
+                </div>
+                <div class="col-xs-4 slot" id="r1c1">
+                </div>
+                <div class="col-xs-4 slot" id="r1c2">
+                </div>
+                <div class="col-xs-4 slot" id="r2c0">
+                </div>
+                <div class="col-xs-4 slot" id="r2c1">
+                </div>
+                <div class="col-xs-4 slot" id="r2c2">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons-wrapper">
+        <div class="buttons">
+            <div class="btn" id="CPU">
+                <p>Enable CPU</p>
+            </div>
+            <div class="btn" id="reset">
+                <p>Reset</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <h6>Created by <a href="http://cameroncabo.com/" target="_blank" title="Learn more about Cameron">Cameron Cabo.</a> All rights reserved.</h6>
+    </footer>
+
+    <!--Javascript-->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
