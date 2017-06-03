@@ -78,6 +78,7 @@
 </div>
 
 <div class="space"></div>
+<div class="space"></div>
 
         </div>
         <!-- close col -->
@@ -87,7 +88,8 @@
 <!-- close container -->
 
 <div class="gray no-pad">
-    <div class="space pad-top-100"></div>
+    <div class="space"></div>
+    <div class="space"></div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
@@ -133,12 +135,24 @@
 
                 <div class="space"></div>
 
-                <%= link_to articles_path do %>
-                    <button class="btn btn-outline-primary btn-sm marg-bot-25 marg-top-25">
-                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                        &nbsp;Back to all articles
-                    </button>
-                <% end %>
+                <div class="buttons">
+                    <% previousArticle = Article.exists?(id: @article.id - 1) ? Article.find(@article.id - 1) : nil %>
+                    <% nextArticle = Article.exists?(id: @article.id + 1) ? Article.find(@article.id + 1) : nil %>
+                    <% if previousArticle %>
+                        <%= link_to previousArticle do %>
+                            <button class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> &nbsp;Previous article</button>
+                        <% end %>
+                    <% else %>
+                        <%= link_to articles_path do %>
+                            <button class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> &nbsp;Back to all articles</button>
+                        <% end %>
+                    <% end %>
+                    <% if nextArticle %>
+                        <%= link_to nextArticle do %>
+                            <button class="btn btn-outline-primary">Next article &nbsp;<i class="fa fa-chevron-right"></i></button>
+                        <% end %>
+                    <% end %>
+                </div>
 
             </div>
             <!-- close col -->
