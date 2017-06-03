@@ -181,6 +181,10 @@ p .pitch {
     background-image: image-url('projects.svg');
 }
 
+#art {
+    background-image: image-url('art.svg');
+}
+
 .btn {
     cursor: pointer;
     cursor: hand;
@@ -396,6 +400,10 @@ p .pitch {
 
     img {
         padding-bottom: 2.5vh;
+    }
+
+    .bubble-title {
+        padding: 0 5vh;
     }
 
     .content,
