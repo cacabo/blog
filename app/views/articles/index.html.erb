@@ -29,9 +29,9 @@
             <% end %>
 
             <% if current_admin %>
-            <%= link_to new_article_path do %>
-            <button class="btn btn-outline-primary btn-sm btn-right">New article</button>
-            <% end %>
+                <%= link_to new_article_path do %>
+                <button class="btn btn-outline-primary btn-sm btn-right">New article</button>
+                <% end %>
             <% end %>
 
             <% @articles.each do |article| %>
@@ -44,12 +44,12 @@
                 <p class="bigger">
                     <% if article.text %>
                         <% if article.text.length > 100 %>
-                            <%= article.text[0...100] + '...' %>
+                            <%= article.text.gsub(/\[.*?\]/, "")[0...100] + '...' %>
                             <%= link_to article do %>
                                 <i class="time">click to read the full post.</i>
                             <% end %>
                         <% else %>
-                            <%= article.text %>
+                            <%= article.text.gsub(/\[.*?\]/, "") %>
                         <% end %>
                     <% end %>
                 </p>
@@ -66,25 +66,26 @@
                         ago</p>
                 <% end %>
             <% end %>
-            <div class="line"></div>
+            <div class="line marg-bot-0"></div>
 
+            <div class="space"></div>
             <div class="space"></div>
 
             <% if params[:tag] %>
                 <%= link_to articles_path do %>
-                    <button class="btn btn-outline-primary btn-sm">
+                    <button class="btn btn-outline-primary">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to all articles
                     </button>
                 <% end %>
             <% else %>
                 <%= link_to root_path do %>
-                    <button class="btn btn-outline-primary btn-sm marg-bot-25">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
-                    &nbsp;Back to home</button>
+                    <button class="btn btn-outline-primary">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to home</button>
                 <% end %>
             <% end %>
         </div>
     </div>
 </div>
 
+<div class="space"></div>
 <div class="space"></div>

@@ -134,6 +134,7 @@
                 <% end %>
 
                 <div class="space"></div>
+                <div class="space"></div>
 
                 <div class="buttons">
                     <% previousArticle = Article.exists?(id: @article.id - 1) ? Article.find(@article.id - 1) : nil %>
@@ -161,6 +162,7 @@
     </div>
     <!-- close container -->
 
+    <div class="space"></div>
     <div class="space"></div>
 </div>
 <!-- close gray -->
