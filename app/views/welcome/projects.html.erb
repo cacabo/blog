@@ -7,9 +7,9 @@
     <div class="space"></div>
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-            <h1 class="title pad-bot-25">Projects are how I grow and learn.</h1>
+            <h1 class="title pad-bot-25">Through my projects I learn, grow, and create.</h1>
             <p class="pitch pad-bot-25">
-                We learn the most through directly applying the things we learn. Thus, I'm a strong proponent of taking on projects of all kinds, regardless of professional applications, because they are avenues to tangibly solidify skills.
+                The best way to learn is by directly implementing concepts. Thus, I'm a strong proponent of taking on projects of all kinds because they serve to tangibly hone my skills and extend my interests.
             </p>
             <div class="buttons">
                 <%= link_to root_path do %>
@@ -177,7 +177,7 @@
                 </div>
 
                 <h2 class="title full-width">
-                    AR Textiles Company Website
+                    AR Textiles company website
                 </h2>
                 <p>
                     Modernized AR Textile's branding and online presence through creating a website and new logo and marketing materials.
@@ -235,7 +235,7 @@
                 </div>
 
                 <h2 class="title full-width">
-                    The Business of Sustainability Conference Website
+                    The Business of Sustainability conference website
                 </h2>
                 <p>
                     Website developed for a conference held on campus by Penn Sustainability Review. This site highlighted the event's focus on sustainability in business and showcased the event speakers. Moreover, it proved pivotal in fomenting student interest.
@@ -359,7 +359,7 @@
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-yh">
                 <h2 class="title full-width">
-                    YouthHack Ventures Website
+                    YouthHack Ventures website
                 </h2>
                 <p>
                     Website for the student-run incubator's new 3 step plan to building business and entrepreneurial culture alike while at Penn.
@@ -369,6 +369,63 @@
                 </p>
                 <div class="buttons pad-top-25">
                     <a href="https://github.com/ccabo1/youthhack-ventures">
+                        <button class="btn btn-project">
+                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+                            GitHub
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="half-space no-display-mobile"></div>
+        <div class="space"></div>
+
+        <!-- site -->
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-site">
+                <div class="ss-wrapper">
+                    <div class="desktop">
+                        <div class="desktop-circles">
+                            <div class="circle green"></div>
+                            <div class="circle yellow"></div>
+                            <div class="circle red"></div>
+                        </div>
+                        <div class="ss">
+                            <%= image_tag 'projects/ccweb.PNG' %>
+                        </div>
+                    </div>
+                    <div class="mobile">
+                        <div class="mobile-top">
+                            <div class="cam"></div>
+                            <div class="speaker"></div>
+                        </div>
+                        <div class="ss">
+                            <%= image_tag 'projects/ccmobile.PNG' %>
+                        </div>
+                        <div class="home-wrapper">
+                            <div class="home"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="title full-width">
+                    Original personal website
+                </h2>
+                <p>
+                    The first website I ever built which I added to over two years. It showcased my artwork, projects, and experience.
+                </p>
+                <p>
+                    <strong>Technologies:</strong>
+                    HTML5, Bootstrap 3, Javascript (jQuery), CSS3.
+                </p>
+                <div class="buttons pad-top-25">
+                    <%= link_to Article.first do %>
+                    <button class="btn btn-project">
+                        Why I changed away
+                    </button>
+                    <% end %>
+                    <a href="https://github.com/ccabo1/site">
                         <button class="btn btn-project">
                             <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
                             GitHub
