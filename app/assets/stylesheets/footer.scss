@@ -4,8 +4,8 @@ $bg: #1a8cff;
 $bot: #0b4074;
 $font: white;
 
-// formatting for the footer
-footer {
+// formatting for the footer#footer
+footer#footer {
     padding: 2.5vh 5vw;
     width: 100%;
     background: $bg;
@@ -16,53 +16,53 @@ footer {
     color: $font;
 }
 
-footer a {
+footer#footer a {
     transition: all 0.25s ease;
     color: $font;
 }
 
-footer a:active,
-footer a:hover,
-footer a:visited {
+footer#footer a:active,
+footer#footer a:hover,
+footer#footer a:visited {
     color: $font;
     text-decoration: none;
 }
 
-footer ul {
+footer#footer ul {
     list-style: none;
     padding: 2.5vh 0;
     margin: 0;
     display: inline-block;
 }
 
-footer li {
+footer#footer li {
     width: auto;
     font-size: 125%;
     display: inline-block;
 }
 
-footer .links li {
+footer#footer .links li {
     padding-right: 2.5vw;
 }
 
-footer .links li .last {
+footer#footer .links li .last {
     padding-right: 0;
 }
 
-footer .social {
+footer#footer .social {
     float: right;
     color: $font;
     padding: 1.25vh 0;
 }
 
-footer .social li.spacer {
+footer#footer .social li.spacer {
     display: inline-block;
     vertical-align: middle;
     width: 8px;
     height: 42px;
 }
 
-footer .social li.icon {
+footer#footer .social li.icon {
     border-radius: 100%;
     border: 2px solid $font;
     display: table-cell;
@@ -75,15 +75,15 @@ footer .social li.icon {
     cursor: hand;
 }
 
-footer .social li i {
+footer#footer .social li i {
     transition: all 0.2s ease;
 }
 
-footer .social li.icon:hover {
+footer#footer .social li.icon:hover {
     background: $font;
 }
 
-footer .social li.icon:hover i {
+footer#footer .social li.icon:hover i {
     color: $bg;
 }
 
@@ -94,7 +94,7 @@ footer .social li.icon:hover i {
     background: $font;
 }
 
-footer p {
+footer#footer p {
     padding: 2.5vh 0;
 }
 

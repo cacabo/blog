@@ -24,7 +24,7 @@ and (max-device-width: 736px) {
 ******************************/
 
 @media screen and (max-width: 1040px) {
-    footer {
+    footer#footer {
         ul.social, ul.links {
             width: 100%;
             float: none;
