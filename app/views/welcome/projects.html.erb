@@ -64,7 +64,7 @@
                 </p>
                 <p>
                     <strong>Technologies:</strong>
-                    Rails 5.1, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), Bootstrap 4, AWS S3, Heroku, SendGrid.
+                    Rails 5.1, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), Bootstrap 4, AWS S3, Heroku, SendGrid, Devise Gem, Paperclip Gem.
                 </p>
                 <div class="buttons pad-top-25">
                     <%= link_to Article.first do %>
@@ -130,7 +130,7 @@
                     Javascript (jQuery), HTML5, CSS3, Bootstrap 3.
                 </p>
                 <div class="buttons pad-top-25">
-                    <a href="ccabo1.github.com/projects/tictactoe.html">
+                    <a href="https://ccabo1.github.com/projects/tictactoe.html">
                         <button class="btn btn-project">
                             Play it here
                         </button>
@@ -246,6 +246,58 @@
         <div class="half-space no-display-mobile"></div>
         <div class="space"></div>
 
+        <!-- camstagram -->
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-camstagram">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="ss-wrapper">
+                            <div class="desktop-same-width">
+                                <div class="desktop-circles">
+                                    <div class="circle green"></div>
+                                    <div class="circle yellow"></div>
+                                    <div class="circle red"></div>
+                                </div>
+                                <div class="ss-same">
+                                    <%= image_tag 'projects/camstagramweb.PNG' %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="title full-width">
+                    Camstagram
+                </h2>
+                <p>
+                    Final project for CIS 196: Ruby on Rails Web Development at Penn. Mimics Instagram with many major features, including user profiles, posting images, liking images, commenting, and follower relationships.
+
+                </p>
+                <p>
+                    <strong>Technologies:</strong> Rails 4, Heroku, Paperclip Gem, AWS s3, bcrypt, HTML5, CSS3, Bootstrap 3.
+                </p>
+                <p>
+                    <strong>Things to Add:</strong> make the app more responsive to different screen sizes, particually mobile devices. Add a more modern navbar. Implement searching for users. Integrating AJAX for real-time commenting and liking.
+                </p>
+                <div class="buttons pad-top-25">
+                    <a href="https://camstagram.herokuapp.com" target="_blank">
+                        <button class="btn btn-project">
+                            Try it here
+                        </button>
+                    </a>
+                    <a href="https://github.com/ccabo1/camstagram">
+                        <button class="btn btn-project">
+                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+                            GitHub
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="half-space no-display-mobile"></div>
+        <div class="space"></div>
+
         <!-- minesweeper -->
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-minesweeper">
@@ -299,6 +351,32 @@
                 </div>
             </div>
         </div>
+
+        <div class="half-space no-display-mobile"></div>
+        <div class="space"></div>
+
+        <!-- youthhack ventures -->
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-yh">
+                <h2 class="title full-width">
+                    YouthHack Ventures Website
+                </h2>
+                <p>
+                    Website for the student-run incubator's new 3 step plan to building business and entrepreneurial culture alike while at Penn.
+                </p>
+                <p>
+                    Utilizing a modern and convincing design is integral to pitching the new accelerator program for what is has been and what it hopes to become.
+                </p>
+                <div class="buttons pad-top-25">
+                    <a href="https://github.com/ccabo1/youthhack-ventures">
+                        <button class="btn btn-project">
+                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+                            GitHub
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="space"></div>
@@ -311,6 +389,7 @@
         <% end %>
     </div>
 </div>
+
 <div class="space"></div>
 <div class="space"></div>
 
