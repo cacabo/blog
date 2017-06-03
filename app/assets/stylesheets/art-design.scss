@@ -1,3 +1,14 @@
+.card.art,
+.card.design {
+    margin-bottom: 1.25rem !important;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: all 0.2s ease;
+
+    &:hover {
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    }
+}
+
 .art {
     display: inline-block !important;
 
@@ -9,23 +20,14 @@
         margin-bottom: 0;
         margin-top: 0.5rem;
     }
-    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    transition: all 0.2s ease;
-
-    &:hover {
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
-    }
 }
 
 #art-columns {
     @media screen and (max-width: 780px) {
         column-count: 2;
     }
-    @media screen and (min-width: 780.1px) and (max-width: 1024px) {
+    @media screen and (min-width: 780.1px) {
         column-count: 3;
-    }
-    @media screen and (min-width: 1024.1px) {
-        column-count: 4;
     }
     //There should only be 2 columns on phones
     @media screen and (orientation: portrait) {
@@ -33,5 +35,21 @@
     }
     @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 736px) {
         column-count: 2;
+    }
+}
+
+#design-columns {
+    @media screen and (max-width: 780px) {
+        column-count: 1;
+    }
+    @media screen and (min-width: 780.1px) {
+        column-count: 2;
+    }
+    //There should only be 1 column on phones
+    @media screen and (orientation: portrait) {
+        column-count: 1;
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 736px) {
+        column-count: 1;
     }
 }
