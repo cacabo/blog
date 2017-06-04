@@ -14,7 +14,7 @@
  *= require prism
  *= require_tree './app-styles'
  */
- 
+
 @import "bootstrap"; // general formatting
 
 body {
@@ -128,10 +128,9 @@ label {
     position: relative;
 
     .fa {
-        // float: right;
         position: absolute;
         right: 5vh;
-        top: 2.5vh;
+        top: 0.5vh;
     }
 }
 
@@ -430,7 +429,7 @@ p .pitch {
     }
 
     .sub-content {
-        padding: 2.5vh 7.5vh 2.5vh 5vh;
+        padding: 2.5vh 5vh 2.5vh 5vh;
 
         p {
             margin-bottom: 0.5rem;
@@ -439,6 +438,10 @@ p .pitch {
 
     .collapser.sub-collapser {
         padding: 2.5vh 7.5vh 2.5vh 5vh;
+
+        .fa {
+            top: 3vh;
+        }
     }
 
     .sub-collapser {

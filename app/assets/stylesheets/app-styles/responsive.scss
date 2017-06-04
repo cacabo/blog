@@ -31,3 +31,9 @@ and (max-device-width: 736px) {
         }
     }
 }
+
+@media screen and (max-width: 575px) {
+    .bubble.bubble-flatten {
+        border-radius: 0;
+    }
+}
