@@ -109,13 +109,13 @@
 
 <div class="space"></div>
 
-<div class="container pad-top-50 pad-bot-50">
+<div class="container pad-top-50 pad-bot-25">
     <div class="row">
         <div class="col-12 col-md-10 offset-md-1">
             <!-- what I do best -->
             <div class="row">
                 <div class="col-12">
-                    <h2 class="pad-bot-25">What I do best</h2>
+                    <h3 class="pad-bot-25">What I do best</h3>
                     <p>
                         I build sleek, well organized, user-centric websites. I tend towards
                         <a href="material.io" target="_blank">material design</a>
@@ -132,15 +132,15 @@
             <!-- what I can make -->
             <div class="row">
                 <div class="col-6 push-3 col-md-3 push-md-0">
-                    <%= image_tag 'gear.svg', class: 'img-fluid img-circ pad-bot-25' %>
+                    <%= image_tag 'gear.svg', class: 'img-fluid img-circ pad-bot-50' %>
                 </div>
                 <div class="col-12 col-md-9">
-                    <h2 class="pad-bot-25">What I can make</h2>
+                    <h3 class="pad-bot-25">What I can make</h3>
                     <p>
                         Here's a list of project types I have experience making:
                     </p>
                     <ul>
-                        <li>Landing pages and company websites</li>
+                        <li>Landing pages, event pages, and company websites</li>
                         <li>Personal websites (single and multi-page)</li>
                         <li>Blogs and other content-serving mediums</li>
                         <li>Social platforms and other connection-based platforms</li>
@@ -158,17 +158,20 @@
 
             <!-- payment -->
             <div class="row">
-                <div class="col-6 push-3 col-md-3 push-md-9">
+                <div class="col-6 push-3 col-md-3 push-md-9 pad-bot-50">
                     <%= image_tag 'money.svg', class: 'img-fluid img-circ' %>
                 </div>
                 <div class="col-12 col-md-9 pull-md-3">
-                    <h2 class="pad-bot-25">Payment</h2>
+                    <h3 class="pad-bot-25">Payment</h3>
                     <p>
                         The amount you pay is a low, negotiable hourly rate paid via a secure client (most often
                         <a href="https://paypal.com/" target="_blank">Paypal</a>). Further, you only pay for the work that I put directly into product: hours spent on learning and preliminary research are on me.
                     </p>
                     <p>
                         If you're dissatisfied with the product in any way, I will work to resolve the problem. In exceptional cases, you will be refunded or exempted from paying.
+                    </p>
+                    <p>
+                        If you work for a club, non-profit, or similar organization, <%= link_to 'send me an email', new_contact_path %> and we can go from there.
                     </p>
                 </div>
             </div>
