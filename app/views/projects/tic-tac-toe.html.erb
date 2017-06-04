@@ -16,8 +16,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
     <!-- styling -->
-    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-    <link type="text/css" rel="stylesheet" href="css/ttt_style.css">
+    <%= stylesheet_link_tag 'project-styles/bootstrap.min.css' %>
+    <!-- <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <%= stylesheet_link_tag 'project-styles/ttt-style.css' %>
+    <!-- <link type="text/css" rel="stylesheet" href="css/ttt_style.css"> -->
 </head>
 
 <body>
@@ -95,8 +97,10 @@
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <%= javascript_include_tag 'project-js/bootstrap.min.js' %>
+    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
+    <%= javascript_include_tag 'project-js/ttt.js' %>
+    <!-- <script type="text/javascript" src="js/ttt.js"></script> -->
 </body>
 
 </html>
