@@ -16,4 +16,6 @@
 //= require tether
 //= require bootstrap-sprockets
 //= require prism
-//= require_tree .
+//= require cable.js
+//= require_tree ./channels
+//= require_tree ./app-js

@@ -12,8 +12,9 @@
  *
  *= require rails_bootstrap_forms
  *= require prism
- *= require_tree .
+ *= require_tree './app-styles'
  */
+ 
 @import "bootstrap"; // general formatting
 
 body {
