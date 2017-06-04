@@ -5,11 +5,9 @@
         <span class="icon-bar bottom-bar"></span>
         <span class="sr-only" Toggle navigation></span>
     </button>
-    <a class="navbar-brand" href="#">
-        <%= image_tag 'logo.svg', width: '30', height: '30', alt: '' %>
-    </a>
     <a class="navbar-brand" href="<%= root_path %>">
-        Cameron Cabo
+        <%= image_tag 'logo.svg', width: "30", height: "30", class: "d-inline-block align-top", alt: '' %>
+        &nbsp;&nbsp;Cameron Cabo
 
         <% if @article %>
         &nbsp;&nbsp;
