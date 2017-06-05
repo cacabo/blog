@@ -5,14 +5,15 @@
     font-size: 120%;
     font-style: italic;
     border-left: 4px solid rgba(0, 0, 0, .15);
-    padding-left: 12px;
+    padding-left: 24px;
     padding-top: 1.25vh;
     padding-bottom: 1.25vh;
 
     p.author {
-        font-size: 100%;
+        font-size: 66.67%;
         width: 100%;
         text-align: right;
+        color: gray;
     }
 }
 
