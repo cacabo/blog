@@ -53,10 +53,13 @@
     <% end %>
 <% elsif comp.start_with?('### ') %>
     <% comp.slice! ('### ') %>
-    <h5><%=comp%></h5>
+    <h5><strong><%=comp%></strong></h5>
 <% elsif comp.start_with?('## ') %>
     <% comp.slice! ('## ') %>
-    <h3><%=comp%></h3>
+    <h3><strong><%=comp%></strong></h3>
+<% elsif comp.start_with?('# ') %>
+    <% comp.slice! ('# ') %>
+    <h2><strong><%=comp%></strong></h2>
 <% elsif comp.start_with?('[QUOTE]') %>
     <% comp.slice! ('[QUOTE]') %>
     <div class="quote">
