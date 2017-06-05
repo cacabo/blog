@@ -17,10 +17,15 @@
 }
 
 span.code {
-    background: rgba(0, 0, 100, 0.1);
+    background: rgba(0, 0, 100, 0.05);
     color: black;
     border-radius: 0.25rem;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 85%;
     padding: .25rem;
+}
+
+pre {
+    background: rgba(0, 0, 100, 0.05) !important;
+    border-radius: 0.25rem;
 }
