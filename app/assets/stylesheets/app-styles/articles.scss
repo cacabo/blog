@@ -1,3 +1,17 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.quote {
+    font-size: 120%;
+    font-style: italic;
+    border-left: 4px solid rgba(0, 0, 0, .15);
+    padding-left: 12px;
+}
+
+.caption {
+    font-size: 100%;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: gray;
+    font-style: italic;
+    width: 100%;
+}

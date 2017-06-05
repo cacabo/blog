@@ -63,13 +63,6 @@ body {
     height: 0;
 }
 
-.quote {
-    font-size: 120%;
-    font-style: italic;
-    border-left: 4px solid rgba(0, 0, 0, .15);
-    padding-left: 12px;
-}
-
 .no-display {
     display: none;
 }
@@ -259,7 +252,7 @@ p .pitch {
 }
 
 .sans {
-    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 .background-wrapper {
