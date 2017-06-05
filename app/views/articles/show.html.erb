@@ -46,9 +46,9 @@
             <div class="line marg-top-0"></div>
 
 <div class="article-wrapper">
-            <% @components = @article.text.split(/\n+/) %>
+            <% components = @article.text.split(/\n+/) %>
             <% code_enabled = false %>
-        <% @components.each do |comp| %><% if comp.start_with?('[IMAGE]') %><% comp.slice! '[IMAGE]' %><img src="<%= comp %>" class="img-fluid"><% elsif comp.start_with?('[CODE]') %><% comp.slice! '[CODE]' %>
+        <% components.each do |comp| %><% if comp.start_with?('[IMAGE]') %><% comp.slice! '[IMAGE]' %><img src="<%= comp %>" class="img-fluid"><% elsif comp.start_with?('[CODE]') %><% comp.slice! '[CODE]' %>
 <% code_enabled = true %><%=comp.html_safe%><% elsif code_enabled %><% if comp.include? "</pre>" %><% code_enabled = false %><%=comp.html_safe%><% else %><%=comp%>
     <% end %>
 <% elsif comp.start_with?('### ') %>
