@@ -68,15 +68,19 @@
                     Rails 5.1, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), Bootstrap 4, AWS S3, Heroku, SendGrid, Devise Gem, Paperclip Gem.
                 </p>
                 <div class="buttons pad-top-25">
-                    <%= link_to Article.first do %>
-                    <button class="btn btn-project">
-                        The motivation
-                    </button>
+                    <% if Article.exists?(id: 3) %>
+                        <%= link_to article_path(id: 3) do %>
+                            <button class="btn btn-project">
+                                The motivation
+                            </button>
+                        <% end %>
                     <% end %>
-                    <%= link_to Article.second do %>
-                    <button class="btn btn-project">
-                        The tech
-                    </button>
+                    <% if Article.exists?(id: 2) %>
+                        <%= link_to article_path(id: 2) do %>
+                        <button class="btn btn-project">
+                            The tech
+                        </button>
+                        <% end %>
                     <% end %>
                     <a href="https://github.com/ccabo1/blog">
                         <button class="btn btn-project">

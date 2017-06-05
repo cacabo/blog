@@ -34,7 +34,7 @@
                 <% end %>
             <% end %>
 
-            <% @articles.each do |article| %>
+            <% @articles.order(created_at: :desc).each do |article| %>
                 <div class="line"></div>
                 <% if not article.image.nil? and not article.image_file_name.nil? %>
                     <%= image_tag article.image.url(:medium), class: 'img-fluid pad-bot-25' %>
