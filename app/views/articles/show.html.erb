@@ -71,6 +71,8 @@
     <div class="col-2 push-5 dash"></div>
 <% elsif comp.start_with?('[SPACE]') %>
     <div class="space"></div>
+<% elsif comp.start_with?('[HALF-SPACE]') %>
+    <div class="half-space"></div>
 <% elsif comp.start_with?('[CAPTION]') %>
     <% comp.slice! ('[CAPTION]') %>
     <div class="caption"><%= comp %></div>
