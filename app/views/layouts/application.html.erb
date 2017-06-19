@@ -5,10 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="author" content="Cameron Cabo">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="<%= content_for?(:description) ? content_for(:description) : 'Cameron is a driven learner, web developer, and product builder. He studies in the Jerome Fisher Program in Management and Technology at the University of Pennsylvania and lives in Los Angeles.' %>">
+        <meta name="keywords" content="<%= content_for?(:keywords) ? content_for(:keywords) : 'Cameron Cabo,M&T,Jerome Fisher Program,cameroncabo,upenn,penn,web developer,Cameron,Cabo' %>">
+
         <meta property="og:image" content='<%= image_url "cameron.png" %>'>
         <meta property="og:title" content="Cameron Cabo">
         <meta property="og:type" content="website">
         <meta property="og:title" content="<%= content_for?(:title) ? content_for(:title) : 'Cameron Cabo' %>">
+        <meta property="og:description" content="<%= content_for?(:description) ? content_for(:description) : 'Cameron is a driven learner, web developer, and product builder. He studies in the Jerome Fisher Program in Management and Technology at the University of Pennsylvania and lives in Los Angeles.' %>"
 
         <title><%= content_for?(:title) ? content_for(:title) : "Cameron Cabo" %></title>
 
