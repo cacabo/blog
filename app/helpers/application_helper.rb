@@ -10,4 +10,8 @@ module ApplicationHelper
     def keywords(page_keywords)
         content_for(:keywords) { page_keywords }
     end
+
+    def image(page_image)
+        content_for(:image) { page_image }
+    end
 end
