@@ -2,6 +2,7 @@
     <% title @article.title %>
     <% description "#{@article.text[0..160]}..." %>
     <% keywords "#{@article.tag_list.join(',')},#{@article.title.gsub(/\s/,'')},Cameron Cabo,Penn,M&T,Jerome Fisher Program,cameroncabo,upenn,penn,web developer,Cameron,Cabo" %>
+    <% image "#{image_url @article.image}" unless @article.image.nil? %>
 </head>
 
 <div class="container serif">
