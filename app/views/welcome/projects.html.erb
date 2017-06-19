@@ -95,6 +95,73 @@
         <div class="half-space no-display-mobile"></div>
         <div class="space"></div>
 
+        <!-- Outreach -->
+        <div class="row">
+            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-outreach">
+                <div class="ss-wrapper">
+                    <div class="desktop">
+                        <div class="desktop-circles">
+                            <div class="circle green"></div>
+                            <div class="circle yellow"></div>
+                            <div class="circle red"></div>
+                        </div>
+                        <div class="ss">
+                            <%= image_tag 'projects/outreachweb.PNG' %>
+                        </div>
+                    </div>
+                    <div class="mobile">
+                        <div class="mobile-top">
+                            <div class="cam"></div>
+                            <div class="speaker"></div>
+                        </div>
+                        <div class="ss">
+                            <%= image_tag 'projects/outreachmobile.PNG' %>
+                        </div>
+                        <div class="home-wrapper">
+                            <div class="home"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="title full-width">
+                    Outreach
+                </h2>
+                <p><i>June 2017</i></p>
+                <p>
+                    A web application created to streamline reaching out to mentors, recruiters, and customers. The aim is to keep all information organized in a manner that makes it easier to keep track of who you've reached out to: my goal was to make something better than a spreadsheet.
+                </p>
+                <p>
+                    <strong>Technologies:</strong>
+                    Rails 5.1, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), Bootstrap 4, AWS S3, Heroku, Devise Gem, Chartkick.
+                </p>
+                <div class="buttons pad-top-25">
+                    <% if Article.exists?(id: 3) %>
+                        <%= link_to article_path(id: 3) do %>
+                            <button class="btn btn-project">
+                                The motivation
+                            </button>
+                        <% end %>
+                    <% end %>
+                    <% if Article.exists?(id: 2) %>
+                        <%= link_to article_path(id: 2) do %>
+                        <button class="btn btn-project">
+                            The tech
+                        </button>
+                        <% end %>
+                    <% end %>
+                    <a href="https://github.com/ccabo1/blog">
+                        <button class="btn btn-project">
+                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+                            GitHub
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="half-space no-display-mobile"></div>
+        <div class="space"></div>
+
         <!-- tic tac toe -->
         <div class="row">
             <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-tic-tac-toe">
