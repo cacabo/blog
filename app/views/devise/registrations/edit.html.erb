@@ -43,10 +43,12 @@
                         <%= f.password_field :current_password, autocomplete: "off" %>
                     </div>
 
-                    <div class="actions">
-                        <%= f.submit "Update" %>
-                    </div>
+                    <%= button_tag(type: 'submit', class: "btn btn-secondary marg-top-25") do %>
+                        Update account
                     <% end %>
+                    <% end %>
+
+                    <div class="space"></div>
 
                     <h3>Cancel my account</h3>
 

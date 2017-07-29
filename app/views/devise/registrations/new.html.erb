@@ -30,10 +30,12 @@
                         <%= f.password_field :password_confirmation, autocomplete: "off" %>
                     </div>
 
-                    <div class="actions">
-                        <%= f.submit "Sign up" %>
-                    </div>
+                    <%= button_tag(type: 'submit', class: "btn btn-secondary marg-top-25") do %>
+                        Sign up
                     <% end %>
+                    <% end %>
+
+                    <div class="space"></div>
 
                     <%= render "devise/shared/links" %>
                 </div>

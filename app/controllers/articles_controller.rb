@@ -30,6 +30,18 @@ class ArticlesController < ApplicationController
 
     def show
         @article = Article.find(params[:id])
+        @previous = nil
+        id = params[:id].to_i - 1
+        while (not @previous) and (id > 0)
+          @previous = Article.exists?(id) ? Article.find(id) : nil
+          id = id - 1
+        end
+        @next = nil
+        id = params[:id].to_i + 1
+        while (not @next) and (id <= Article.all.count)
+          @next = Article.exists?(id) ? Article.find(id) : nil
+          id = id + 1
+        end
     end
 
     def update

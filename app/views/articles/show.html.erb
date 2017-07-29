@@ -147,10 +147,8 @@
                 <div class="space"></div>
 
                 <div class="buttons">
-                    <% previousArticle = Article.exists?(id: @article.id - 1) ? Article.find(@article.id - 1) : nil %>
-                    <% nextArticle = Article.exists?(id: @article.id + 1) ? Article.find(@article.id + 1) : nil %>
-                    <% if previousArticle %>
-                        <%= link_to previousArticle do %>
+                    <% if @previous %>
+                        <%= link_to @previous do %>
                             <button class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> &nbsp;Previous article</button>
                         <% end %>
                     <% else %>
@@ -158,8 +156,8 @@
                             <button class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> &nbsp;Back to all articles</button>
                         <% end %>
                     <% end %>
-                    <% if nextArticle %>
-                        <%= link_to nextArticle do %>
+                    <% if @next %>
+                        <%= link_to @next do %>
                             <button class="btn btn-outline-primary">Next article &nbsp;<i class="fa fa-chevron-right"></i></button>
                         <% end %>
                     <% end %>
