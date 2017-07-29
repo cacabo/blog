@@ -1,469 +1,502 @@
 <div class="container bg pad-top-25 pad-bot-100" id="landscape">
-    <div class="space"></div>
-    <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <div class="row no-pad">
-                <div class="col-6 push-3 col-sm-3 push-sm-0 marg-bot-50">
-                    <%= image_tag 'cameron.png', class: 'img-fluid' %>
-                </div>
-                <div class="col-12 col-sm-9">
-                    <h1 class="title pad-bot-25">Hi! I'm Cameron.</h1>
-                    <p class="pitch pad-bot-25">I'm a driven learner, freelance web developer, and product builder&mdash; passionate for entrepreneurship, user experience, analytics, and marketing.
-                        <br><br>
-                        I study <a href="https://www.cis.upenn.edu/index.php" target="_blank">computer science,</a> <a href="https://undergrad-inside.wharton.upenn.edu/business-analytics/" target="_blank">business analytics,</a> and <a href="http://undergrad-inside.wharton.upenn.edu/concentrations/mgmt/" target="_blank">management of entrepreneurship and innovation</a> in the <a href="http://www.upenn.edu/fisher/" target="_blank">Jerome Fisher Program in Management and Technology</a> at the University of Pennsylvania. When not at school in Philadelphia, I live in Los Angeles.
-                    </p>
-                </div>
-            </div>
-            <div class="buttons">
-                <%= link_to projects_path do %>
-                <button class="btn btn-outline-primary">View my projects</button>
-                <% end %>
-                <%= link_to articles_path do %>
-                <button class="btn btn-outline-primary">View my blog</button>
-                <% end %>
-                <%= link_to new_contact_path do %>
-                <button class="btn btn-outline-primary">Contact me</button>
-                <% end %>
-            </div>
+  <div class="space"></div>
+  <div class="row">
+    <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <div class="row no-pad">
+        <div class="col-6 push-3 col-sm-3 push-sm-0 marg-bot-50">
+          <%= image_tag 'cameron.png', class: 'img-fluid' %>
         </div>
+        <div class="col-12 col-sm-9">
+          <h1 class="title pad-bot-25">Hi! I'm Cameron.</h1>
+          <p class="pitch pad-bot-25">I'm a driven learner, freelance web developer, and product builder&mdash; passionate for entrepreneurship, user experience, analytics, and marketing.
+            <br><br>
+            I study
+            <a href="https://www.cis.upenn.edu/index.php" target="_blank">computer science,</a>
+            <a href="https://undergrad-inside.wharton.upenn.edu/business-analytics/" target="_blank">business analytics,</a>
+            and
+            <a href="http://undergrad-inside.wharton.upenn.edu/concentrations/mgmt/" target="_blank">management of entrepreneurship and innovation</a>
+            in the
+            <a href="http://www.upenn.edu/fisher/" target="_blank">Jerome Fisher Program in Management and Technology</a>
+            at the University of Pennsylvania. When not at school in Philadelphia, I live in Los Angeles.
+          </p>
+        </div>
+      </div>
+      <div class="buttons">
+        <%= link_to projects_path do %>
+        <button class="btn btn-outline-primary">View my projects</button>
+        <% end %>
+        <%= link_to articles_path do %>
+        <button class="btn btn-outline-primary">View my blog</button>
+        <% end %>
+        <%= link_to new_contact_path do %>
+        <button class="btn btn-outline-primary">Contact me</button>
+        <% end %>
+      </div>
     </div>
+  </div>
 </div>
 
 <nav class="nav-sub">
-    <div class="nav-wrapper">
-        <a class="scroll" href="#education">Education</a>
-        <a class="scroll" href="#technologies">Technologies</a>
-        <a class="scroll" href="#experience">Experience</a>
-        <a class="scroll" href="#extracurriculars">Extracurriculars</a>
-    </div>
+  <div class="nav-wrapper">
+    <a class="scroll" href="#education">Education</a>
+    <a class="scroll" href="#technologies">Technologies</a>
+    <a class="scroll" href="#experience">Experience</a>
+    <a class="scroll" href="#extracurriculars">Extracurriculars</a>
+  </div>
 </nav>
 
 <div class="gray no-pad">
-    <div class="space pad-top-50" id="education"></div>
-    <div class="container">
-        <div class="row pad-top-25 pad-bot-25">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble bubble-flatten">
-                <a data-toggle="collapse" href="#education-content" aria-expanded="true" class="collapser">
-                    <h2 class="title">Education</h2>
-                    <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                </a>
-                <div class="line"></div>
-                <div class="collapse show content" id="education-content">
-                    <!-- upenn -->
-                    <div class="row no-pad">
-                        <div class="col-3 col-md-2">
-                            <%= image_tag "penn.png", class: "img-fluid" %>
-                        </div>
-                        <div class="col-12 col-md-10">
-                            <h4>University of Pennsylvania - Jerome Fisher Program in Mangement and Technology</h4>
-                            <p>
-                                <i>3.95 GPA. 2016-2020.</i>
-                            </p>
-                            <p>Pursuing a Bachelor of Science in Engineering in Computer Science from the School of Engineering and Applied Sciences and a Bachelors of Science in Economics in Business Analytics and Management of Tech Entrepreneurship from the Wharton School of
-                                Business.</p>
-                        </div>
-                    </div>
-
-                    <div class="line"></div>
-                    <!-- hw -->
-                    <div class="row no-pad">
-                        <div class="col-3 col-md-2">
-                            <%= image_tag "hw.png", class: "img-fluid" %>
-                        </div>
-                        <div class="col-12 col-md-10">
-                            <h4>Harvard-Westlake School</h4>
-                            <p>
-                                <i>3.94 GPA. 2013-2016.</i>
-                            </p>
-                            <p>Graduated Cum Laude (Highest Honors) top three in the class. Leader in entrepreneurship, ethics, and current events clubs on campus.</p>
-                        </div>
-                    </div>
-
-                    <div class="line"></div>
-                    <!-- UCLA -->
-                    <div class="row no-pad">
-                        <div class="col-3 col-md-2">
-                            <%= image_tag "ucla.jpg", class: "img-fluid" %>
-                        </div>
-                        <div class="col-12 col-md-10">
-                            <h4>University of California, Los Angeles: SciArt NanoLab</h4>
-                            <p>
-                                <i>Summer 2015.</i>
-                            </p>
-                            <p>Interdisciplinary summer course focusing on utilizing art and design to solve issues in modern nanoscience and computing.</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="space pad-top-50" id="education"></div>
+  <div class="container">
+    <div class="row pad-top-25 pad-bot-25">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble bubble-flatten">
+        <a data-toggle="collapse" href="#education-content" aria-expanded="true" class="collapser">
+          <h2 class="title">Education</h2>
+          <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+        <div class="line"></div>
+        <div class="collapse show content" id="education-content">
+          <!-- upenn -->
+          <div class="row no-pad">
+            <div class="col-3 col-md-2">
+              <%= image_tag "penn.png", class: "img-fluid" %>
             </div>
-        </div>
-
-        <div class="space" id="technologies"></div>
-
-        <div class="row pad-top-25 pad-bot-25">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble bubble-flatten">
-                <a data-toggle="collapse" href="#technologies-content" aria-expanded="true" class="collapser">
-                    <h2 class="title">Technologies</h2>
-                    <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                </a>
-                <div class="line"></div>
-                <div class="collapse show content" id="technologies-content">
-                    <h4>General Purpose Programming Languages</h4>
-                    <i>From highest to lowest exposure.</i>
-                    <ul>
-                        <li>
-                            <strong>Java:</strong>
-                            &nbsp;test driven development (JUnit), Swing library used for GUI development, advanced collections and data structures.</li>
-                        <li>
-                            <strong>Javascript:</strong>
-                            &nbsp;functional and object oriented programming, scripting.</li>
-                        <li>
-                            <strong>Ruby:</strong>
-                            &nbsp;foundational understanding, DRY programming.</li>
-                        <li>
-                            <strong>C:</strong>
-                            &nbsp;experience from the machine level up to building basic games and a compiler. Strong understanding of memory allocation and storage in the stack and heap.</li>
-                        <li>
-                            <strong>OCaml:</strong>
-                            &nbsp;test driven development, functional programming.</li>
-                        <li>
-                            <strong>Python:</strong>
-                            &nbsp;lightweight yet powerful scripting and data analytics.</li>
-                    </ul>
-                    <div class="line"></div>
-                    <h4>Web Development Programming Languages</h4>
-                    <ul>
-                        <li>
-                            <strong>HTML5:</strong>
-                            &nbsp;user-oriented programming, industry standard syntax. Experience utlizing
-                            <a href="https://aws.amazon.com/s3/" target="_blank">AWS (Amazon Web Services) S3</a>
-                            for hosting and
-                            <a href="https://aws.amazon.com/route53/" target="_blank">AWS Route 53</a>
-                            for domain name management.</li>
-                        <li>
-                            <strong>CSS3, Sass:</strong>
-                            &nbsp; media queries for mobile-first development, CSS transitions for dynamic, engaging UX. Preprocessor used for more efficient and modular development.</li>
-                        <li>
-                            <strong>Javascript/jQuery:</strong>
-                            &nbsp;writting object oriented and functional programs to keep track of web application state and make sites more interactive.</li>
-                        <li>
-                            <strong>Bootstrap 4:</strong>
-                            &nbsp;mobile-first CSS &amp; Javascript library for rapid and responsive web development.</li>
-                        <li>
-                            <strong>Ruby on Rails 5:</strong>
-                            &nbsp;web app programming, RESTful routes, deployment to
-                            <a href="https://heroku.com" target="_blank">Heroku.</a>
-                            Databases with
-                            <a href="https://sqlite.org/" target="_blank">SQLite3</a>
-                            and
-                            <a href="https://www.postgresql.org/" target="_blank">PostgreSQL.</a>
-                            View manipulation with embedded ruby (ERB).</li>
-                        <li>
-                            <strong>React.js:</strong>
-                            &nbsp;front end development; creating components and writing in JSX to handle the view side of web applications.
-                    </ul>
-                    <div class="line"></div>
-                    <h4>Additional Technologies</h4>
-                    <ul>
-                        <li>
-                            <strong>Git:</strong>
-                            &nbsp;managing projects through git for distributed version control. Primarily conducted via
-                            <a href="https://github.com/ccabo1" taget="_blank">Github.</a>
-                        </li>
-                        <li>
-                            <strong>SQL:</strong>
-                            &nbsp;relational database structuring and querying.
-                        </li>
-                        <li>
-                            <strong>Google Analytics:</strong>
-                            &nbsp;using the javascript plugin to generate insights into website growth.
-                        </li>
-                        <li>
-                            <strong>Wordpress:</strong>
-                            &nbsp;building websites through the Wordpress web application.
-                        </li>
-                    </ul>
-                    <div class="line"></div>
-                    <h4>Digital Media</h4>
-                    <ul>
-                        <li>Adobe Photoshop, Adobe Illustrator, Adobe Dreamweaver. Graphic design, concept design for applications, wireframing, digital art, and poster design.</li>
-                    </ul>
-                </div>
+            <div class="col-12 col-md-10">
+              <h4>University of Pennsylvania - Jerome Fisher Program in Mangement and Technology</h4>
+              <p>
+                <i>3.95 GPA. 2016-2020.</i>
+              </p>
+              <p>Pursuing a Bachelor of Science in Engineering in Computer Science from the School of Engineering and Applied Sciences and a Bachelors of Science in Economics in Business Analytics and Management of Tech Entrepreneurship from the Wharton School of
+                Business.</p>
             </div>
-        </div>
+          </div>
 
-        <div class="space" id="experience"></div>
-        <!-- experience -->
-        <div class="row pad-top-25 pad-bot-25">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble bubble-flatten">
-                <h2 class="title pad-bot-25 collapser">Experience</h2>
-                <div class="content no-pad" id="experience-content">
-                    <!-- fortuna health -->
-                    <a data-toggle="collapse" href="#fortuna" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Front End Developer - Fortuna Health</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="fortuna">
-                        <p class="time">
-                            March 2017 &ndash; present
-                        </p>
-                        <p>
-                            Building a web marketplace and social platform to aid hospitals in sourcing traveling nurses.
-                        </p>
-                        <p>
-                            <strong>Languages and frameworks:</strong>
-                            <a href="https://www.mongodb.com/" target="_blank">MongoDB</a>, <a href="https://expressjs.com/" target="_blank">Express.js</a>, <a href="https://facebook.github.io/react/" target="_blank">React.js</a>, Javascript, HTML, and CSS.
-                        </p>
-                    </div>
-
-                    <!-- ar textiles -->
-                    <a data-toggle="collapse" href="#ar" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Web and Marketing Developer - AR Textiles</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="ar">
-                        <div class="row no-pad">
-                            <div class="col-3">
-                                <%= image_tag "ar.svg", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    February 2017 &ndash; May 2017
-                                </p>
-                                <p>
-                                    Modernized AR Textile's logo and image to better compete in the market. Integrated this logo into signage, business cards, and websites.
-                                </p>
-                                <p>
-                                    Proceeded to build a one page site to pitch the brand, answer common customer questions, and facilitate easier and more targeted communication between the customers and company.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- crossroads -->
-                    <a data-toggle="collapse" href="#crossroads" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Floor Staff - Crossroads Trading Company</p>
-                        <i class="arrow fa fa-chevron-up" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse sub-content" id="crossroads">
-                        <div class="row no-pad">
-                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
-                                <%= image_tag "crossroads.jpg", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    Summer 2016
-                                </p>
-                                <p>
-                                    Retail experience at a consignment and recycled clothing store. Aided in interacting with customers and organizing merchandise in order to optimize sales.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- atletico -->
-                    <a data-toggle="collapse" href="#atletico" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Web Intern - Atletico SoCal Soccer Club</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="atletico">
-                        <div class="row no-pad">
-                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
-                                <%= image_tag "atletico.png", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    Winter 2016
-                                </p>
-                                <p>
-                                    Conducted design updates, proofreading, and content additions for the club's website, thereby improving their online presence and refining their company image.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- crossroads -->
-                    <a data-toggle="collapse" href="#soupure" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Digital Designer - Soupure</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="soupure">
-                        <div class="row no-pad">
-                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
-                                <%= image_tag "soupure.jpg", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    Spring 2016
-                                </p>
-                                <p>
-                                    Aided in designing printouts and online pdfs for customer use to incentivize continued product use.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- beacon -->
-                    <a data-toggle="collapse" href="#beacon" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Growth Intern - Beacon School for Boys</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="beacon">
-                        <div class="row no-pad">
-                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
-                                <%= image_tag "beacon.png", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width"></p>
-                                <p>
-                                    Conducted web design and content updates, photo simulations in Photoshop, statistics, and site research. My work generated enough demonstrated interest to ensure the school would open by their scheduled date.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+          <div class="line"></div>
+          <!-- hw -->
+          <div class="row no-pad">
+            <div class="col-3 col-md-2">
+              <%= image_tag "hw.png", class: "img-fluid" %>
             </div>
-        </div>
-
-        <div class="space" id="extracurriculars"></div>
-
-        <div class="row pad-top-25 pad-bot-25">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble bubble-flatten">
-                <h2 class="title pad-bot-25 collapser">Extracurriculars</h2>
-                <div class="content no-pad" id="extracurriculars-content">
-
-                    <!-- youthhack -->
-                    <a data-toggle="collapse" href="#youthhack" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">VP Marketing and Webmaster - YouthHack</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="youthhack">
-                        <div class="row no-pad">
-                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
-                                <%= image_tag "youthhack.png", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    Fall 2016 &ndash; present
-                                </p>
-                                <p>
-                                    <a href="youthhack.net">YouthHack</a>
-                                    is an international organization dedicated to fomenting entrepreneurial culture among students. I lead the Core Team in all marketing initiatives for YouthHack events, partnerships, and programs. Further, I consult our student-run ventures within the
-                                    Accelerator program regarding their own marketing, design, and consumer acquisition queries.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- weisslabs -->
-                    <a data-toggle="collapse" href="#weisslabs" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Mentor - WeissLabs</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="weisslabs">
-                        <div class="row no-pad">
-                            <div class="col-5 col-sm-4 col-md-3">
-                                <%= image_tag "weisslabs.png", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    Fall 2016 &ndash; present
-                                </p>
-                                <p>
-                                    <a href="weisslabs.io/" target="blank">Weisslabs</a>
-                                    is an incubator at Penn within the
-                                    <a href="https://weisstech.upenn.edu/" target="blank">Weiss Tech House</a>. Within Weisslabs, I am the point person for a company within the accelerator each semester. I provide insight into their business operations, set growth metrics, track
-                                    progress, and connect them to resources within the Penn and Philadelphia communities.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- muse -->
-                    <a data-toggle="collapse" href="#muse" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Consultant - MUSE</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="muse">
-                        <div class="row no-pad">
-                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
-                                <%= image_tag "muse.png", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    Fall 2016 &ndash; present
-                                </p>
-                                <p>
-                                    <a href="musepenn.org/" target="blank">MUSE</a>, or the Marketing Undergraduate Student Establishment, is a club at Wharton dedicated to marketing-oriented event planning and consulting. Through MUSE, I consult businesses, working primarily on
-                                    go-to-market strategies, market research, and brand positioning and differentiation.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- pennsem -->
-                    <a data-toggle="collapse" href="#pennsem" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Consultant - PennSEM</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="pennsem">
-                        <div class="row no-pad">
-                            <div class="col-5 col-sm-4 col-md-3">
-                                <%= image_tag "pennsem.png", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    Fall 2016 &ndash; present
-                                </p>
-                                <p>
-                                    <a href="pennsem.com/" target="blank">PennSEM</a>, or Penn Social Entrepreneurship Movement, seeks to develop social enterprises of all forms. Within the consulting branch specifically, I have focused on aiding companies with brand differentiation, online-optimization, and pricing strategy.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- inner-city arts -->
-                    <a data-toggle="collapse" href="#ica" aria-expanded="true" class="collapser sub-collapser">
-                        <p class="title">Volunteer - Inner-City Arts</p>
-                        <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                    <div class="collapse show sub-content" id="ica">
-                        <div class="row no-pad">
-                            <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
-                                <%= image_tag "ica.png", class: "img-fluid" %>
-                            </div>
-                            <div class="col-12">
-                                <p class="time full-width">
-                                    Summer 2015
-                                </p>
-                                <p>
-                                    <a href="inner-cityarts.org" target="_blank" title="Learn more about Inner-City Arts">Inner-City Arts</a>
-                                    is an organization in downtown Los Angeles dedicated to providing free arts education to local youth. During my time there, I led student groups, aided professional artists in teaching groups, and helped maintenance in cleaning facilities and
-                                    preparing installations.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="col-12 col-md-10">
+              <h4>Harvard-Westlake School</h4>
+              <p>
+                <i>3.94 GPA. 2013-2016.</i>
+              </p>
+              <p>Graduated Cum Laude (Highest Honors) top three in the class. Leader in entrepreneurship, ethics, and current events clubs on campus.</p>
             </div>
-        </div>
+          </div>
 
-        <div class="space"></div>
-        <div class="center">
-            <a href="https://drive.google.com/file/d/0BydUbLqE7ydLb00xT3JRVkZqcDQ/view?usp=sharing" target="_blank">View my full resume here.</a>
+          <div class="line"></div>
+          <!-- UCLA -->
+          <div class="row no-pad">
+            <div class="col-3 col-md-2">
+              <%= image_tag "ucla.jpg", class: "img-fluid" %>
+            </div>
+            <div class="col-12 col-md-10">
+              <h4>University of California, Los Angeles: SciArt NanoLab</h4>
+              <p>
+                <i>Summer 2015.</i>
+              </p>
+              <p>Interdisciplinary summer course focusing on utilizing art and design to solve issues in modern nanoscience and computing.</p>
+            </div>
+          </div>
         </div>
-        <div class="space"></div>
+      </div>
     </div>
-    <!-- close container -->
+
+    <div class="space" id="technologies"></div>
+
+    <div class="row pad-top-25 pad-bot-25">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble bubble-flatten">
+        <a data-toggle="collapse" href="#technologies-content" aria-expanded="true" class="collapser">
+          <h2 class="title">Technologies</h2>
+          <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+        </a>
+        <div class="line"></div>
+        <div class="collapse show content" id="technologies-content">
+          <h4>General Purpose Programming Languages</h4>
+          <i>From highest to lowest exposure.</i>
+          <ul>
+            <li>
+              <strong>JavaScript:</strong>
+              &nbsp;functional and object oriented programming, scripting.
+            </li>
+            <li>
+              <strong>Java:</strong>
+              &nbsp;test driven development (JUnit), Swing library used for GUI development, advanced collections and data structures.
+            </li>
+            <li>
+              <strong>Ruby:</strong>
+              &nbsp;foundational understanding, DRY programming.
+            </li>
+            <li>
+              <strong>C:</strong>
+              &nbsp;experience from the machine level up to building basic games and a compiler. Strong understanding of memory allocation and storage in the stack and heap.
+            </li>
+            <li>
+              <strong>OCaml:</strong>
+              &nbsp;test driven development, functional programming.
+            </li>
+          </ul>
+          <div class="line"></div>
+          <h4>Web Development Programming Languages</h4>
+          <ul>
+            <li>
+              <strong>HTML5:</strong>
+              &nbsp;user-oriented programming, industry standard syntax. Experience utlizing
+              <a href="https://aws.amazon.com/s3/" target="_blank">AWS (Amazon Web Services) S3</a>
+              for hosting and
+              <a href="https://aws.amazon.com/route53/" target="_blank">AWS Route 53</a>
+              for domain name management.
+            </li>
+            <li>
+              <strong>CSS3, Sass:</strong>
+              &nbsp; media queries for mobile-first development, CSS transitions for dynamic, engaging UX. Preprocessor used for more efficient and modular development.
+            </li>
+            <li>
+              <strong>JavaScript/jQuery:</strong>
+              &nbsp;writting object oriented and functional programs to keep track of web application state and make sites more interactive.
+            </li>
+            <li>
+              <strong>Bootstrap 4:</strong>
+              &nbsp;mobile-first CSS &amp; JavaScript library for rapid and responsive web development.
+            </li>
+            <li>
+              <strong>Ruby on Rails 5:</strong>
+              &nbsp;web app programming, RESTful routes, deployment to
+              <a href="https://heroku.com" target="_blank">Heroku.</a>
+              Databases with
+              <a href="https://sqlite.org/" target="_blank">SQLite3</a>
+              and
+              <a href="https://www.postgresql.org/" target="_blank">PostgreSQL.</a>
+              View manipulation with embedded ruby (ERB).
+            </li>
+            <li>
+              <strong>React.js / React Native:</strong>
+              &nbsp;front end development; creating components and writing in JSX to handle the view side of web applications and native mobile applications.
+            </li>
+            <li>
+              <strong>Jest:</strong>
+              &nbsp;JavaScript unit testing.
+            </li>
+            <li>
+              <strong>Node:</strong>
+              &nbsp;server-side JavaScript.
+            </li>
+            <li>
+              <strong>Express:</strong>
+              &nbsp;JavaScript web servers.
+            </li>
+            <li>
+              <strong>MongoDB/Mongoose:</strong>
+              &nbsp; NoSQL database and JavaScript client.
+            </li>
+          </ul>
+          <div class="line"></div>
+          <h4>Additional Technologies</h4>
+          <ul>
+            <li>
+              <strong>Git:</strong>
+              &nbsp;managing projects through git for distributed version control. Primarily conducted via
+              <a href="https://github.com/ccabo1" taget="_blank">Github.</a>
+            </li>
+            <li>
+              <strong>SQL:</strong>
+              &nbsp;relational database structuring and querying.
+            </li>
+            <li>
+              <strong>Google Analytics:</strong>
+              &nbsp;using the JavaScript plugin to generate insights into website growth.
+            </li>
+            <li>
+              <strong>Wordpress:</strong>
+              &nbsp;building websites through the Wordpress web application.
+            </li>
+          </ul>
+          <div class="line"></div>
+          <h4>Digital Media</h4>
+          <ul>
+            <li>Adobe Photoshop, Adobe Illustrator, Adobe Dreamweaver. Graphic design, concept design for applications, wireframing, digital art, and poster design.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="space" id="experience"></div>
+    <!-- experience -->
+    <div class="row pad-top-25 pad-bot-25">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble bubble-flatten">
+        <h2 class="title pad-bot-25 collapser">Experience</h2>
+        <div class="content no-pad" id="experience-content">
+          <!-- honey -->
+          <a data-toggle="collapse" href="#honey" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Software Engineering Intern - Honey</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="honey">
+            <div class="row no-pad">
+              <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <%= image_tag "honey.svg", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time">
+                  June 2017 &ndash; present
+                </p>
+                <p>
+                  Helping to build the consumer-focused future of ecommerce. REST API's with Node and Express, HTTP requests with jQuery and AJAX, general scripting and DOM querying with JavaScript and jQuery, test driven development with Jest, front end development with React Native.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ar textiles -->
+          <a data-toggle="collapse" href="#ar" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Web and Marketing Developer - AR Textiles</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="ar">
+            <div class="row no-pad">
+              <div class="col-3">
+                <%= image_tag "ar.svg", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  February 2017 &ndash; May 2017
+                </p>
+                <p>
+                  Modernized AR Textile's logo and image to better compete in the market. Integrated this logo into signage, business cards, and websites.
+                </p>
+                <p>
+                  Proceeded to build a one page site to pitch the brand, answer common customer questions, and facilitate easier and more targeted communication between the customers and company.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- crossroads -->
+          <a data-toggle="collapse" href="#crossroads" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Floor Staff - Crossroads Trading Company</p>
+            <i class="arrow fa fa-chevron-up" aria-hidden="true"></i>
+          </a>
+          <div class="collapse sub-content" id="crossroads">
+            <div class="row no-pad">
+              <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <%= image_tag "crossroads.jpg", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  Summer 2016
+                </p>
+                <p>
+                  Retail experience at a consignment and recycled clothing store. Aided in interacting with customers and organizing merchandise in order to optimize sales.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- atletico -->
+          <a data-toggle="collapse" href="#atletico" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Web Intern - Atletico SoCal Soccer Club</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="atletico">
+            <div class="row no-pad">
+              <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <%= image_tag "atletico.png", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  Winter 2016
+                </p>
+                <p>
+                  Conducted design updates, proofreading, and content additions for the club's website, thereby improving their online presence and refining their company image.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- crossroads -->
+          <a data-toggle="collapse" href="#soupure" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Digital Designer - Soupure</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="soupure">
+            <div class="row no-pad">
+              <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <%= image_tag "soupure.jpg", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  Spring 2016
+                </p>
+                <p>
+                  Aided in designing printouts and online pdfs for customer use to incentivize continued product use.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- beacon -->
+          <a data-toggle="collapse" href="#beacon" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Growth Intern - Beacon School for Boys</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="beacon">
+            <div class="row no-pad">
+              <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <%= image_tag "beacon.png", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width"></p>
+                <p>
+                  Conducted web design and content updates, photo simulations in Photoshop, statistics, and site research. My work generated enough demonstrated interest to ensure the school would open by their scheduled date.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="space" id="extracurriculars"></div>
+
+    <div class="row pad-top-25 pad-bot-25">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 bubble bubble-flatten">
+        <h2 class="title pad-bot-25 collapser">Extracurriculars</h2>
+        <div class="content no-pad" id="extracurriculars-content">
+
+          <!-- youthhack -->
+          <a data-toggle="collapse" href="#youthhack" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">VP Marketing and Webmaster - YouthHack</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="youthhack">
+            <div class="row no-pad">
+              <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <%= image_tag "youthhack.png", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  Fall 2016 &ndash; present
+                </p>
+                <p>
+                  <a href="youthhack.net">YouthHack</a>
+                  is an international organization dedicated to fomenting entrepreneurial culture among students. I lead the Core Team in all marketing initiatives for YouthHack events, partnerships, and programs. Further, I consult our student-run ventures within the
+                  Accelerator program regarding their own marketing, design, and consumer acquisition queries.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- weisslabs -->
+          <a data-toggle="collapse" href="#weisslabs" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Mentor - WeissLabs</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="weisslabs">
+            <div class="row no-pad">
+              <div class="col-5 col-sm-4 col-md-3">
+                <%= image_tag "weisslabs.png", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  Fall 2016 &ndash; present
+                </p>
+                <p>
+                  <a href="weisslabs.io/" target="blank">Weisslabs</a>
+                  is an incubator at Penn within the
+                  <a href="https://weisstech.upenn.edu/" target="blank">Weiss Tech House</a>. Within Weisslabs, I am the point person for a company within the accelerator each semester. I provide insight into their business operations, set growth metrics, track
+                  progress, and connect them to resources within the Penn and Philadelphia communities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- muse -->
+          <a data-toggle="collapse" href="#muse" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Consultant - MUSE</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="muse">
+            <div class="row no-pad">
+              <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <%= image_tag "muse.png", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  Fall 2016 &ndash; present
+                </p>
+                <p>
+                  <a href="musepenn.org/" target="blank">MUSE</a>, or the Marketing Undergraduate Student Establishment, is a club at Wharton dedicated to marketing-oriented event planning and consulting. Through MUSE, I consult businesses, working primarily on
+                  go-to-market strategies, market research, and brand positioning and differentiation.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- pennsem -->
+          <a data-toggle="collapse" href="#pennsem" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Consultant - PennSEM</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="pennsem">
+            <div class="row no-pad">
+              <div class="col-5 col-sm-4 col-md-3">
+                <%= image_tag "pennsem.png", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  Fall 2016 &ndash; present
+                </p>
+                <p>
+                  <a href="pennsem.com/" target="blank">PennSEM</a>, or Penn Social Entrepreneurship Movement, seeks to develop social enterprises of all forms. Within the consulting branch specifically, I have focused on aiding companies with brand differentiation, online-optimization, and pricing strategy.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- inner-city arts -->
+          <a data-toggle="collapse" href="#ica" aria-expanded="true" class="collapser sub-collapser">
+            <p class="title">Volunteer - Inner-City Arts</p>
+            <i class="arrow fa fa-chevron-down" aria-hidden="true"></i>
+          </a>
+          <div class="collapse show sub-content" id="ica">
+            <div class="row no-pad">
+              <div class="col-8 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+                <%= image_tag "ica.png", class: "img-fluid" %>
+              </div>
+              <div class="col-12">
+                <p class="time full-width">
+                  Summer 2015
+                </p>
+                <p>
+                  <a href="inner-cityarts.org" target="_blank" title="Learn more about Inner-City Arts">Inner-City Arts</a>
+                  is an organization in downtown Los Angeles dedicated to providing free arts education to local youth. During my time there, I led student groups, aided professional artists in teaching groups, and helped maintenance in cleaning facilities and
+                  preparing installations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="space"></div>
+    <div class="center">
+      <a href="https://drive.google.com/file/d/0BydUbLqE7ydLb00xT3JRVkZqcDQ/view?usp=sharing" target="_blank">View my full resume here.</a>
+    </div>
+    <div class="space"></div>
+  </div>
+  <!-- close container -->
 </div>
 <!-- close gray -->
 
 <script type="text/javascript">
-    $(document).ready(function () {
-        $('.collapser').click(function () {
-            var $icon = $(this).find('i');
-            $icon.toggleClass('rotate');
-        });
+  $(document).ready(function () {
+    $('.collapser').click(function () {
+      var $icon = $(this).find('i');
+      $icon.toggleClass('rotate');
     });
+  });
 </script>
