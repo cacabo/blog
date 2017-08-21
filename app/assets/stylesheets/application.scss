@@ -45,6 +45,67 @@ body {
     min-height: 60vh;
 }
 
+.space-0,
+.space-1,
+.space-2,
+.space-3,
+.space-4 {
+  display: block;
+  width: 100%;
+}
+
+.space-0 {
+  height: 0rem;
+}
+
+.space-1 {
+  height: 1rem;
+}
+
+.space-2 {
+  height: 2rem;
+}
+
+.space-3 {
+  height: 3rem;
+}
+
+.space-4 {
+  height: 4rem;
+}
+
+.black-text {
+  color: black;
+}
+
+.marg-bot-1 {
+  margin-bottom: 1rem !important;
+}
+
+a.black-text,
+a.black-text:active,
+a.black-text:hover,
+a.black-text:focus,
+a.black-text:visited {
+  color: black;
+}
+
+.bord-top-thick {
+  border-top: 0.25rem solid rgba(0, 0, 0, 0.15);
+}
+
+.pad-0 {
+  padding: 0rem!important;
+}
+
+.pad-1 {
+  padding: 1rem!important;
+}
+
+.pad-2 {
+  padding: 2rem!important;
+}
+
 .space {
     display: block;
     width: 100%;

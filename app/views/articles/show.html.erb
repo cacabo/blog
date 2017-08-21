@@ -97,81 +97,111 @@
 </div>
 <!-- close container -->
 
-<div class="gray no-pad">
-    <div class="space"></div>
-    <div class="space"></div>
-    <div class="container">
+<div class="gray">
+  <div class="space-4"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1">
         <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-
-                <h4>Responses</h4>
-                <div class="line marg-bot-50"></div>
-
-                <% if @article.comments %>
-                    <% @comments = [] %>
-                    <% @hidden_comments = [] %>
-                    <% if @article.comments.size > 5 %>
-                        <% @comments = @article.comments.last(5) %>
-                        <% @hidden_comments = @article.comments.limit(@article.comments.size - 3) %>
-                        <button class='btn btn-secondary btn-sm shade' id="show-all">
-                            See all <%= @article.comments.size %> comments
-                        </button>
-                    <% else %>
-                        <% @comments = @article.comments %>
-                    <% end %>
-
-                    <% if @hidden_comments and @hidden_comments.size > 0 %>
-                        <div class="no-display" id="hidden_comments">
-                            <%= render @hidden_comments, article: @article %>
-                        </div>
-                    <% end %>
-                    <div id="comments_<%= @article.id %>">
-                        <%= render @comments, article: @article %>
-                    </div>
-                <% end %>
-
-                <div class="space"></div>
-
-                <h4 class="animate">Join the discussion</h4>
-                <div class="line animate"></div>
-
-                <%= bootstrap_form_for([@article, @article.comments.new], remote: true) do |f| %>
-                    <p><%= f.text_field :name, placeholder: 'Your name', class: 'shade', id: 'comment_name', required: true %></p>
-                    <p><%= f.text_area :content, placeholder: 'Add a comment...', class: 'shade no-scroll animate min-3', id: 'comment_content', required: true %></p>
-                    <%= button_tag(type: 'submit', class: "btn btn-secondary shade marg-top-25") do %>
-                        Post response
-                    <% end %>
-                <% end %>
-
-                <div class="space"></div>
-                <div class="space"></div>
-
-                <div class="buttons">
-                    <% if @previous %>
-                        <%= link_to @previous do %>
-                            <button class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> &nbsp;Previous article</button>
-                        <% end %>
-                    <% else %>
-                        <%= link_to articles_path do %>
-                            <button class="btn btn-outline-primary"><i class="fa fa-chevron-left"></i> &nbsp;Back to all articles</button>
-                        <% end %>
-                    <% end %>
-                    <% if @next %>
-                        <%= link_to @next do %>
-                            <button class="btn btn-outline-primary">Next article &nbsp;<i class="fa fa-chevron-right"></i></button>
-                        <% end %>
-                    <% end %>
+          <% if @previous %>
+            <div class="col-12 col-md-6">
+              <%= link_to @previous do %>
+                <div class="white marg-bot-1 other">
+                  <% if not @previous.image.nil? and not @previous.image_file_name.nil? %>
+                    <%= image_tag @previous.image.url(:medium), class: 'img-fluid full-width' %>
+                  <% end %>
+                  <div class="pad-1">
+                    <p class="description">
+                      Previous article
+                    </p>
+                    <h2 class="sans">
+                      <%= @previous.title %>
+                    </h2>
+                    <h3 class="serif">
+                      <%= @previous.text[0..100] + '...' %>
+                    </h3>
+                  </div>
                 </div>
-
+              <% end %>
             </div>
-            <!-- close col -->
+          <% else %>
+            <div class="col-12 col-md-6">
+              <%= link_to articles_path do %>
+                <div class="other white marg-bot-1">
+                  <div class="pad-1">
+                    <p class="description">
+                      Keep reading
+                    </p>
+                    <h2 class="sans title smaller">
+                      Back to all articles
+                    </h2>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
+          <% if @next %>
+            <div class="col-12 col-md-6">
+              <%= link_to @next do %>
+                <div class="other white marg-bot-1">
+                  <% if not @next.image.nil? and not @next.image_file_name.nil? %>
+                    <%= image_tag @next.image.url(:medium), class: 'img-fluid full-width' %>
+                  <% end %>
+                  <div class="pad-1">
+                    <p class="description">
+                      Next article
+                    </p>
+                    <h2 class="sans">
+                      <%= @next.title %>
+                    </h2>
+                    <h3 class="serif">
+                      <%= @next.text[0..100] + "..." %>
+                    </h3>
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
         </div>
-        <!-- close row -->
+        <!-- closing row around other articles -->
+      </div>
+      <!-- close col -->
     </div>
-    <!-- close container -->
+    <!-- close row -->
 
-    <div class="space"></div>
-    <div class="space"></div>
+    <div class="space-2"></div>
+
+    <% if @article %>
+      <div class="row">
+        <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+          <!-- DISQUS -->
+          <div id="disqus_thread"></div>
+          <script>
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+            var disqus_config = function () {
+            this.page.url = '<%= request.original_url %>';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '<%= @article.id %>'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://cameron-1.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+      </div>
+    <% end %>
+    <!-- end logic checking for article for disqus -->
+  </div>
+  <!-- close container -->
+
+  <div class="space-4"></div>
 </div>
 <!-- close gray -->
 
