@@ -41,15 +41,6 @@ ActiveRecord::Schema.define(version: 20170524024244) do
     t.datetime "image_updated_at"
   end
 
-  create_table "comments", force: :cascade do |t|
-    t.integer "article_id"
-    t.string "name"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["article_id"], name: "index_comments_on_article_id"
-  end
-
   create_table "taggings", force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
