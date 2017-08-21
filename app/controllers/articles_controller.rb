@@ -29,19 +29,31 @@ class ArticlesController < ApplicationController
     end
 
     def show
-        @article = Article.find(params[:id])
-        @previous = nil
-        id = params[:id].to_i - 1
-        while (not @previous) and (id > 0)
+      @article = Article.find(params[:id]) if Article.exists? params[:id]
+      @previous = nil
+      @next = nil
+
+      if @article
+        id = @article.id.to_i - 1
+        while (not @previous) and (id >= Article.first.id)
           @previous = Article.exists?(id) ? Article.find(id) : nil
           id = id - 1
         end
-        @next = nil
-        id = params[:id].to_i + 1
-        while (not @next) and (id <= Article.all.count)
+        id = @article.id.to_i + 1
+        while (not @next) and (id <= Article.last.id)
           @next = Article.exists?(id) ? Article.find(id) : nil
           id = id + 1
         end
+        if (not @next or not @previous)
+          random = Article.limit(10).where.not(id: id).order("RANDOM()")
+          @next = @next.nil? ? random.first : @next
+          @previous = @previous.nil? ? random.second : @previous
+        end
+      else
+        random = Article.limit(10).order("RANDOM()")
+        @previous = random.first
+        @next = random.second
+      end
     end
 
     def update

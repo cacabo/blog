@@ -1,3 +1,4 @@
+<% if @article %>
 <head>
     <% title @article.title %>
     <% description "#{@article.text[0..160]}..." %>
@@ -96,6 +97,30 @@
     <!-- close row -->
 </div>
 <!-- close container -->
+
+<% else %>
+<!-- if there is no article found -->
+  <head>
+    <% title 'Cameron Cabo | Article Not Found' %>
+    <% description "This article does not exist." %>
+  </head>
+
+  <div class="container">
+    <div class="row">
+      <div class="space-2"></div>
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+        <h2 class="marg-bot-1">Article not found, oh man!</h2>
+        <p>
+          Seems like this the article that you are looking for does not exist. If you think this is a mistake, please <%= link_to 'contact me', new_contact_path %> with a description of what happened.
+        </p>
+        <div class="space-2"></div>
+        <%= link_to 'Back to all articles', articles_path, class: 'btn btn-primary' %>
+        <div class="space-4"></div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
 
 <div class="gray">
   <div class="space-4"></div>
