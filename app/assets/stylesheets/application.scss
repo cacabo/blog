@@ -78,6 +78,10 @@ body {
   color: black;
 }
 
+.full-height {
+  min-height: calc(100vh - 50px);
+}
+
 .marg-bot-1 {
   margin-bottom: 1rem !important;
 }
