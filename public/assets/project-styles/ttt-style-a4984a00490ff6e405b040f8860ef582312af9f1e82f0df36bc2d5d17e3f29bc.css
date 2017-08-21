@@ -1,0 +1,221 @@
+/*
+ * Format the header and background
+ */
+
+
+.alert {
+    position: absolute;
+    bottom: .5in;
+    width: 2in;
+    right: .5in;
+    border: 0px solid transparent;
+    border-radius: 4px;
+    z-index: 3;
+    opacity: .625;
+    margin: 0;
+    /*Style the background color*/
+    background: #C2FFC2;
+    /* For browsers that do not support gradients */
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: -webkit-gradient(linear, left top, right bottom, from(#C2FFC2), to(#6EFFCF));
+    background: linear-gradient(to bottom right, #C2FFC2, #6EFFCF);
+    /* Standard syntax */
+}
+
+.alert {
+    display: none;
+}
+
+.alert p {
+    font-size: 125%;
+}
+
+.navbar {
+    border-radius: 0px !important;
+    background: #484848;
+    border: none;
+    border-bottom: 3px solid #303030;
+}
+
+nav h1 {
+    font-size: 125%;
+    margin: 2.5vh;
+    color: whitesmoke;
+}
+
+#title {
+    float: left;
+}
+
+#state {
+    float: right;
+}
+
+#state span {
+    position: absolute;
+    border-radius: 100%;
+    top: 25%;
+    height: 50%;
+    opacity: 0.75;
+}
+
+#state span.d {
+    background: gray;
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: radial-gradient(gray, #585858);
+    /* Standard syntax */
+}
+
+body {
+    background: black;
+    /* For browsers that do not support gradients */
+    /*background: url(https://static.pexels.com/photos/25316/pexels-photo-25316.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;*/
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#484848, #282828);
+    /* Standard syntax */
+    min-height: 100vh;
+}
+
+
+/*
+ * Format the gameboard
+ */
+
+.board-wrapper {}
+
+.board {
+    padding: 0;
+    margin: 0;
+    border-radius: 1vh;
+}
+
+.slot {
+    opacity: 0.625;
+    height: 10vh;
+    padding: 0;
+    border-radius: 100%;
+    cursor: pointer;
+    cursor: hand;
+    -webkit-transform: scale(.8, .8);
+            transform: scale(.8, .8);
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+    -webkit-box-shadow: 0px 4px 4px #202020;
+            box-shadow: 0px 4px 4px #202020;
+    background: gray;
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: radial-gradient(gray, #585858);
+    /* Standard syntax */
+}
+
+.slot:hover {
+    -webkit-transform: scale(.85, .85);
+            transform: scale(.85, .85);
+    background: #909090;
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#909090, #686868);
+    /* Standard syntax */
+}
+
+.p1, .slot.p1, .slot.p1:hover {
+    background: #00ffff;
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#00ffff, #0099ff);
+    /* Standard syntax */
+}
+
+.p2, .slot.p2, .slot.p2:hover {
+    background: #ff9999;
+    /* For Safari 5.1 to 6.0 */
+    /* For Opera 11.1 to 12.0 */
+    /* For Firefox 3.6 to 15 */
+    background: radial-gradient(#ff9999, #ff1a66);
+    /* Standard syntax */
+}
+
+
+/*
+ * Format buttons
+ */
+
+.buttons-wrapper {
+    display: inline-block;
+    padding: 4vh 0;
+    width: 100%;
+}
+
+.buttons {
+    width: auto;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.buttons .btn {
+    border: 1px solid #303030;
+    background: #585858;
+    padding: 1vh 2vh;
+    margin: 0 1vh;
+    -webkit-box-shadow: 0px 4px 0px #202020;
+            box-shadow: 0px 4px 0px #202020;
+    -webkit-transition: all .25s ease;
+    transition: all .25s ease;
+}
+
+.buttons .btn:hover {
+    -webkit-box-shadow: 0px 2px 0px #101010;
+            box-shadow: 0px 2px 0px #101010;
+    background: #686868;
+    -webkit-transform: translateY(2px);
+            transform: translateY(2px);
+}
+
+.buttons .btn p {
+    color: gainsboro;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*
+ * Format the footer
+ */
+
+footer {
+    position: relative;
+    width: 100%;
+    padding: 0, 2.5vh;
+}
+
+footer h6 {
+    text-align: center;
+    margin: 2.5vh 0px;
+    font-size: 100%;
+    color: gray;
+}
+
+footer a {
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #5bc0de;
+}
