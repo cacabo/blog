@@ -16,20 +16,20 @@
                         Whether you have a project, potential employment or internship inquiry, design or website commission, or just want to talk, feel free to send me an email or add me on appropriate social media&mdash;I love meeting new people.
                     </p>
                     <p>
-                        <a href="tel:1-781-296-0345"><i class="fa fa-phone fa-fw" aria-hidden="true"></i> &nbsp;(781)296-0345</a>
-                        <br>
                         <a href="mailto:ccabo@wharton.upenn.edu?subject=Hi%Cameron"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> &nbsp;ccabo@wharton.upenn.edu</a>
                         <br>
                         <a href="#"><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> &nbsp;Los Angeles &amp; Philadelphia</a>
                     </p>
                     <div class="line"></div>
                     <%= bootstrap_form_for @contact do |f| %>
-                        <%= f.text_field :name, placeholder: 'John Doe', required: true %>
-                        <%= f.email_field :email, placeholder: 'example@domain.com', required: true %>
-                        <%= f.text_area :message, placeholder: 'Be as brief or long as you wish...', required: true, class: 'animate no-scroll' %>
+                        <%= f.text_field :name, required: true %>
+                        <%= f.email_field :email, required: true %>
+                        <%= f.text_area :message, required: true, class: 'animate no-scroll' %>
                         <div class="no-display">
                             <%= f.text_field :nickname, hint: 'leave this field blank' %>
                         </div>
+
+                        <div class="space-1"></div>
 
                         <%= f.submit 'Send message', class: 'btn btn-primary' %>
                     <% end %>
