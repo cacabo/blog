@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
     end
 
     def edit
-        @article = Article.find(params[:id])
+        @article = Article.friendly.find(params[:id])
     end
 
     def create
@@ -29,19 +29,19 @@ class ArticlesController < ApplicationController
     end
 
     def show
-      @article = Article.find(params[:id]) if Article.exists? params[:id]
+      @article = Article.friendly.find(params[:id]) if Article.friendly.exists? params[:id]
       @previous = nil
       @next = nil
 
       if @article
         id = @article.id.to_i - 1
         while (not @previous) and (id >= Article.first.id)
-          @previous = Article.exists?(id) ? Article.find(id) : nil
+          @previous = Article.exists?(id) ? Article.friendly.find(id) : nil
           id = id - 1
         end
         id = @article.id.to_i + 1
         while (not @next) and (id <= Article.last.id)
-          @next = Article.exists?(id) ? Article.find(id) : nil
+          @next = Article.exists?(id) ? Article.friendly.find(id) : nil
           id = id + 1
         end
         if (not @next or not @previous)
@@ -57,7 +57,7 @@ class ArticlesController < ApplicationController
     end
 
     def update
-        @article = Article.find(params[:id])
+        @article = Article.friendly.find(params[:id])
 
         if @article.update(article_params)
             redirect_to @article
@@ -68,7 +68,7 @@ class ArticlesController < ApplicationController
 
 
     def destroy
-        @article = Article.find(params[:id])
+        @article = Article.friendly.find(params[:id])
         @article.destroy
         redirect_to articles_path
     end
@@ -79,7 +79,7 @@ class ArticlesController < ApplicationController
     end
     # Confirms the correct admin.
     def correct_admin
-        @article = Article.find(params[:id])
+        @article = Article.friendly.find(params[:id])
         @admin = Admin.find(current_admin.id)
         redirect_to(root_url) unless current_admin.id == @article.admin.id
     end

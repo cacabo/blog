@@ -30,7 +30,7 @@
                         <%= link_to article_path(@article),
                                   method: :delete,
                                   data: { confirm: 'Are you sure? The article will be permanantly deleted.' } do %>
-                            <button class="btn btn-sm btn-outline-danger">Delete</button>
+                            <button class="btn btn-sm btn-danger">Delete</button>
                         <% end %>
                     </div>
                 <% end %>
@@ -41,7 +41,7 @@
                 <p class="inline tags">
                     <% @article.tag_list.each do |t| %>
                         <%= link_to tag_path(t) do %>
-                            <button class="btn btn-white btn-sm tag"><%= t %></button>
+                            <button class="btn btn-gray btn-sm tag"><%= t %></button>
                         <% end %>
                     <% end %>
                 </p>
@@ -113,8 +113,10 @@
         <p>
           Seems like this the article that you are looking for does not exist. If you think this is a mistake, please <%= link_to 'contact me', new_contact_path %> with a description of what happened.
         </p>
-        <div class="space-2"></div>
-        <%= link_to 'Back to all articles', articles_path, class: 'btn btn-primary' %>
+        <div class="space-1"></div>
+        <%= link_to articles_path, class: 'btn btn-primary' do %>
+          <i class="fa fa-chevron-left"></i> &nbsp; Back to all articles
+        <% end %>
         <div class="space-4"></div>
       </div>
     </div>

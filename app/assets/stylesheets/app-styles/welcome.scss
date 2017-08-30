@@ -11,6 +11,16 @@
   }
 }
 
+.btn-gray {
+  color: #0275d8;
+  background: #FAFAFA;
+
+  &:hover {
+    color: #014c8c;
+    background: whitesmoke;
+  }
+}
+
 .btn {
   font-weight: bold !important;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
