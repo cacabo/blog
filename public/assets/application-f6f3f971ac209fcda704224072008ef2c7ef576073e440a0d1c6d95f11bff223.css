@@ -4595,30 +4595,30 @@ fieldset[disabled] a.btn {
 }
 
 /* line 75, /Users/cameroncabo/.rvm/gems/ruby-2.3.3/gems/bootstrap-4.0.0.alpha6/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-outline-primary {
+.btn-primary {
   color: #0275d8;
   background-image: none;
   background-color: transparent;
   border-color: #0275d8;
 }
 /* line 11, /Users/cameroncabo/.rvm/gems/ruby-2.3.3/gems/bootstrap-4.0.0.alpha6/assets/stylesheets/bootstrap/mixins/_hover.scss */
-.btn-outline-primary:hover {
+.btn-primary:hover {
   color: #fff;
   background-color: #0275d8;
   border-color: #0275d8;
 }
 /* line 61, /Users/cameroncabo/.rvm/gems/ruby-2.3.3/gems/bootstrap-4.0.0.alpha6/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-outline-primary:focus, .btn-outline-primary.focus {
+.btn-primary:focus, .btn-primary.focus {
   -webkit-box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
           box-shadow: 0 0 0 2px rgba(2, 117, 216, 0.5);
 }
 /* line 66, /Users/cameroncabo/.rvm/gems/ruby-2.3.3/gems/bootstrap-4.0.0.alpha6/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+.btn-primary.disabled, .btn-primary:disabled {
   color: #0275d8;
   background-color: transparent;
 }
 /* line 72, /Users/cameroncabo/.rvm/gems/ruby-2.3.3/gems/bootstrap-4.0.0.alpha6/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-outline-primary:active, .btn-outline-primary.active, .show > .btn-outline-primary.dropdown-toggle {
+.btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
   background-color: #0275d8;
   border-color: #0275d8;

@@ -24,21 +24,25 @@
             <div class="space"></div>
 
             <% if params[:tag] %>
-            <h2 class="title sans">Listing articles tagged with "<%=params[:tag]%>"</h2>
-        <% else %>
-            <h2 class="title sans">Listing all articles</h2>
+              <h2 class="title sans">Listing articles tagged with "<%=params[:tag]%>"</h2>
+              <div class="line"></div>
             <% end %>
 
             <% if current_admin %>
-                <%= link_to new_article_path do %>
-                <button class="btn btn-outline-primary btn-sm btn-right">New article</button>
-                <% end %>
+              <%= link_to new_article_path do %>
+                <button class="btn btn-primary btn-sm btn-right">New article</button>
+              <% end %>
             <% end %>
 
-            <% @articles.order(created_at: :desc).each do |article| %>
-                <div class="line"></div>
+            <% @articles.each do |article| %>
+                <% unless article == @articles.first %>
+                  <div class="line"></div>
+                <% end %>
+
                 <% if not article.image.nil? and not article.image_file_name.nil? %>
-                    <%= image_tag article.image.url(:medium), class: 'img-fluid pad-bot-25' %>
+                  <%= link_to article do %>
+                    <%= image_tag article.image.url(:large), class: 'img-fluid pad-bot-25' %>
+                  <% end %>
                 <% end %>
                 <h3 class="sans inline"><%= link_to article.title, article %></h3>
                 <div class="empty-spacer"></div>
@@ -59,7 +63,7 @@
                     <p class="inline">
                         <% article.tag_list.each do |t| %>
                             <%= link_to tag_path(t) do %>
-                                <button class="btn btn-outline-primary btn-sm tag"><%= t %></button>
+                                <button class="btn btn-white btn-sm tag"><%= t %></button>
                             <% end %>
                         <% end %>
                     </p>
@@ -74,13 +78,13 @@
 
             <% if params[:tag] %>
                 <%= link_to articles_path do %>
-                    <button class="btn btn-outline-primary">
+                    <button class="btn btn-primary">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to all articles
                     </button>
                 <% end %>
             <% else %>
                 <%= link_to root_path do %>
-                    <button class="btn btn-outline-primary">
+                    <button class="btn btn-white">
                     <i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to home</button>
                 <% end %>
             <% end %>
