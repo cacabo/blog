@@ -1,602 +1,653 @@
 <head>
-    <% title 'Cameron Cabo | Projects' %>
-    <% description "I learn best through buidling and I also enjoy the building process. Through my projects I explore new languages, refine my skills, and create." %>
+  <% title 'Cameron Cabo | Projects' %>
+  <% description "I learn best through buidling and I also enjoy the building process. Through my projects I explore new languages, refine my skills, and create." %>
 </head>
 
 <div class="container bg pad-top-25 pad-bot-100 border-bot" id="projects">
-    <div class="space"></div>
-    <div class="row">
-        <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
-            <h1 class="title pad-bot-25">Through my projects I learn, grow, and create.</h1>
-            <p class="pitch pad-bot-25">
-                The best way to learn is by directly implementing concepts. Thus, I'm a strong proponent of taking on projects of all kinds because they serve to tangibly hone my skills and extend my interests.
-            </p>
-            <div class="buttons">
-                <%= link_to root_path do %>
-                <button class="btn btn-primary">Here's what I know</button>
-                <% end %>
-                <%= link_to articles_path do %>
-                <button class="btn btn-primary">Read my blog posts</button>
-                <% end %>
-            </div>
-        </div>
+  <div class="space"></div>
+  <div class="row">
+    <div class="col-12 col-md-10 offset-md-1 col-lg-6 offset-lg-3">
+      <h1 class="title pad-bot-25">Through my projects I learn, grow, and create.</h1>
+      <p class="pitch pad-bot-25">
+        The best way to learn is by directly implementing concepts. Thus, I'm a strong proponent of taking on projects of all kinds because they serve to tangibly hone my skills and extend my interests.
+      </p>
+      <div class="buttons">
+        <%= link_to root_path do %>
+        <button class="btn btn-primary">Here's what I know</button>
+        <% end %>
+        <%= link_to articles_path do %>
+        <button class="btn btn-primary">Read my blog posts</button>
+        <% end %>
+      </div>
     </div>
+  </div>
 </div>
 
 <div class="space no-display-mobile"></div>
 <div class="space"></div>
 
 <div class="projects-container">
-    <div class="container">
-        <!-- personal blog -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-blog">
-                <div class="ss-wrapper">
-                    <div class="desktop">
-                        <div class="desktop-circles">
-                            <div class="circle green"></div>
-                            <div class="circle yellow"></div>
-                            <div class="circle red"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/blogweb.PNG' %>
-                        </div>
-                    </div>
-                    <div class="mobile">
-                        <div class="mobile-top">
-                            <div class="cam"></div>
-                            <div class="speaker"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/blogmobile.PNG' %>
-                        </div>
-                        <div class="home-wrapper">
-                            <div class="home"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    Personal website and blog
-                </h2>
-                <p><i>May 2017&ndash;June 2017</i></p>
-                <p>
-                    Personal site created to communicate who I am, pitch my personal image, and effectively display my writing, projects, and work.
-                </p>
-                <p>
-                    <strong>Technologies:</strong>
-                    Rails 5.1, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), Bootstrap 4, AWS S3, Heroku, SendGrid, Devise Gem, Paperclip Gem.
-                </p>
-                <div class="buttons pad-top-25">
-                    <% if Article.exists?(id: 3) %>
-                        <%= link_to article_path(id: 3) do %>
-                            <button class="btn btn-project">
-                                The motivation
-                            </button>
-                        <% end %>
-                    <% end %>
-                    <% if Article.exists?(id: 2) %>
-                        <%= link_to article_path(id: 2) do %>
-                        <button class="btn btn-project">
-                            The tech
-                        </button>
-                        <% end %>
-                    <% end %>
-                    <a href="https://github.com/ccabo1/blog">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
+  <div class="container">
+    <!-- personal blog -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-blog">
+        <div class="ss-wrapper">
+          <div class="desktop">
+            <div class="desktop-circles">
+              <div class="circle green"></div>
+              <div class="circle yellow"></div>
+              <div class="circle red"></div>
             </div>
+            <div class="ss">
+              <%= image_tag 'projects/blogweb.PNG' %>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="mobile-top">
+              <div class="cam"></div>
+              <div class="speaker"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/blogmobile.PNG' %>
+            </div>
+            <div class="home-wrapper">
+              <div class="home"></div>
+            </div>
+          </div>
         </div>
 
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- Outreach -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-outreach">
-                <div class="ss-wrapper">
-                    <div class="desktop">
-                        <div class="desktop-circles">
-                            <div class="circle green"></div>
-                            <div class="circle yellow"></div>
-                            <div class="circle red"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/outreachweb.PNG' %>
-                        </div>
-                    </div>
-                    <div class="mobile">
-                        <div class="mobile-top">
-                            <div class="cam"></div>
-                            <div class="speaker"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/outreachmobile.PNG' %>
-                        </div>
-                        <div class="home-wrapper">
-                            <div class="home"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    Outreach
-                </h2>
-                <p><i>June 2017</i></p>
-                <p>
-                    A web application created to streamline reaching out to mentors, recruiters, and customers. The aim is to keep all information organized in a manner that makes it easier to keep track of who you've reached out to: my goal was to make something better than a spreadsheet.
-                </p>
-                <p>
-                    <strong>Technologies:</strong>
-                    Rails 5.1, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), Bootstrap 4, AWS S3, Heroku, Devise Gem, Chartkick.
-                </p>
-                <div class="buttons pad-top-25">
-                    <a href="https://outreachly.herokuapp.com/">
-                        <button class="btn btn-project">
-                            Use it here
-                        </button>
-                    </a>
-                    <a href="https://github.com/ccabo1/outreach">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
-            </div>
+        <h2 class="title full-width">
+          Personal website and blog
+        </h2>
+        <p>
+          <i>May 2017&ndash;June 2017</i>
+        </p>
+        <p>
+          Personal site created to communicate who I am, pitch my personal image, and effectively display my writing, projects, and work.
+        </p>
+        <p>
+          <strong>Technologies:</strong>
+          Rails 5.1, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), Bootstrap 4, AWS S3, Heroku, SendGrid, Devise Gem, Paperclip Gem.
+        </p>
+        <div class="buttons pad-top-25">
+          <% if Article.exists?(id: 3) %>
+          <%= link_to article_path(id: 3) do %>
+          <button class="btn btn-project">
+            The motivation
+          </button>
+          <% end %>
+          <% end %>
+          <% if Article.exists?(id: 2) %>
+          <%= link_to article_path(id: 2) do %>
+          <button class="btn btn-project">
+            The tech
+          </button>
+          <% end %>
+          <% end %>
+          <a href="https://github.com/ccabo1/blog">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
         </div>
-
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- tic tac toe -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-tic-tac-toe">
-                <div class="ss-wrapper">
-                    <div class="desktop">
-                        <div class="desktop-circles">
-                            <div class="circle green"></div>
-                            <div class="circle yellow"></div>
-                            <div class="circle red"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/tictactoeweb.PNG' %>
-                        </div>
-                    </div>
-                    <div class="mobile">
-                        <div class="mobile-top">
-                            <div class="cam"></div>
-                            <div class="speaker"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/tictactoemobile.PNG' %>
-                        </div>
-                        <div class="home-wrapper">
-                            <div class="home"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    Javascript Tic-Tac-Toe
-                </h2>
-                <p><i>May 2017</i></p>
-                <p>
-                    Recreation of the game maintaining state in Javascript. The player has the option to enable a CPU which responds to the current game state by choosing its moves to maximize winning opportunities and minimize losing opportunities. To my understanding,
-                    the CPU cannot be beat.
-                </p>
-                <p>
-                    <strong>Technologies:</strong>
-                    Javascript (jQuery), HTML5, CSS3, Bootstrap 3.
-                </p>
-                <div class="buttons pad-top-25">
-                    <a href="./projects/tic-tac-toe" target="_blank">
-                        <button class="btn btn-project">
-                            Play it here
-                        </button>
-                    </a>
-                    <a href="https://github.com/ccabo1/tictactoe">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- ar textiles -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-ar">
-                <div class="ss-wrapper">
-                    <div class="desktop">
-                        <div class="desktop-circles">
-                            <div class="circle green"></div>
-                            <div class="circle yellow"></div>
-                            <div class="circle red"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/arweb.PNG' %>
-                        </div>
-                    </div>
-                    <div class="mobile">
-                        <div class="mobile-top">
-                            <div class="cam"></div>
-                            <div class="speaker"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/armobile.PNG' %>
-                        </div>
-                        <div class="home-wrapper">
-                            <div class="home"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    AR Textiles company website
-                </h2>
-                <p><i>March 2017&ndash;present</i></p>
-                <p>
-                    Modernized AR Textile's branding and online presence through creating a website and new logo and marketing materials. This allows them to better connect with their customers and gives their customers important information about the company, their facilities, and their machinery.
-                </p>
-                <p>
-                    <strong>Technologies:</strong>
-                    Javascript (jQuery), HTML5, CSS3.
-                </p>
-                <div class="buttons pad-top-25">
-                    <a href="http://artextiles.us">
-                        <button class="btn btn-project">
-                            View it here
-                        </button>
-                    </a>
-                    <a href="https://github.com/ccabo1/ar">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- express flashcards -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-flashcards">
-                <div class="ss-wrapper">
-                    <div class="desktop">
-                        <div class="desktop-circles">
-                            <div class="circle green"></div>
-                            <div class="circle yellow"></div>
-                            <div class="circle red"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/flashcardsweb.PNG' %>
-                        </div>
-                    </div>
-                    <div class="mobile">
-                        <div class="mobile-top">
-                            <div class="cam"></div>
-                            <div class="speaker"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/flashcardsmobile.PNG' %>
-                        </div>
-                        <div class="home-wrapper">
-                            <div class="home"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    Express flashcards
-                </h2>
-                <p><i>July 2017</i></p>
-                <p>
-                    Web application created in order to practice routing, cookie manipulation, and database calls in Express and Node. This was additionally an opportunity to work on templating via Pug.
-                </p>
-                <p>
-                    <strong>Technologies:</strong>
-                    Node.js, Express.js, Pug.js, Javascript (jQuery), CSS3, Bootstrap 4, Heroku.
-                </p>
-                <div class="buttons pad-top-25">
-                    <a href="https://express-flashcards.herokuapp.com">
-                      <button class="btn btn-project">
-                        Try it out here
-                      </button>
-                    </a>
-                    <a href="https://github.com/ccabo1/express-practice">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- business of sustainability -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-sustain">
-                <div class="ss-wrapper">
-                    <div class="desktop">
-                        <div class="desktop-circles">
-                            <div class="circle green"></div>
-                            <div class="circle yellow"></div>
-                            <div class="circle red"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/sustainweb.PNG' %>
-                        </div>
-                    </div>
-                    <div class="mobile">
-                        <div class="mobile-top">
-                            <div class="cam"></div>
-                            <div class="speaker"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/sustainmobile.PNG' %>
-                        </div>
-                        <div class="home-wrapper">
-                            <div class="home"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    The Business of Sustainability conference website
-                </h2>
-                <p><i>November 2016</i></p>
-                <p>
-                    Website developed for a conference held on campus by Penn Sustainability Review. This site highlighted the event's focus on sustainability in business and showcased the event speakers. Moreover, it proved pivotal in fomenting student interest.
-                </p>
-            </div>
-        </div>
-
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- camstagram -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-camstagram">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="ss-wrapper">
-                            <div class="desktop-same-width">
-                                <div class="desktop-circles">
-                                    <div class="circle green"></div>
-                                    <div class="circle yellow"></div>
-                                    <div class="circle red"></div>
-                                </div>
-                                <div class="ss-same">
-                                    <%= image_tag 'projects/camstagramweb.PNG' %>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    Camstagram
-                </h2>
-                <p><i>November 2016&ndash;December 2017</i></p>
-                <p>
-                    Final project for CIS 196: Ruby on Rails Web Development at Penn. Mimics Instagram with many major features, including user profiles, posting images, liking images, commenting, and follower relationships.
-
-                </p>
-                <p>
-                    <strong>Technologies:</strong> Rails 4, Heroku, Paperclip Gem, AWS s3, bcrypt, HTML5, CSS3, Bootstrap 3.
-                </p>
-                <p>
-                    <strong>Things to Add:</strong> make the app more responsive to different screen sizes, particually mobile devices. Add a more modern navbar. Implement searching for users. Integrating AJAX for real-time commenting and liking.
-                </p>
-                <div class="buttons pad-top-25">
-                    <a href="https://camstagram.herokuapp.com" target="_blank">
-                        <button class="btn btn-project">
-                            Try it here
-                        </button>
-                    </a>
-                    <a href="https://github.com/ccabo1/camstagram">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- minesweeper -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-minesweeper">
-                <div class="ss-wrapper">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="desktop-same-width">
-                                <div class="desktop-circles">
-                                    <div class="circle green"></div>
-                                    <div class="circle yellow"></div>
-                                    <div class="circle red"></div>
-                                </div>
-                                <div class="ss-same">
-                                    <%= image_tag 'projects/minesweeperweb1.PNG', class: 'img-fluid' %>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="desktop-same-width second">
-                                <div class="desktop-circles">
-                                    <div class="circle green"></div>
-                                    <div class="circle yellow"></div>
-                                    <div class="circle red"></div>
-                                </div>
-                                <div class="ss-same">
-                                    <%= image_tag 'projects/minesweeperweb2.PNG', class: 'img-fluid' %>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    Java Minesweeper
-                </h2>
-                <p><i>December 2017</i></p>
-                <p>
-                    Final project for CIS 120: Programming Languages and Techniques I at Penn. It is coded entirely in Java utilizing Java's Swing library for the GUI display.
-                </p>
-                <p>
-                    <strong>Major Features:</strong>
-                    Game board which automatically resizes based on window size and game level. Preset and custom difficulties. Random algorithm to generate the board based off of the user's initial click. Boxes touching zero mines utilize a recursive formula to reveal
-                    adjacent boxes. The game keeps track of time and logs highscores to external files.
-                </p>
-                <div class="buttons pad-top-25">
-                    <a href="https://github.com/ccabo1/minesweeper">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- youthhack ventures -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-yh">
-                <h2 class="title full-width">
-                    YouthHack Ventures website
-                </h2>
-                <p><i>May 2017&ndash;present</i></p>
-                <p>
-                    Website for the student-run incubator's new 3 step plan to building business and entrepreneurial culture alike while at Penn.
-                </p>
-                <p>
-                    Utilizing a modern and convincing design is integral to pitching the new accelerator program for what is has been and what it hopes to become.
-                </p>
-                <div class="buttons pad-top-25">
-                    <a href="https://github.com/ccabo1/youthhack-ventures">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="half-space no-display-mobile"></div>
-        <div class="space"></div>
-
-        <!-- site -->
-        <div class="row">
-            <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-site">
-                <div class="ss-wrapper">
-                    <div class="desktop">
-                        <div class="desktop-circles">
-                            <div class="circle green"></div>
-                            <div class="circle yellow"></div>
-                            <div class="circle red"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/ccweb.PNG' %>
-                        </div>
-                    </div>
-                    <div class="mobile">
-                        <div class="mobile-top">
-                            <div class="cam"></div>
-                            <div class="speaker"></div>
-                        </div>
-                        <div class="ss">
-                            <%= image_tag 'projects/ccmobile.PNG' %>
-                        </div>
-                        <div class="home-wrapper">
-                            <div class="home"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <h2 class="title full-width">
-                    Original personal website
-                </h2>
-                <p><i>August 2015&ndash;January 2017</i></p>
-                <p>
-                    The first website I ever built which I added to over two years. It showcased my artwork, projects, and experience.
-                </p>
-                <p>
-                    <strong>Technologies:</strong>
-                    HTML5, Bootstrap 3, Javascript (jQuery), CSS3.
-                </p>
-                <div class="buttons pad-top-25">
-                    <%= link_to Article.first do %>
-                    <button class="btn btn-project">
-                        Why I changed away
-                    </button>
-                    <% end %>
-                    <a href="https://github.com/ccabo1/site">
-                        <button class="btn btn-project">
-                            <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
-                            GitHub
-                        </button>
-                    </a>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
 
+    <div class="half-space no-display-mobile"></div>
     <div class="space"></div>
-    <div class="space"></div>
-    <div class="buttons">
-        <%= link_to freelancing_path do %>
-        <button class="btn btn-primary">
-            Work with me
-        </button>
-        <% end %>
+
+    <!-- youthhack ventures -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-yh">
+        <div class="ss-wrapper">
+          <div class="desktop">
+            <div class="desktop-circles">
+              <div class="circle green"></div>
+              <div class="circle yellow"></div>
+              <div class="circle red"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/yhweb.PNG' %>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="mobile-top">
+              <div class="cam"></div>
+              <div class="speaker"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/yhmobile.PNG' %>
+            </div>
+            <div class="home-wrapper">
+              <div class="home"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          YouthHack website
+        </h2>
+        <p>
+          <i>May 2017&ndash;August 2017</i>
+        </p>
+        <p>
+          YouthHack is an international organization dedicated to cultivating student entrepreneurship. We give them the tools and insights they need to build startups while in school. The website aims to modernize and differentiate YouthHack as a product-driven and completely student-run and student-built organization.
+        </p>
+        <div class="buttons pad-top-25">
+          <a href="http://youthhack.net">
+            <button class="btn btn-project">
+              See it here
+            </button>
+          </a>
+          <a href="https://github.com/ccabo1/youthhack-ventures">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
+        </div>
+      </div>
     </div>
+
+    <div class="half-space no-display-mobile"></div>
+    <div class="space"></div>
+
+    <!-- ar textiles -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-ar">
+        <div class="ss-wrapper">
+          <div class="desktop">
+            <div class="desktop-circles">
+              <div class="circle green"></div>
+              <div class="circle yellow"></div>
+              <div class="circle red"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/arweb.PNG' %>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="mobile-top">
+              <div class="cam"></div>
+              <div class="speaker"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/armobile.PNG' %>
+            </div>
+            <div class="home-wrapper">
+              <div class="home"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          AR Textiles company website
+        </h2>
+        <p>
+          <i>March 2017&ndash;present</i>
+        </p>
+        <p>
+          Modernized AR Textile's branding and online presence through creating a website and new logo and marketing materials. This allows them to better connect with their customers and gives their customers important information about the company, their
+          facilities, and their machinery.
+        </p>
+        <p>
+          <strong>Technologies:</strong>
+          Javascript (jQuery), HTML5, CSS3.
+        </p>
+        <div class="buttons pad-top-25">
+          <a href="http://artextiles.us">
+            <button class="btn btn-project">
+              View it here
+            </button>
+          </a>
+          <a href="https://github.com/ccabo1/ar">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="half-space no-display-mobile"></div>
+    <div class="space"></div>
+
+    <!-- tic tac toe -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-tic-tac-toe">
+        <div class="ss-wrapper">
+          <div class="desktop">
+            <div class="desktop-circles">
+              <div class="circle green"></div>
+              <div class="circle yellow"></div>
+              <div class="circle red"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/tictactoeweb.PNG' %>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="mobile-top">
+              <div class="cam"></div>
+              <div class="speaker"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/tictactoemobile.PNG' %>
+            </div>
+            <div class="home-wrapper">
+              <div class="home"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          Javascript Tic-Tac-Toe
+        </h2>
+        <p>
+          <i>May 2017</i>
+        </p>
+        <p>
+          Recreation of the game maintaining state in Javascript. The player has the option to enable a CPU which responds to the current game state by choosing its moves to maximize winning opportunities and minimize losing opportunities. To my understanding,
+          the CPU cannot be beat.
+        </p>
+        <p>
+          <strong>Technologies:</strong>
+          Javascript (jQuery), HTML5, CSS3, Bootstrap 3.
+        </p>
+        <div class="buttons pad-top-25">
+          <a href="./projects/tic-tac-toe" target="_blank">
+            <button class="btn btn-project">
+              Play it here
+            </button>
+          </a>
+          <a href="https://github.com/ccabo1/tictactoe">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="half-space no-display-mobile"></div>
+    <div class="space"></div>
+
+    <!-- Outreach -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-outreach">
+        <div class="ss-wrapper">
+          <div class="desktop">
+            <div class="desktop-circles">
+              <div class="circle green"></div>
+              <div class="circle yellow"></div>
+              <div class="circle red"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/outreachweb.PNG' %>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="mobile-top">
+              <div class="cam"></div>
+              <div class="speaker"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/outreachmobile.PNG' %>
+            </div>
+            <div class="home-wrapper">
+              <div class="home"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          Outreach
+        </h2>
+        <p>
+          <i>June 2017</i>
+        </p>
+        <p>
+          A web application created to streamline reaching out to mentors, recruiters, and customers. The aim is to keep all information organized in a manner that makes it easier to keep track of who you've reached out to: my goal was to make something better
+          than a spreadsheet.
+        </p>
+        <p>
+          <strong>Technologies:</strong>
+          Rails 5.1, Ruby, Javascript (jQuery), HTML5, CSS3 (SCSS), Bootstrap 4, AWS S3, Heroku, Devise Gem, Chartkick.
+        </p>
+        <div class="buttons pad-top-25">
+          <a href="https://outreachly.herokuapp.com/">
+            <button class="btn btn-project">
+              Use it here
+            </button>
+          </a>
+          <a href="https://github.com/ccabo1/outreach">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="half-space no-display-mobile"></div>
+    <div class="space"></div>
+
+    <!-- express flashcards -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-flashcards">
+        <div class="ss-wrapper">
+          <div class="desktop">
+            <div class="desktop-circles">
+              <div class="circle green"></div>
+              <div class="circle yellow"></div>
+              <div class="circle red"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/flashcardsweb.PNG' %>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="mobile-top">
+              <div class="cam"></div>
+              <div class="speaker"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/flashcardsmobile.PNG' %>
+            </div>
+            <div class="home-wrapper">
+              <div class="home"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          Express flashcards
+        </h2>
+        <p>
+          <i>July 2017</i>
+        </p>
+        <p>
+          Web application created in order to practice routing, cookie manipulation, and database calls in Express and Node. This was additionally an opportunity to work on templating via Pug.
+        </p>
+        <p>
+          <strong>Technologies:</strong>
+          Node.js, Express.js, Pug.js, Javascript (jQuery), CSS3, Bootstrap 4, Heroku.
+        </p>
+        <div class="buttons pad-top-25">
+          <a href="https://express-flashcards.herokuapp.com">
+            <button class="btn btn-project">
+              Try it out here
+            </button>
+          </a>
+          <a href="https://github.com/ccabo1/express-practice">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="half-space no-display-mobile"></div>
+    <div class="space"></div>
+
+    <!-- business of sustainability -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-sustain">
+        <div class="ss-wrapper">
+          <div class="desktop">
+            <div class="desktop-circles">
+              <div class="circle green"></div>
+              <div class="circle yellow"></div>
+              <div class="circle red"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/sustainweb.PNG' %>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="mobile-top">
+              <div class="cam"></div>
+              <div class="speaker"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/sustainmobile.PNG' %>
+            </div>
+            <div class="home-wrapper">
+              <div class="home"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          The Business of Sustainability conference website
+        </h2>
+        <p>
+          <i>November 2016</i>
+        </p>
+        <p>
+          Website developed for a conference held on campus by Penn Sustainability Review. This site highlighted the event's focus on sustainability in business and showcased the event speakers. Moreover, it proved pivotal in fomenting student interest.
+        </p>
+      </div>
+    </div>
+
+    <div class="half-space no-display-mobile"></div>
+    <div class="space"></div>
+
+    <!-- camstagram -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-camstagram">
+        <div class="row">
+          <div class="col-12">
+            <div class="ss-wrapper">
+              <div class="desktop-same-width">
+                <div class="desktop-circles">
+                  <div class="circle green"></div>
+                  <div class="circle yellow"></div>
+                  <div class="circle red"></div>
+                </div>
+                <div class="ss-same">
+                  <%= image_tag 'projects/camstagramweb.PNG' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          Camstagram
+        </h2>
+        <p>
+          <i>November 2016&ndash;December 2017</i>
+        </p>
+        <p>
+          Final project for CIS 196: Ruby on Rails Web Development at Penn. Mimics Instagram with many major features, including user profiles, posting images, liking images, commenting, and follower relationships.
+
+        </p>
+        <p>
+          <strong>Technologies:</strong>
+          Rails 4, Heroku, Paperclip Gem, AWS s3, bcrypt, HTML5, CSS3, Bootstrap 3.
+        </p>
+        <p>
+          <strong>Things to Add:</strong>
+          make the app more responsive to different screen sizes, particually mobile devices. Add a more modern navbar. Implement searching for users. Integrating AJAX for real-time commenting and liking.
+        </p>
+        <div class="buttons pad-top-25">
+          <a href="https://camstagram.herokuapp.com" target="_blank">
+            <button class="btn btn-project">
+              Try it here
+            </button>
+          </a>
+          <a href="https://github.com/ccabo1/camstagram">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="half-space no-display-mobile"></div>
+    <div class="space"></div>
+
+    <!-- minesweeper -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-minesweeper">
+        <div class="ss-wrapper">
+          <div class="row">
+            <div class="col-6">
+              <div class="desktop-same-width">
+                <div class="desktop-circles">
+                  <div class="circle green"></div>
+                  <div class="circle yellow"></div>
+                  <div class="circle red"></div>
+                </div>
+                <div class="ss-same">
+                  <%= image_tag 'projects/minesweeperweb1.PNG', class: 'img-fluid' %>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="desktop-same-width second">
+                <div class="desktop-circles">
+                  <div class="circle green"></div>
+                  <div class="circle yellow"></div>
+                  <div class="circle red"></div>
+                </div>
+                <div class="ss-same">
+                  <%= image_tag 'projects/minesweeperweb2.PNG', class: 'img-fluid' %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          Java Minesweeper
+        </h2>
+        <p>
+          <i>December 2017</i>
+        </p>
+        <p>
+          Final project for CIS 120: Programming Languages and Techniques I at Penn. It is coded entirely in Java utilizing Java's Swing library for the GUI display.
+        </p>
+        <p>
+          <strong>Major Features:</strong>
+          Game board which automatically resizes based on window size and game level. Preset and custom difficulties. Random algorithm to generate the board based off of the user's initial click. Boxes touching zero mines utilize a recursive formula to reveal
+          adjacent boxes. The game keeps track of time and logs highscores to external files.
+        </p>
+        <div class="buttons pad-top-25">
+          <a href="https://github.com/ccabo1/minesweeper">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="half-space no-display-mobile"></div>
+    <div class="space"></div>
+
+    <!-- site -->
+    <div class="row">
+      <div class="col-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2 project" id="project-site">
+        <div class="ss-wrapper">
+          <div class="desktop">
+            <div class="desktop-circles">
+              <div class="circle green"></div>
+              <div class="circle yellow"></div>
+              <div class="circle red"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/ccweb.PNG' %>
+            </div>
+          </div>
+          <div class="mobile">
+            <div class="mobile-top">
+              <div class="cam"></div>
+              <div class="speaker"></div>
+            </div>
+            <div class="ss">
+              <%= image_tag 'projects/ccmobile.PNG' %>
+            </div>
+            <div class="home-wrapper">
+              <div class="home"></div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="title full-width">
+          Original personal website
+        </h2>
+        <p>
+          <i>August 2015&ndash;January 2017</i>
+        </p>
+        <p>
+          The first website I ever built which I added to over two years. It showcased my artwork, projects, and experience.
+        </p>
+        <p>
+          <strong>Technologies:</strong>
+          HTML5, Bootstrap 3, Javascript (jQuery), CSS3.
+        </p>
+        <div class="buttons pad-top-25">
+          <%= link_to Article.first do %>
+          <button class="btn btn-project">
+            Why I changed away
+          </button>
+          <% end %>
+          <a href="https://github.com/ccabo1/site">
+            <button class="btn btn-project">
+              <i class="fa fa-github" target="_blank" aria-hidden="true"></i>
+              GitHub
+            </button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="space"></div>
+  <div class="space"></div>
+  <div class="buttons">
+    <%= link_to freelancing_path do %>
+    <button class="btn btn-primary">
+      Work with me
+    </button>
+    <% end %>
+  </div>
 </div>
 
 <div class="space"></div>
 <div class="space"></div>
 
 <script type="text/javascript">
-    function resize_ss() {
-        var $ss = $('.ss');
-        var $desk = $('.desktop');
-        var $mobile = $('.mobile');
-        var space = 24;
-        var width = $('.ss-wrapper').width() - 24 - space;
-        var height = width / 2.752960544329101;
-        $ss.height(height);
-        $desk.width(height / 0.456525 + 4);
-        $mobile.width(height / 1.777778 + 6);
+  function resize_ss() {
+    var $ss = $('.ss');
+    var $desk = $('.desktop');
+    var $mobile = $('.mobile');
+    var space = 24;
+    var width = $('.ss-wrapper').width() - 24 - space;
+    var height = width / 2.752960544329101;
+    $ss.height(height);
+    $desk.width(height / 0.456525 + 4);
+    $mobile.width(height / 1.777778 + 6);
 
-        // var $ssSameWidth = $('.ss-same'); var $deskSameWidth = $('.desktop-same-width'); $ssSameWidth.width(width / 2);
-    }
+    // var $ssSameWidth = $('.ss-same'); var $deskSameWidth = $('.desktop-same-width'); $ssSameWidth.width(width / 2);
+  }
 
-    $(document).ready(function () {
-        resize_ss();
-    });
+  $(document).ready(function () {
+    resize_ss();
+  });
 
-    $(window).resize(function () {
-        resize_ss();
-    });
+  $(window).resize(function () {
+    resize_ss();
+  });
 </script>
