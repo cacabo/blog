@@ -817,6 +817,7 @@ footer#footer p {
   border-radius: 1.25vh;
   background: gray;
   color: white;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.15);
 }
 @media screen and (max-width: 480px) {
   /* line 5, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
@@ -843,58 +844,60 @@ footer#footer p {
   }
 }
 
-/* line 24, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 25, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss {
   height: 0px;
   text-align: center;
 }
-/* line 28, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 29, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss img {
   display: inline-block;
   overflow: hidden;
 }
 
-/* line 34, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 35, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss img {
   height: 100%;
   width: auto;
 }
 
-/* line 39, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 40, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-same img {
   width: 100%;
   height: auto;
 }
 
-/* line 44, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 45, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper {
   padding-bottom: 5vh;
   width: 100%;
 }
-/* line 48, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 49, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .desktop, .ss-wrapper .desktop-same-width, .ss-wrapper .mobile {
   background: gainsboro;
   display: inline-block;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
 }
-/* line 53, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 55, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .desktop:hover, .ss-wrapper .desktop-same-width:hover, .ss-wrapper .mobile:hover {
   -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.5);
 }
-/* line 58, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 60, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .desktop-same-width, .ss-wrapper .desktop {
   padding: 8px 2px 22px 2px;
   border-radius: 4px;
 }
-/* line 62, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 64, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .desktop-same-width .desktop-circles, .ss-wrapper .desktop .desktop-circles {
   width: 100%;
   text-align: right;
   padding-bottom: 4px;
 }
-/* line 67, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 69, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .desktop-same-width .desktop-circles .circle, .ss-wrapper .desktop .desktop-circles .circle {
   display: inline-block;
   height: 16px;
@@ -904,41 +907,41 @@ footer#footer p {
   cursor: pointer;
   cursor: hand;
 }
-/* line 78, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 80, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .desktop-same-width .green:hover, .ss-wrapper .desktop .green:hover {
   background: #33A329;
 }
-/* line 82, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 84, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .desktop-same-width .yellow:hover, .ss-wrapper .desktop .yellow:hover {
   background: #FFF200;
 }
-/* line 86, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 88, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .desktop-same-width .red:hover, .ss-wrapper .desktop .red:hover {
   background: #AD0F00;
 }
-/* line 91, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 93, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .ss, .ss-wrapper .ss-same {
   width: 100%;
 }
-/* line 95, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 97, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .second {
   float: right;
 }
-/* line 99, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 101, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .mobile {
   text-align: center;
   padding: 0px 2px 2px 2px;
   float: right;
   border-radius: 8px;
 }
-/* line 105, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 107, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .mobile .mobile-top {
   margin-bottom: 4px;
   position: relative;
   display: block;
   width: 100%;
 }
-/* line 111, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 113, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .mobile .mobile-top .cam {
   height: 6px;
   width: 6px;
@@ -947,7 +950,7 @@ footer#footer p {
   border-radius: 100%;
   background: gray;
 }
-/* line 120, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 122, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .mobile .mobile-top .speaker {
   display: inline-block;
   border-radius: 2px;
@@ -956,7 +959,7 @@ footer#footer p {
   width: 20px;
   background: gray;
 }
-/* line 130, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 132, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .mobile .home-wrapper {
   width: 100%;
   display: block;
@@ -964,7 +967,7 @@ footer#footer p {
   margin-bottom: 0px;
   line-height: 0;
 }
-/* line 137, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 139, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .mobile .home-wrapper .home {
   border: 2px solid gray;
   border-radius: 100%;
@@ -976,15 +979,15 @@ footer#footer p {
   cursor: pointer;
   cursor: hand;
 }
-/* line 149, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 151, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .ss-wrapper .mobile .home-wrapper .home:hover {
   background: rgba(0, 0, 0, 0.15);
 }
 
-/* line 156, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 158, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .btn-project {
-  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15) !important;
+          box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.15) !important;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
   background: #888888;
@@ -992,142 +995,142 @@ footer#footer p {
   margin-top: 1rem;
 }
 
-/* line 164, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 166, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 .btn-project:hover {
-  -webkit-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3) !important;
+          box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3) !important;
   /* IE 9 */
   -webkit-transform: translateY(2px);
   /* Safari */
   transform: translateY(2px);
 }
 
-/* line 171, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 173, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-blog {
   background: #1a8cff;
 }
-/* line 174, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 176, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-blog .btn-project {
   background: #66b3ff;
 }
-/* line 178, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 180, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-blog .btn-project:hover {
   background: #99ccff;
 }
 
-/* line 183, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 185, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-flashcards {
   background: #4d88ff;
 }
-/* line 186, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 188, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-flashcards .btn-project {
   background: #80aaff;
 }
-/* line 190, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 192, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-flashcards .btn-project:hover {
   background: #b3ccff;
 }
 
-/* line 195, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 197, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-outreach {
   background: #ff6600;
 }
-/* line 198, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 200, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-outreach .btn-project {
   background: #ff8533;
 }
-/* line 202, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 204, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-outreach .btn-project:hover {
   background: #ffa366;
 }
 
-/* line 207, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 209, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-tic-tac-toe {
   background: #404040;
 }
-/* line 210, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 212, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-tic-tac-toe .btn-project {
   background: #606060;
 }
-/* line 214, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 216, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-tic-tac-toe .btn-project:hover {
   background: #707070;
 }
 
-/* line 219, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 221, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-ar {
   background: #00bfff;
 }
-/* line 222, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 224, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-ar .btn-project {
   background: #4dd2ff;
 }
-/* line 226, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 228, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-ar .btn-project:hover {
   background: #80dfff;
 }
 
-/* line 231, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 233, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-minesweeper {
   background: #ff4d4d;
 }
-/* line 234, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 236, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-minesweeper .btn-project {
   background: #ff8080;
 }
-/* line 238, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 240, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-minesweeper .btn-project:hover {
   background: #ff9999;
 }
 
-/* line 243, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 245, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-sustain {
   background: #00cc66;
 }
-/* line 246, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 248, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-sustain .btn-project {
   background: #00ff80;
 }
-/* line 250, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 252, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-sustain .btn-project:hover {
   background: #33ff99;
 }
 
-/* line 255, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 257, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-yh {
-  background: #f5d400;
+  background: #fcd200;
 }
-/* line 258, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 260, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-yh .btn-project {
-  background: #ffe747;
+  background: #ffdf49;
 }
-/* line 262, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 264, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-yh .btn-project:hover {
-  background: #ffec70;
+  background: #ffe25e;
 }
 
-/* line 267, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 269, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-camstagram {
   background: #3366ff;
 }
-/* line 270, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 272, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-camstagram .btn-project {
   background: #668cff;
 }
-/* line 274, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 276, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-camstagram .btn-project:hover {
   background: #99b3ff;
 }
 
-/* line 279, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 281, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-site {
   background: #1a8cff;
 }
-/* line 282, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 284, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-site .btn-project {
   background: #66b3ff;
 }
-/* line 286, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
+/* line 288, /Users/cameroncabo/blog/app/assets/stylesheets/app-styles/projects.scss */
 #project-site .btn-project:hover {
   background: #99ccff;
 }
