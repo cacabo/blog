@@ -35,45 +35,9 @@
             <% end %>
 
             <% @articles.each do |article| %>
-                <% unless article == @articles.first %>
-                  <div class="line"></div>
-                <% end %>
-
-                <% if not article.image.nil? and not article.image_file_name.nil? %>
-                  <%= link_to article do %>
-                    <%= image_tag article.image.url(:large), class: 'img-fluid pad-bot-25' %>
-                  <% end %>
-                <% end %>
-                <h3 class="sans inline"><%= link_to article.title, article %></h3>
-                <div class="empty-spacer"></div>
-                <p class="bigger">
-                    <% if article.text %>
-                        <% if article.text.length > 100 %>
-                            <%= article.text.gsub(/\[.*?\]/, "")[0...100] + '...' %>
-                            <%= link_to article do %>
-                                <i class="time">click to read the full post.</i>
-                            <% end %>
-                        <% else %>
-                            <%= article.text.gsub(/\[.*?\]/, "") %>
-                        <% end %>
-                    <% end %>
-                </p>
-                <div class="empty-spacer"></div>
-                <% if article.tag_list %>
-                    <p class="inline">
-                        <% article.tag_list.each do |t| %>
-                            <%= link_to tag_path(t) do %>
-                                <button class="btn btn-gray btn-sm tag"><%= t %></button>
-                            <% end %>
-                        <% end %>
-                    </p>
-                    <p class="time sans inline float-right"><%= time_ago_in_words(article.created_at) %>
-                        ago</p>
-                <% end %>
+              <%= render article %>
             <% end %>
-            <div class="line marg-bot-0"></div>
 
-            <div class="space"></div>
             <div class="space"></div>
 
             <% if params[:tag] %>

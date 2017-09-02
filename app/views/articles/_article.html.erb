@@ -1,0 +1,37 @@
+<%= link_to article do %>
+  <div class="marg-bot-1">
+    <% if not article.image.nil? and not article.image_file_name.nil? %>
+      <%= link_to article do %>
+        <%= image_tag article.image.url(:large), class: 'img-fluid' %>
+      <% end %>
+    <% end %>
+    <!-- close image -->
+
+    <h3 class="sans inline"><%= link_to article.title, article %></h3>
+    <div class="empty-spacer"></div>
+    <p class="bigger">
+        <% if article.text %>
+            <% if article.text.length > 100 %>
+                <%= article.text.gsub(/\[.*?\]/, "")[0...100] + '...' %>
+            <% else %>
+                <%= article.text.gsub(/\[.*?\]/, "") %>
+            <% end %>
+        <% end %>
+    </p>
+    <div class="empty-spacer"></div>
+    <% if article.tag_list %>
+        <p class="inline">
+            <% article.tag_list.each do |t| %>
+                <%= link_to tag_path(t) do %>
+                    <button class="btn btn-gray btn-sm tag"><%= t %></button>
+                <% end %>
+            <% end %>
+        </p>
+        <p class="time sans inline float-right">
+          <%= time_ago_in_words(article.created_at) %> ago
+        </p>
+    <% end %>
+  </div>
+  <div class="line"></div>
+  <!-- close card -->
+<% end %>
