@@ -30,7 +30,9 @@
 
             <% if current_admin %>
               <%= link_to new_article_path do %>
-                <button class="btn btn-primary btn-sm btn-right">New article</button>
+                <button class="btn btn-primary marg-bot-1">
+                  <i class="fa fa-text"></i> &nbps;New article
+                </button>
               <% end %>
             <% end %>
 
@@ -38,7 +40,7 @@
               <%= render article %>
             <% end %>
 
-            <div class="space"></div>
+            <div class="space-1"></div>
 
             <% if params[:tag] %>
                 <%= link_to articles_path do %>
@@ -49,7 +51,8 @@
             <% else %>
                 <%= link_to root_path do %>
                     <button class="btn btn-white">
-                    <i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to home</button>
+                      <i class="fa fa-chevron-left" aria-hidden="true"></i> &nbsp;Back to home
+                    </button>
                 <% end %>
             <% end %>
         </div>
