@@ -14,4 +14,7 @@ Rails.application.routes.draw do
   get 'freelancing', to: 'welcome#freelancing', as: 'freelancing'
   get 'art-design', to: 'welcome#art-design', as: 'art_design'
   get 'articles/tags/:tag', to: 'articles#index', as: 'tag'
+
+  # Handle 404
+  get '*unmatched_route', to: 'welcome#notfound'
 end
