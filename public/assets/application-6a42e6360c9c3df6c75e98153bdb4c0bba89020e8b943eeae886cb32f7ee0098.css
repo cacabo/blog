@@ -12511,7 +12511,7 @@ label {
 
 /* line 170, /Users/cameroncabo/blog/app/assets/stylesheets/application.scss */
 .time {
-  color: #666666;
+  color: rgba(0, 0, 0, 0.6);
   font-style: italic;
 }
 
